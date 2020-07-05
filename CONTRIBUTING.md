@@ -65,3 +65,14 @@ pnpm test core/test/react-jsx -t 'accepts sx prop'
 ```
 
 ## Pull Requests
+
+When opening a pull request, please be sure to update any relevant documentation
+in the READMEs or in the `packages/docs` directory. Also include a high-level
+list of changes in the [CHANGELOG.md](CHANGELOG.md) file at the top under the
+`## Unreleased` heading.
+
+[pnpm workspaces]: https://pnpm.io/workspaces
+[install pnpm]: https://pnpm.io/installation
+[jest]: https://jestjs.io/
+[preconstruct]:
+  https://preconstruct.tools/guides/using-preconstruct-dev-in-a-monorepo
