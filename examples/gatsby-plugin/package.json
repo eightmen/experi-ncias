@@ -1,0 +1,29 @@
+
+{
+  "private": true,
+  "name": "gatsby-plugin-theme-ui-example",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "@emotion/react": "^11",
+    "gatsby": "^4.21.0",
+    "gatsby-plugin-mdx": "^3.7.1",
+    "gatsby-plugin-theme-ui": "workspace:^",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "theme-ui": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "typescript": "^4",
+    "babel-eslint": "^10"
+  }
+}
