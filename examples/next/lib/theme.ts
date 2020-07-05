@@ -46,3 +46,7 @@ export const theme = makeTheme({
 
   buttons: {
     primary: {
+      cursor: 'pointer',
+    },
+  },
+})
