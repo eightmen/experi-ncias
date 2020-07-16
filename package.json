@@ -1,0 +1,120 @@
+
+{
+  "name": "@theme-ui/monorepo",
+  "version": "0.15.4",
+  "private": true,
+  "scripts": {
+    "build": "preconstruct build",
+    "build:docs": "pnpm build && pnpm run --filter docs build",
+    "serve:docs": "pnpm build:docs && pnpm run --filter docs serve",
+    "dev:docs": "pnpm run --filter docs start",
+    "clean": "rimraf packages/*/{dist,rts2_cache*}",
+    "format": "prettier --write \"**/*.{ts,js,json}\" \"**/*.md\"  \"**/*.mdx\"",
+    "lint": "eslint --ext .ts,.tsx,.js \"packages/**/*.{ts,tsx,js,mtsx,mts}\"",
+    "test": "cross-env \"NODE_OPTIONS=--experimental-vm-modules --no-warnings\" jest",
+    "test:coverage": "cross-env \"NODE_OPTIONS=--experimental-vm-modules --no-warnings\" jest --coverage",
+    "typecheck": "tsc --noEmit",
+    "typecheck:tests": "tsc --noEmit -P ./tsconfig.test.json",
+    "logo": "pnpm run --filter docs logo",
+    "postinstall": "preconstruct dev",
+    "dev": "preconstruct dev",
+    "release": "pnpm clean && pnpm build && pnpm shipit && node scripts/publish-to-npm.mjs",
+    "auto": "cross-env TS_NODE_COMPILER_OPTIONS=\"{ \\\"module\\\": \\\"commonjs\\\", \\\"isolatedModules\\\": false }\" auto",
+    "shipit": "pnpm auto shipit",
+    "shipit:verbose": "pnpm auto shipit -v",
+    "auto:version": "pnpm auto version -v",
+    "all-contributors:check": "./scripts/all-contributors-check.js",
+    "all-contributors:add": "npx all-contributors add",
+    "codesandbox-ci:install": "pnpm install --no-frozen-lockfile"
+  },
+  "nohoist": [
+    "**/@mdx-js/react",
+    "**/@mdx-js/mdx"
+  ],
+  "preconstruct": {
+    "packages": [
+      "packages/*",
+      "!packages/docs",
+      "!packages/e2e",
+      "!packages/tachyons"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@auto-it/all-contributors": "^10.37.6",
+    "@auto-it/conventional-commits": "^10.37.6",
+    "@auto-it/core": "^10.37.6",
+    "@auto-it/first-time-contributor": "^10.37.6",
+    "@auto-it/magic-zero": "^10.37.6",
+    "@auto-it/npm": "^10.37.6",
+    "@auto-it/omit-commits": "^10.37.6",
+    "@auto-it/released": "^10.37.6",
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.15.8",
+    "@babel/helper-string-parser": "^7.18.10",
+    "@babel/helper-validator-identifier": "^7.12.11",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@babel/runtime": "^7.16.3",
+    "@codechecks/build-size-watcher": "^0.1.0",
+    "@codechecks/client": "0.1.10-beta",
+    "@emotion/jest": "^11.10.0",
+    "@jest/types": "^29",
+    "@preconstruct/cli": "^2.1.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/eslint": "8.4.6",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^18.7.18",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-test-renderer": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "auto": "^10.37.6",
+    "babel-jest": "^29.0.3",
+    "babel-preset-gatsby": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "egzek": "^1.2.0",
+    "eslint": "^8",
+    "eslint-config-react-app": "^7.0.1",
+    "jest": "^29.0.3",
+    "jest-canvas-mock": "^2.4.0",
+    "jest-environment-jsdom": "^29.0.3",
+    "jest-mock-console": "^2.0.0",
+    "jest-ts-webcompat-resolver": "^1.0.0",
+    "postinstall-postinstall": "^2.1.0",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.1",
+    "ts-toolbelt": "^9.6.0",
+    "typecov": "^0.2.3",
+    "typescript": "^4"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/readable-stream": "2.3.11",
+      "@types/eslint": "7.29.0",
+      "@types/react": "^18.0.8",
+      "@emotion/react": "11.10.0"
+    },
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "babel-eslint"
+      ],
+      "allowedVersions": {
+        "react": "18",
+        "eslint": "8",
+        "gatsby": "^4 || ^5",
+        "@types/jest": "29"
+      }
+    }
+  },
+  "dependencies": {
+    "@types/semver": "^7.3.12",
+    "semver": "^7.3.7"
+  }
+}
