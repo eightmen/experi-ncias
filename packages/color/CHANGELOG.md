@@ -165,4 +165,4 @@ Background color of autofilled inputs will now default to `theme.colors.backgrou
 #### Authors: 2
 
 - Alex Chan ([@alexanderchan](https://github.com/alexanderchan))
-- Piotr Monwid-Olechnowic
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
