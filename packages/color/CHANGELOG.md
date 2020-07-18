@@ -61,4 +61,56 @@ Thank you, Vlad Shcherbin ([@vladshcherbin](https://github.com/vladshcherbin)), 
 
 ### Release Notes
 
-#### Allow easy styling autofilled of Inputs ([#1811](https://github.com/sys
+#### Allow easy styling autofilled of Inputs ([#1811](https://github.com/system-ui/theme-ui/pull/1811))
+
+Background color of autofilled inputs will now default to `theme.colors.background`. It can be changed by setting `autofillBackgroundColor` prop.
+
+---
+
+#### 🚀 Enhancement
+
+
+#### 🐛 Bug Fix
+
+- Allow easy styling autofilled of Inputs [#1811](https://github.com/system-ui/theme-ui/pull/1811) ([@hasparus](https://github.com/hasparus))
+- fix(css): add JSDoc comment to sx.label [#1813](https://github.com/system-ui/theme-ui/pull/1813) ([@hasparus](https://github.com/hasparus))
+- fix(css): add JSDoc comment to sx.label ([@hasparus](https://github.com/hasparus))
+- Add missing meta repository to published packages [#1807](https://github.com/system-ui/theme-ui/pull/1807) ([@aaronadamsCA](https://github.com/aaronadamsCA))
+- Add missing repository metadata to published packages [#1779](https://github.com/system-ui/theme-ui/pull/1779) ([@aaronadamsCA](https://github.com/aaronadamsCA))
+- Add missing meta repository to published packages ([@aaronadamsCA](https://github.com/aaronadamsCA))
+
+#### 🏠 Internal
+
+- Docs: update JSX pragma guide with automatic runtime section [#1718](https://github.com/system-ui/theme-ui/pull/1718) ([@flo-sch](https://github.com/flo-sch) [@hasparus](https://github.com/hasparus))
+
+#### Authors: 5
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Aaron Adams ([@aaronadamsCA](https://github.com/aaronadamsCA))
+- Florent SCHILDKNECHT ([@flo-sch](https://github.com/flo-sch))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+- Vlad Shcherbin ([@vladshcherbin](https://github.com/vladshcherbin))
+
+---
+
+# v0.8.3 (Wed May 05 2021)
+
+#### ⚠️ Pushed to `stable`
+
+- Merge branch 'stable' into develop ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 1
+
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.8.0 (Wed May 05 2021)
+
+#### 🚀 Enhancement
+
+- v0.8 [#1688](https://github.com/system-ui/theme-ui/pull/1688) ([@lachlanjc](https://github.com/lachlanjc) [@hasparus](https://github.com/hasparus))
+
+#### 🐛 Bug Fix
+
+- Merge remo
