@@ -39,4 +39,49 @@ Thanks for all your work!
 
 - Use media query value when useColorSchemeMediaQuery is set to 'system' [#1981](https://github.com/system-ui/theme-ui/pull/1981) ([@julianbenegas](https://github.com/julianbenegas) [@draekien](https://github.com/draekien))
 - feat(color-modes): update client side effect so that it maintains existing behaviour ([@draekien](https://github.com/draekien))
-- feat(color-modes): add media 
+- feat(color-modes): add media query event listeners and effects ([@draekien](https://github.com/draekien))
+
+#### 🐛 Bug Fix
+
+- Merge remote-tracking branch 'upstream/develop' into fix/color-scheme-media-query-api-update [#981](https://github.com/system-ui/theme-ui/pull/981) ([@draekien](https://github.com/draekien))
+- fix(css): reexport CSSObject from @emotion/react ([@hasparus](https://github.com/hasparus))
+- Check if function before executing. ([@julianbenegas](https://github.com/julianbenegas))
+- use addEventListener instead of addListener ([@julianbenegas](https://github.com/julianbenegas))
+- added media query listeners. added dependencies to effects ([@julianbenegas](https://github.com/julianbenegas))
+- made media query win when useColorSchemeMediaQuery set to true ([@julianbenegas](https://github.com/julianbenegas))
+
+#### Authors: 6
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Julian Benegas ([@julianbenegas](https://github.com/julianbenegas))
+- Lachlan Campbell ([@lachlanjc](https://github.com/lachlanjc))
+- Lennart ([@LekoArts](https://github.com/LekoArts))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+- William Pei ([@draekien](https://github.com/draekien))
+
+---
+
+# v0.11.0 (Wed Aug 25 2021)
+
+#### 🚀 Enhancement
+
+- fix(color-modes): combine colors in nested providers [#1838](https://github.com/system-ui/theme-ui/pull/1838) ([@hasparus](https://github.com/hasparus))
+
+#### 🐛 Bug Fix
+
+- fix(color-modes): respect html.theme-ui-{mode} class in nested providers to reduce FOUC ([@hasparus](https://github.com/hasparus))
+- 0.10 chores [#1842](https://github.com/system-ui/theme-ui/pull/1842) ([@hasparus](https://github.com/hasparus))
+- fix(color-modes): properly combine colors from nested providers ([@hasparus](https://github.com/hasparus))
+- fix(color-modes): nest styles using css not style ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 1
+
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.10.0 (Sat Jun 19 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Vlad Shcherbin ([@vladshcherbin](https://github.com/vladshcherbin)), for all your work!
