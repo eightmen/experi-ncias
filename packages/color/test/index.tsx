@@ -318,3 +318,68 @@ describe('colors inside ThemeProvider', () => {
       colors: {
         blue: {
           __default: '#00f',
+          dark: '#00c',
+        },
+      },
+    }
+
+    type MyTheme = typeof theme & { rawColors: typeof theme.colors }
+
+    const tree = render(
+      <ThemeProvider theme={theme}>
+        <button
+          sx={{
+            color: (theme) => lighten(theme.rawColors?.blue, 0.1)(theme),
+          }}
+        >
+          Click me
+        </button>
+        <p
+          sx={{
+            color: (theme) =>
+              lighten((theme as MyTheme).rawColors.blue.__default, 0.1)(theme),
+          }}
+        >
+          Hello
+        </p>
+      </ThemeProvider>
+    )
+
+    expect(tree.getByRole('button')).toHaveStyleRule('color', '#33f')
+    expect(tree.getByText('Hello')).toHaveStyleRule('color', '#33f')
+  })
+})
+
+test('typechecks', () => {
+  const _a: ThemeUICSSObject = {
+    color: darken('primary', 0.1),
+  }
+
+  //#region past bugs
+  const _b: ThemeUICSSObject = {
+    'h1, h2, h3, h4, h5, h6': {
+      '.remark-autolink-headers__anchor': {
+        opacity: 0,
+        borderRadius: '50%',
+        transition: 'all 150ms linear',
+        ':focus, :hover': {
+          backgroundColor: alpha('primary', 0.07),
+        },
+      },
+      ':focus, :hover': {
+        '.remark-autolink-headers__anchor': {
+          opacity: 1,
+        },
+      },
+    },
+  }
+  //#endregion
+})
+
+describe('getColor', () => {
+  test('throws error if given CSS custom property', () => {
+    expect(() => getColor({}, 'var(--theme-ui-colors-primary)')).toThrow(
+      'A CSS property was passed to `getColor`.'
+    )
+  })
+})
