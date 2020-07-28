@@ -146,4 +146,48 @@ Thank you, Francis Champagne ([@fcisio](https://github.com/fcisio)), for all you
 
 #### 🐛 Bug Fix
 
--
+- Merge remote-tracking branch 'origin/develop' into v0.8 ([@hasparus](https://github.com/hasparus))
+- test: read root styles from html element ([@hasparus](https://github.com/hasparus))
+- fix(color-modes): default useCustomProperties to true, as in the docs ([@hasparus](https://github.com/hasparus))
+- Merge branch 'stable' into config-2 ([@hasparus](https://github.com/hasparus))
+- Merge branch 'config' into config-2 [#1421](https://github.com/system-ui/theme-ui/pull/1421) ([@hasparus](https://github.com/hasparus))
+- refactor: memoize theme colors mutation ([@fcisio](https://github.com/fcisio))
+- refactor: remove lodash dependency ([@fcisio](https://github.com/fcisio))
+- refactor: assemble the modes inside rawColors ([@fcisio](https://github.com/fcisio))
+- fix: test coverage ([@fcisio](https://github.com/fcisio))
+- Update color-modes to be more backwards compatible ([@lachlanjc](https://github.com/lachlanjc))
+- Remove duplicate vars from merge conflict ([@lachlanjc](https://github.com/lachlanjc))
+- Merge branch 'develop' into config ([@lachlanjc](https://github.com/lachlanjc))
+- Fix remaining issues ([@lachlanjc](https://github.com/lachlanjc))
+- Begin moving theme config options ([@lachlanjc](https://github.com/lachlanjc))
+- Re-add config options to root theme type as deprecated ([@lachlanjc](https://github.com/lachlanjc))
+- Make changes to ColorModeProvider non-breaking ([@lachlanjc](https://github.com/lachlanjc))
+
+#### ⚠️ Pushed to `stable`
+
+- Merge branch 'stable' into develop ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 4
+
+- Brent Jackson ([@jxnblk](https://github.com/jxnblk))
+- Francis Champagne ([@fcisio](https://github.com/fcisio))
+- Lachlan Campbell ([@lachlanjc](https://github.com/lachlanjc))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.7.5 (Wed Apr 28 2021)
+
+#### ⚠️ Pushed to `stable`
+
+- Merge branch 'develop' into stable ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 1
+
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.7.0 (Thu Apr 15 2021)
+
+#### 🚀 Enhancemen
