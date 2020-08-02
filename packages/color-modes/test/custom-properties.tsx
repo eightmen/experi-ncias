@@ -119,4 +119,77 @@ describe('__createColorStyles', () => {
 
   test('creates styles at the HTML root', () => {
     const styles = __createColorStyles({
-   
+      useRootStyles: true,
+      colors: {
+        text: 'white',
+        background: 'tomato',
+        modes: {
+          light: {
+            text: 'tomato',
+            background: 'white',
+          },
+        },
+      },
+    })
+    expect(styles).toEqual({
+      color: 'var(--theme-ui-colors-text)',
+      backgroundColor: 'var(--theme-ui-colors-background)',
+      '--theme-ui-colors-text': 'white',
+      '--theme-ui-colors-background': 'tomato',
+      '&.theme-ui-light, .theme-ui-light &': {
+        '--theme-ui-colors-text': 'tomato',
+        '--theme-ui-colors-background': 'white',
+      },
+    })
+  })
+
+  test('creates styles at the HTML root and override the body styles prop', () => {
+    const styles = __createColorStyles({
+      useRootStyles: true,
+      colors: {
+        text: 'white',
+        background: 'tomato',
+        modes: {
+          light: {
+            text: 'tomato',
+            background: 'white',
+          },
+        },
+      },
+    })
+    expect(styles).toEqual({
+      color: 'var(--theme-ui-colors-text)',
+      backgroundColor: 'var(--theme-ui-colors-background)',
+      '--theme-ui-colors-text': 'white',
+      '--theme-ui-colors-background': 'tomato',
+      '&.theme-ui-light, .theme-ui-light &': {
+        '--theme-ui-colors-text': 'tomato',
+        '--theme-ui-colors-background': 'white',
+      },
+    })
+  })
+
+  test('creates styles for print color mode', () => {
+    const styles = __createColorStyles({
+      config: {
+        printColorModeName: 'light',
+      },
+      colors: {
+        text: 'white',
+        background: 'tomato',
+        modes: {
+          light: {
+            text: 'tomato',
+            background: 'white',
+          },
+        },
+      },
+    })
+
+    expect(styles).toEqual({
+      color: 'var(--theme-ui-colors-text)',
+      backgroundColor: 'var(--theme-ui-colors-background)',
+      '--theme-ui-colors-text': 'white',
+      '--theme-ui-colors-background': 'tomato',
+      '&.theme-ui-light, .theme-ui-light &': {
+        '--theme-ui-colors-text':
