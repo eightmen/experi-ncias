@@ -192,4 +192,81 @@ describe('__createColorStyles', () => {
       '--theme-ui-colors-text': 'white',
       '--theme-ui-colors-background': 'tomato',
       '&.theme-ui-light, .theme-ui-light &': {
-        '--theme-ui-colors-text':
+        '--theme-ui-colors-text': 'tomato',
+        '--theme-ui-colors-background': 'white',
+      },
+      '@media print': {
+        '--theme-ui-colors-text': 'tomato',
+        '--theme-ui-colors-background': 'white',
+      },
+    })
+  })
+
+  test('creates styles for print color mode if its name is the same as initialColorModeName', () => {
+    const styles = __createColorStyles({
+      config: {
+        initialColorModeName: 'light',
+        useColorSchemeMediaQuery: true,
+        printColorModeName: 'light',
+      },
+      colors: {
+        text: '#fff',
+        background: '#000',
+        modes: {
+          light: {
+            text: '#000',
+            background: '#fff',
+          },
+        },
+      },
+    })
+
+    expect(styles['@media print']).toEqual({
+      '--theme-ui-colors-text': '#000',
+      '--theme-ui-colors-background': '#fff',
+    })
+  })
+
+  test('creates styles for initial print color mode', () => {
+    const styles = __createColorStyles({
+      config: {
+        initialColorModeName: 'tomato',
+        printColorModeName: 'tomato',
+      },
+      colors: {
+        text: 'tomato',
+        background: 'white',
+        modes: {
+          dark: {
+            text: 'white',
+            background: 'black',
+          },
+        },
+      },
+    })
+    expect(styles).toEqual({
+      color: 'var(--theme-ui-colors-text)',
+      backgroundColor: 'var(--theme-ui-colors-background)',
+      '--theme-ui-colors-text': 'tomato',
+      '--theme-ui-colors-background': 'white',
+      '&.theme-ui-dark, .theme-ui-dark &': {
+        '--theme-ui-colors-text': 'white',
+        '--theme-ui-colors-background': 'black',
+      },
+      '@media print': {
+        '--theme-ui-colors-text': 'tomato',
+        '--theme-ui-colors-background': 'white',
+      },
+    })
+  })
+
+  test('creates styles from color palette', () => {
+    const styles = __createColorStyles({
+      colors: {
+        text: 'tomato',
+        background: 'white',
+      },
+    })
+    expect(styles).toEqual({
+      color: 'var(--theme-ui-colors-text)',
+      backgroundColor: 'var(--
