@@ -269,4 +269,9 @@ describe('__createColorStyles', () => {
     })
     expect(styles).toEqual({
       color: 'var(--theme-ui-colors-text)',
-      backgroundColor: 'var(--
+      backgroundColor: 'var(--theme-ui-colors-background)',
+      '--theme-ui-colors-text': 'tomato',
+      '--theme-ui-colors-background': 'white',
+    })
+  })
+})
