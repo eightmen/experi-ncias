@@ -202,4 +202,91 @@ test('uses default mode', () => {
   }
 
   render(
-    <ThemeProvid
+    <ThemeProvider theme={{}}>
+      <ColorModeProvider>
+        <Button />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+
+  expect(mode).toBe(undefined)
+})
+
+test('initializes mode based on localStorage', () => {
+  window.localStorage.setItem(STORAGE_KEY, 'dark')
+  let mode
+  const Button = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return <button children="test" />
+  }
+  render(
+    <ThemeProvider theme={{}}>
+      <ColorModeProvider>
+        <Button />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(mode).toBe('dark')
+})
+
+test('does not initialize mode based on localStorage if useLocalStorage is set to false', () => {
+  window.localStorage.setItem(STORAGE_KEY, 'dark')
+  let mode
+  const Button = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return <button children="test" />
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useLocalStorage: false,
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Button />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(mode).toBe(defaultColorModeName)
+})
+
+test('retains initial context', () => {
+  let context: ThemeUIContextValue | undefined = undefined
+  const Consumer = () => {
+    context = useThemeUI()
+    return null
+  }
+  render(
+    <ThemeProvider theme={{}}>
+      <ColorModeProvider>
+        <Consumer />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(typeof context).toBe('object')
+  expect(typeof context!.theme).toBe('object')
+  expect(typeof context!.setColorMode).toBe('function')
+})
+
+test('initializes mode from prefers-color-scheme media query', () => {
+  window.matchMedia = jest.fn().mockImplementation((query) => {
+    return {
+      matches: query.includes('dark'),
+      media: query,
+    }
+  })
+  let mode
+  const Consumer = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useColorSchemeMediaQuery
