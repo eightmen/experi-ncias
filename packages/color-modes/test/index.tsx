@@ -90,4 +90,116 @@ test('renders with initial color mode name', () => {
 })
 
 test('useColorMode updates color mode state', () => {
-  
+  let mode
+  const Button = () => {
+    const [colorMode, setMode] = useColorMode()
+    mode = colorMode
+    return (
+      <button
+        onClick={() => {
+          setMode('dark')
+        }}
+        children="test"
+      />
+    )
+  }
+  const tree = render(
+    <ThemeProvider theme={{}}>
+      <ColorModeProvider>
+        <Button />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  const button = tree.getByText('test')
+  fireEvent.click(button)
+  expect(mode).toBe('dark')
+})
+
+test('color mode is passed through theme context', () => {
+  let mode
+  const Button = () => {
+    const [colorMode, setMode] = useColorMode()
+    mode = colorMode
+    return (
+      <button
+        sx={{
+          color: 'text',
+        }}
+        onClick={() => {
+          setMode('dark')
+        }}
+        children="test"
+      />
+    )
+  }
+  const tree = render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useCustomProperties: false,
+        },
+        colors: {
+          text: '#000',
+          modes: {
+            dark: {
+              text: 'cyan',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Button />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  const button = tree.getByText('test')
+  act(() => button.click())
+  expect(mode).toBe('dark')
+  expect(tree.getByText('test')).toHaveStyleRule('color', 'cyan')
+})
+
+test('converts color modes to css custom properties', () => {
+  const Box = () => (
+    <div
+      sx={{
+        color: 'text',
+      }}
+      children="test"
+    />
+  )
+  const tree = render(
+    <ThemeProvider
+      theme={{
+        colors: {
+          text: '#000',
+          modes: {
+            dark: {
+              text: '#fff',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Box />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(tree.getByText('test')).toHaveStyleRule(
+    'color',
+    'var(--theme-ui-colors-text)'
+  )
+})
+
+test('uses default mode', () => {
+  let mode
+
+  const Button = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return <button children="test" />
+  }
+
+  render(
+    <ThemeProvid
