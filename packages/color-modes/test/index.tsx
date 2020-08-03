@@ -289,4 +289,100 @@ test('initializes mode from prefers-color-scheme media query', () => {
     <ThemeProvider
       theme={{
         config: {
-          useColorSchemeMediaQuery
+          useColorSchemeMediaQuery: 'initial',
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Consumer />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(mode).toBe('dark')
+})
+
+test('initializes light mode from prefers-color-scheme media query', () => {
+  window.matchMedia = jest.fn().mockImplementation((query) => {
+    return {
+      matches: query.includes('light'),
+      media: query,
+    }
+  })
+  let mode
+  const Consumer = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useColorSchemeMediaQuery: true,
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Consumer />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(mode).toBe('light')
+})
+
+test('does not initialize mode from prefers-color-scheme media query', () => {
+  window.matchMedia = jest.fn().mockImplementation((query) => {
+    return {
+      matches: false,
+      media: query,
+    }
+  })
+  let mode
+  const Consumer = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useColorSchemeMediaQuery: true,
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Consumer />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(mode).toBe(defaultColorModeName)
+})
+
+test('does not initialize mode from prefers-color-scheme media query when useColorSchemeMediaQuery is set to `false`', () => {
+  window.matchMedia = jest.fn().mockImplementation((query) => {
+    return {
+      matches: true,
+      media: query,
+    }
+  })
+  let mode
+  const Consumer = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useColorSchemeMediaQuery: false,
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Consumer />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+ 
