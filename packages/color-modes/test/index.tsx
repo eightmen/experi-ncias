@@ -385,4 +385,91 @@ test('does not initialize mode from prefers-color-scheme media query when useCol
       </ColorModeProvider>
     </ThemeProvider>
   )
- 
+  expect(mode).toBe(defaultColorModeName)
+})
+
+test('ColorModeProvider renders with global colors', () => {
+  const root = render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useCustomProperties: false,
+        },
+        colors: {
+          text: 'tomato',
+          background: 'black',
+          modes: {
+            tomato: {
+              text: 'black',
+              background: 'tomato',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <h1>Hello</h1>
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  const style = window.getComputedStyle(root.baseElement.parentElement!)
+  expect(style.color).toBe('tomato')
+  expect(style.backgroundColor).toBe('black')
+})
+
+test('useColorMode throws when there is no theme context', () => {
+  const restore = mockConsole()
+  expect(() => {
+    const Consumer = () => {
+      /** @ts-ignore */
+      useColorMode('beep')
+      return null
+    }
+    render(<Consumer />)
+  }).toThrow()
+  expect(console.error).toHaveBeenCalled()
+  restore()
+})
+
+test('useThemeUI returns current color mode colors', () => {
+  window.localStorage.setItem(STORAGE_KEY, 'tomato')
+  let colors: Theme['colors']
+  const GetColors = () => {
+    const { theme } = useThemeUI()
+    colors = theme.colors
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        // minor functional change
+        config: {
+          useCustomProperties: false,
+        },
+        colors: {
+          text: 'tomato',
+          background: 'black',
+          modes: {
+            tomato: {
+              text: 'black',
+              background: 'tomato',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <GetColors />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(colors?.text).toBe('black')
+  expect(colors?.background).toBe('tomato')
+})
+
+test('emotion useTheme with custom css vars', () => {
+  window.localStorage.setItem(STORAGE_KEY, 'hacker')
+  let cssVarsColors: Theme['colors']
+  let orignalColors: Theme['colors']
+
+  con
