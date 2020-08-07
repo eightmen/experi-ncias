@@ -472,4 +472,98 @@ test('emotion useTheme with custom css vars', () => {
   let cssVarsColors: Theme['colors']
   let orignalColors: Theme['colors']
 
-  con
+  const GetColors = () => {
+    const theme = useTheme() as Theme
+    cssVarsColors = theme.colors
+    orignalColors = theme.rawColors
+    return null
+  }
+
+  render(
+    <ThemeProvider
+      theme={{
+        // minor functional change
+        useCustomProperties: true,
+        colors: {
+          text: 'tomato',
+          background: 'black',
+          modes: {
+            hacker: {
+              text: 'limegreen',
+              background: '#111',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <GetColors />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+
+  expect(cssVarsColors?.text).toBe('var(--theme-ui-colors-text)')
+  expect(cssVarsColors?.background).toBe('var(--theme-ui-colors-background)')
+
+  expect(cssVarsColors).toStrictEqual({
+    text: 'var(--theme-ui-colors-text)',
+    background: 'var(--theme-ui-colors-background)',
+  })
+
+  expect(orignalColors?.text).toBe('limegreen')
+  expect(orignalColors?.background).toBe('#111')
+})
+
+test('warns when initialColorModeName matches a key in theme.colors.modes', () => {
+  const restore = mockConsole()
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          initialColorModeName: 'dark',
+        },
+        colors: {
+          text: '#000',
+          background: '#fff',
+          modes: {
+            dark: {
+              text: '#fff',
+              background: '#000',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider />
+    </ThemeProvider>
+  )
+  expect(console.warn).toBeCalled()
+  restore()
+})
+
+test('warns when a key in theme.colors.modes has leading/trailing whitespace', () => {
+  const restore = mockConsole()
+  render(
+    <ThemeProvider
+      theme={{
+        colors: {
+          text: '#000',
+          background: '#fff',
+          modes: {
+            dark: {
+              ' text ': '#fff',
+              background: '#000',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider />
+    </ThemeProvider>
+  )
+  expect(console.warn).toBeCalled()
+  restore()
+})
+
+test('does not warn in production', () => {
+  const restore =
