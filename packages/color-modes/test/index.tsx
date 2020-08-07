@@ -566,4 +566,106 @@ test('warns when a key in theme.colors.modes has leading/trailing whitespace', (
 })
 
 test('does not warn in production', () => {
-  const restore =
+  const restore = mockConsole()
+  const init = process.env.NODE_ENV
+  process.env.NODE_ENV = 'production'
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          initialColorModeName: 'dark',
+        },
+        colors: {
+          text: '#000',
+          background: '#fff',
+          modes: {
+            dark: {
+              text: '#fff',
+              ' background': '#000',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider />
+    </ThemeProvider>
+  )
+  expect(console.warn).not.toBeCalled()
+  restore()
+  process.env.NODE_ENV = init
+})
+
+test('dot notation works with color modes', () => {
+  const Button = () => {
+    const [, setMode] = useColorMode()
+    return (
+      <button
+        sx={{
+          color: 'header.title',
+        }}
+        onClick={() => {
+          setMode('dark')
+        }}
+        children="test"
+      />
+    )
+  }
+  const root = render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useCustomProperties: false,
+        },
+        colors: {
+          header: {
+            title: 'blue',
+          },
+          modes: {
+            dark: {
+              header: {
+                title: 'tomato',
+              },
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Button />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  const button = root.getByText('test')
+  act(() => button.click())
+  expect(button).toHaveStyleRule('color', 'tomato')
+})
+
+test('dot notation works with color modes and custom properties', () => {
+  const Button = () => {
+    const [, setMode] = useColorMode()
+    return (
+      <button
+        sx={{
+          color: 'header.title',
+        }}
+        onClick={() => {
+          setMode('dark')
+        }}
+        children="test"
+      />
+    )
+  }
+  const root = render(
+    <ThemeProvider
+      theme={{
+        colors: {
+          header: {
+            title: 'blue',
+          },
+          modes: {
+            dark: {
+              header: {
+                title: 'tomato',
+              },
+            },
+    
