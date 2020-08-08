@@ -668,4 +668,94 @@ test('dot notation works with color modes and custom properties', () => {
                 title: 'tomato',
               },
             },
-    
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Button />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  const button = root.getByText('test')
+  act(() => button.click())
+  expect(button).toHaveStyleRule('color', 'var(--theme-ui-colors-header-title)')
+})
+
+test('raw color values are passed to theme-ui context when custom properties are enabled', () => {
+  let color
+  const Grabber = () => {
+    const context = useThemeUI()
+    color = context.theme?.rawColors?.primary
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        config: {
+          useColorSchemeMediaQuery: false,
+        },
+        colors: {
+          primary: 'tomato',
+          modes: {
+            dark: {
+              primary: 'black',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Grabber />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(color).toBe('tomato')
+})
+
+test('raw color modes are passed to theme-ui context and include the default colors', () => {
+  let colors
+  const Grabber = () => {
+    const context = useThemeUI()
+    colors = context.theme?.rawColors
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        useColorSchemeMediaQuery: false,
+        colors: {
+          primary: 'tomato',
+          modes: {
+            dark: {
+              primary: 'black',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Grabber />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(colors).toStrictEqual({
+    primary: 'tomato',
+    modes: {
+      __default: { primary: 'tomato' },
+      dark: { primary: 'black' },
+    },
+  })
+})
+
+test('raw color modes are passed to theme-ui context and include the default colors under the initialColorModeName', async () => {
+  let rawColors: Theme['rawColors']
+  const Grabber = () => {
+    const context = useThemeUI()
+    rawColors = context.theme?.rawColors
+    return null
+  }
+
+  const SetDarkColorMode = () => {
+    const [, setColorMode] = useColorMode()
+    return <button onClick={() => setColorMode('dark')}>set dark</butt
