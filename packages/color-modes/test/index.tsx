@@ -758,4 +758,108 @@ test('raw color modes are passed to theme-ui context and include the default col
 
   const SetDarkColorMode = () => {
     const [, setColorMode] = useColorMode()
-    return <button onClick={() => setColorMode('dark')}>set dark</butt
+    return <button onClick={() => setColorMode('dark')}>set dark</button>
+  }
+
+  const { findByRole } = render(
+    <ThemeProvider
+      theme={{
+        useColorSchemeMediaQuery: false,
+        initialColorModeName: 'light',
+        colors: {
+          primary: 'tomato',
+          modes: {
+            dark: {
+              primary: 'black',
+            },
+          },
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Grabber />
+        <SetDarkColorMode />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+
+  expect(rawColors).toStrictEqual({
+    primary: 'tomato',
+    modes: {
+      light: { primary: 'tomato' },
+      dark: { primary: 'black' },
+    },
+  })
+
+  const button = await findByRole('button')
+  fireEvent.click(button)
+
+  expect(rawColors).toStrictEqual({
+    primary: 'black',
+    modes: {
+      light: { primary: 'tomato' },
+      dark: { primary: 'black' },
+    },
+  })
+})
+
+test('raw color modes are are not passed to theme-ui context if modes are not defined', () => {
+  let colors
+  const Grabber = () => {
+    const context = useThemeUI()
+    colors = context.theme?.rawColors
+    return null
+  }
+  render(
+    <ThemeProvider
+      theme={{
+        useColorSchemeMediaQuery: false,
+        initialColorModeName: 'light',
+        colors: {
+          primary: 'tomato',
+        },
+      }}
+    >
+      <ColorModeProvider>
+        <Grabber />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+  expect(colors).toStrictEqual({
+    primary: 'tomato',
+  })
+})
+
+test('InitializeColorMode renders', () => {
+  const json = renderJSON(<InitializeColorMode />)
+  expect(json).toMatchSnapshot()
+})
+
+test('colorMode accepts function from previous state to new one', () => {
+  type MyColorMode = 'serious' | 'cute' | 'hackerman'
+
+  const theme: Theme = {
+    config: {
+      initialColorModeName: 'serious',
+    },
+    colors: {
+      primary: 'black',
+      modes: {
+        cute: {
+          primary: 'pink',
+        },
+        hackerman: {
+          primary: 'chartreuse',
+        },
+      },
+    },
+  }
+
+  let primaryColor
+  const Grabber = () => {
+    const context = useThemeUI()
+    primaryColor = context.theme?.rawColors?.primary
+    return null
+  }
+
+  const colorModes: MyCol
