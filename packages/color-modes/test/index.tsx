@@ -862,4 +862,97 @@ test('colorMode accepts function from previous state to new one', () => {
     return null
   }
 
-  const colorModes: MyCol
+  const colorModes: MyColorMode[] = ['serious', 'cute', 'hackerman']
+  const NextColorModeButton = () => {
+    // user can specify their color mode name type
+    const [, setColorMode] = useColorMode<MyColorMode>()
+
+    return (
+      <button
+        onClick={() => {
+          setColorMode((previous) => {
+            return colorModes[
+              (colorModes.indexOf(previous) + 1) % colorModes.length
+            ]
+          })
+        }}
+      >
+        next color mode
+      </button>
+    )
+  }
+
+  const root = render(
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+        <Grabber />
+        <NextColorModeButton />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+
+  expect(primaryColor).toBe('black')
+
+  act(() => {
+    root.getByText('next color mode').click()
+  })
+
+  expect(primaryColor).toBe('pink')
+
+  act(() => {
+    root.getByText('next color mode').click()
+  })
+
+  expect(primaryColor).toBe('chartreuse')
+})
+
+test('warns when localStorage is disabled', () => {
+  const restoreConsole = mockConsole()
+
+  const localStorage = window.localStorage
+  Object.defineProperty(window, 'localStorage', {
+    get: jest.fn(() => {
+      throw new Error('SecurityError: The operation is insecure.')
+    }),
+  })
+
+  let mode = ''
+  const Consumer = () => {
+    const [colorMode] = useColorMode()
+    mode = colorMode
+    return null
+  }
+
+  render(
+    <ThemeProvider theme={{}}>
+      <ColorModeProvider>
+        <Consumer />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+
+  expect(mode).toBe(undefined)
+
+  Object.defineProperty(window, 'localStorage', { value: localStorage })
+
+  expect((console.warn as jest.Mock).mock.calls[0]).toMatchInlineSnapshot(`
+    [
+      "localStorage is disabled and color mode might not work as expected.",
+      "Please check your Site Settings.",
+      [Error: SecurityError: The operation is insecure.],
+    ]
+  `)
+
+  restoreConsole()
+})
+
+test('rawColors are properly inherited in nested providers #1', () => {
+  let finalTheme: Theme = {}
+  const Grabber = () => {
+    const context = useThemeUI()
+    finalTheme = context.theme
+    return null
+  }
+
+  const outerTheme: Theme = {
+    col
