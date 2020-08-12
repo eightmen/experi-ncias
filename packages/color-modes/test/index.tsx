@@ -1050,4 +1050,98 @@ test('rawColors are properly inherited in nested providers #2', () => {
     modes: {
       __default: {
         text: 'black',
-        prim
+        primary: 'blue',
+        background: 'white',
+      },
+      dark: {
+        text: 'white',
+        primary: 'red',
+        background: 'black',
+      },
+    },
+  })
+
+  expect(finalTheme.colors).toStrictEqual({
+    text: 'var(--theme-ui-colors-text)',
+    background: 'var(--theme-ui-colors-background)',
+    primary: 'var(--theme-ui-colors-primary)',
+  })
+})
+
+test('rawColors with no color modes are merged in nested providers', () => {
+  let finalTheme: Theme = {}
+  const Grabber = () => {
+    const context = useThemeUI()
+    finalTheme = context.theme
+    return null
+  }
+
+  const outerTheme: Theme = {
+    colors: {
+      text: 'black',
+    },
+  }
+
+  const nestedTheme: Theme = {
+    rawColors: {
+      background: 'white',
+    },
+  }
+
+  const nestedTheme2: Theme = {
+    rawColors: {
+      primary: 'blue',
+    },
+  }
+
+  render(
+    <ThemeProvider theme={outerTheme}>
+      <ColorModeProvider>
+        <ThemeProvider theme={nestedTheme}>
+          <ColorModeProvider>
+            <ColorModeProvider>
+              <ThemeProvider theme={nestedTheme2}>
+                <ColorModeProvider>
+                  <Grabber />
+                </ColorModeProvider>
+              </ThemeProvider>
+            </ColorModeProvider>
+          </ColorModeProvider>
+        </ThemeProvider>
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+
+  expect(finalTheme.rawColors).toStrictEqual({
+    text: 'black',
+    primary: 'blue',
+    background: 'white',
+  })
+
+  expect(finalTheme.colors).toStrictEqual({
+    text: 'var(--theme-ui-colors-text)',
+    background: 'var(--theme-ui-colors-background)',
+    primary: 'var(--theme-ui-colors-primary)',
+  })
+})
+
+function mockMatchMedia(pattern: string) {
+  const listeners: Function[] = []
+
+  const callListeners = (init: MediaQueryListEventInit) => {
+    for (const listener of listeners) {
+      listener(new Event('change', init))
+    }
+  }
+
+  const setPattern = (media: string) => {
+    const matches = pattern === media
+    pattern = media
+    callListeners({ media, matches })
+  }
+
+  const impl = (query: string) => {
+    const matches = query.includes(pattern)
+
+    return {
+      m
