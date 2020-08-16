@@ -1144,4 +1144,63 @@ function mockMatchMedia(pattern: string) {
     const matches = query.includes(pattern)
 
     return {
-      m
+      matches,
+      media: query,
+      addEventListener(
+        _type: 'change',
+        listener: (this: MediaQueryList, ev: MediaQueryListEvent) => void,
+        _options?: boolean | AddEventListenerOptions
+      ) {
+        listeners.push(listener)
+      },
+      removeEventListener(
+        _type: 'change',
+        listener: (ev: MediaQueryListEvent) => void
+      ) {
+        listeners.splice(listeners.indexOf(listener), 1)
+      },
+    } as MediaQueryList
+  }
+
+  return { callListeners, setPattern, impl }
+}
+
+test('when useColorSchemeMediaQuery is set to "system", color mode aligns to user preference', () => {
+  const matchMedia = mockMatchMedia('(prefers-color-scheme: dark)')
+  window.matchMedia = jest.fn().mockImplementation(matchMedia.impl)
+
+  const theme: Theme = {
+    config: {
+      useColorSchemeMediaQuery: 'system',
+    },
+    colors: {
+      background: 'white',
+      modes: {
+        dark: { background: 'black' },
+      },
+    },
+  }
+
+  let colorMode: string | undefined
+  const GetColorMode = () => {
+    const context = useThemeUI()
+    colorMode = context.colorMode
+    return null
+  }
+
+  render(
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+        <GetColorMode />
+      </ColorModeProvider>
+    </ThemeProvider>
+  )
+
+  expect(colorMode).toBe('dark')
+
+  act(() => {
+    matchMedia.setPattern('(prefers-color-scheme: light)')
+  })
+
+  expect(colorMode).toBe('light')
+})
