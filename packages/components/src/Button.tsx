@@ -36,4 +36,9 @@ export const Button: ForwardRef<HTMLButtonElement, ButtonProps> =
             color: 'white',
             bg: 'primary',
             border: 0,
-           
+            borderRadius: 4,
+          },
+        })}
+      />
+    )
+  })
