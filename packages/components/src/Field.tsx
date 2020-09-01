@@ -50,4 +50,12 @@ export const Field = React.forwardRef(function Field<
     name,
     id: fieldIdentifier,
     ...omitMargin(rest),
-  } as React.ComponentPro
+  } as React.ComponentPropsWithRef<T>
+
+  return (
+    <Box {...getMargin(rest)}>
+      <Label htmlFor={fieldIdentifier}>{label}</Label>
+      <Control {...controlProps} />
+    </Box>
+  )
+}) as Field // Field is generic bcs of `as` prop, so we can't just use types from forwardRef
