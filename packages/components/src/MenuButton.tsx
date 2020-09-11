@@ -28,4 +28,21 @@ export const MenuIcon = ({ size = 24 }) => {
 export type MenuButtonProps = IconButtonProps
 /**
  * MenuButton variants can be defined in the `theme.buttons` object.
- * By def
+ * By default the MenuButton component will use styles defined in `theme.buttons.menu`.
+ *
+ * @see https://theme-ui.com/components/menu-button
+ */
+export const MenuButton: ForwardRef<HTMLButtonElement, MenuButtonProps> =
+  React.forwardRef(function MenuButton(props, ref) {
+    return (
+      <IconButton
+        ref={ref}
+        title="Menu"
+        aria-label="Toggle Menu"
+        variant="menu"
+        {...props}
+      >
+        <MenuIcon />
+      </IconButton>
+    )
+  })
