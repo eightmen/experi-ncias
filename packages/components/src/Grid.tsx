@@ -52,4 +52,25 @@ export interface GridProps extends BoxProps {
  */
 export const Grid: ForwardRef<HTMLDivElement, GridProps> = React.forwardRef(
   function Grid({ width, columns, gap = 3, repeat = 'fit', ...props }, ref) {
-    const gridTemplateColumns =
+    const gridTemplateColumns = !!width
+      ? widthToColumns(width, repeat)
+      : countToColumns(columns)
+
+    const __css: ThemeUICSSObject = {
+      display: 'grid',
+      gridGap: gap,
+      gridTemplateColumns,
+    }
+
+    return (
+      <Box
+        ref={ref}
+        {...props}
+        {...__internalProps({
+          __themeKey: 'grids',
+          __css,
+        })}
+      />
+    )
+  }
+)
