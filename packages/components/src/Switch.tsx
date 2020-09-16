@@ -63,4 +63,29 @@ export const Switch: ForwardRef<HTMLInputElement, SwitchProps> =
         <Box
           ref={ref}
           as="input"
-          type
+          type="checkbox"
+          aria-label={label}
+          {...rest}
+          sx={{
+            position: 'absolute',
+            opacity: 0,
+            zIndex: -1,
+            width: 1,
+            height: 1,
+            overflow: 'hidden',
+          }}
+          {...__internalProps({ __themeKey: 'forms' })}
+        />
+        <Box
+          css={{ padding: GUTTER }}
+          variant={variant}
+          className={className}
+          sx={sx}
+          {...__internalProps({ __themeKey: 'forms', __css })}
+        >
+          <Box />
+        </Box>
+        <span>{label}</span>
+      </Label>
+    )
+  })
