@@ -43,4 +43,18 @@ export interface SliderProps
  *
  * Slider variants can be defined in the `theme.forms` object.
  * The Slider component uses `theme.forms.slider` as its default variant style.
- * @see https://theme-ui.com/
+ * @see https://theme-ui.com/components/slider/
+ */
+export const Slider: ForwardRef<HTMLInputElement, SliderProps> =
+  React.forwardRef(function Slider(props, ref) {
+    return (
+      <Box
+        ref={ref}
+        as="input"
+        type="range"
+        variant="slider"
+        {...props}
+        {...__internalProps({ __themeKey: 'forms', __css: sliderStyle })}
+      />
+    )
+  })
