@@ -717,3 +717,119 @@ exports[`IconButton renders 1`] = `
 
 <button
   className="emotion-0"
+/>
+`;
+
+exports[`Image renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 99999px;
+}
+
+<img
+  className="emotion-0"
+/>
+`;
+
+exports[`Input renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+.emotion-0:autofill,
+.emotion-0:autofill:hover,
+.emotion-0:autofill:focus {
+  box-shadow: inset 0 0 0 1000px var(--theme-ui-input-autofill-bg);
+  font-size: inherit;
+}
+
+.emotion-0:autofill:first-line,
+.emotion-0:autofill:hover:first-line,
+.emotion-0:autofill:focus:first-line {
+  font-size: 1rem;
+}
+
+.emotion-0:-webkit-autofill,
+.emotion-0:-webkit-autofill:hover,
+.emotion-0:-webkit-autofill:focus {
+  box-shadow: inset 0 0 0 1000px var(--theme-ui-input-autofill-bg);
+  font-size: inherit;
+}
+
+.emotion-0:-webkit-autofill:first-line,
+.emotion-0:-webkit-autofill:hover:first-line,
+.emotion-0:-webkit-autofill:focus:first-line {
+  font-size: 1rem;
+}
+
+<input
+  className="emotion-0"
+/>
+`;
+
+exports[`Label renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<label
+  className="emotion-0"
+/>
+`;
+
+exports[`Link renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
+<a
+  className="emotion-0"
+/>
+`;
+
+exports[`MenuButton renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inli
