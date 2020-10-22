@@ -832,4 +832,127 @@ exports[`MenuButton renders 1`] = `
   appearance: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
-  display: -ms-inli
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+<button
+  aria-label="Toggle Menu"
+  className="emotion-0"
+  title="Menu"
+>
+  <svg
+    className="emotion-1"
+    fill="currentColor"
+    height={24}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Message renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: 16px;
+  padding-left: 12px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: primary;
+  border-radius: 4px;
+  background-color: highlight;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`NavLink renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0.active {
+  color: primary;
+}
+
+<a
+  className="emotion-0"
+/>
+`;
+
+exports[`Paragraph renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-family: body;
+  font-weight: body;
+  line-height: body;
+}
+
+<p
+  className="emotion-0"
+/>
+`;
+
+exports[`Progress renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  color: primary;
+  backgro
