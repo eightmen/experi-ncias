@@ -955,4 +955,131 @@ exports[`Progress renders 1`] = `
   -ms-appearance: none;
   appearance: none;
   color: primary;
-  backgro
+  background-color: gray;
+  border-radius: 9999px;
+  border: none;
+}
+
+.emotion-0::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.emotion-0::-webkit-progress-value {
+  background-color: currentcolor;
+}
+
+.emotion-0::-moz-progress-bar {
+  background-color: currentcolor;
+}
+
+<progress
+  className="emotion-0"
+/>
+`;
+
+exports[`Radio renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: none;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 9999px;
+  color: gray;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+input:checked~.emotion-2 {
+  display: block;
+}
+
+input:checked~.emotion-2 {
+  color: primary;
+}
+
+input:focus~.emotion-2 {
+  background-color: highlight;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-right: 8px;
+  border-radius: 9999px;
+  color: gray;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+input:checked~.emotion-3 {
+  display: none;
+}
+
+input:checked~.emotion-3 {
+  color: primary;
+}
+
+input:focus~.emotion-3 {
+  background-color: highlight;
+}
+
+<div
+  className="emotion-0"
+>
+  <input
+    className="emotion-1"
+    type="radio"
+  />
+  <svg
+    aria-hidden="true"
+    className="emotion-2"
+    fill="currentcolor"
+    height={24}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="emotion-3"
+    fill="currentcolor"
+    height={24}
+    viewBox="0 0 24 24"
+    width={24}
+    xmlns="http://www.w3
