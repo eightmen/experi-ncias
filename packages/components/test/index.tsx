@@ -198,4 +198,99 @@ describe('Select', () => {
   test('renders', () => {
     const json = renderJSON(
       <ThemeProvider theme={theme}>
-    
+        <Select />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+
+  test('renders with style props', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Select mb={3} value="hello" />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+
+  test('renders with custom icon', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Select
+          arrow={
+            <svg>
+              <path d="M7.41 7.84l4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
+            </svg>
+          }
+        />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+
+  test('renders with background-color', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={{ colors: { background: 'blueviolet' } }}>
+        <Select />
+      </ThemeProvider>
+    )!
+
+    expect(json.children?.[0]).toHaveStyleRule(
+      'background-color',
+      'var(--theme-ui-colors-background)'
+    )
+  })
+})
+
+describe('Textarea', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Textarea />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+})
+
+describe('Radio', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Radio />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+})
+
+describe('Checkbox', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Checkbox />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+})
+
+describe('Slider', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Slider />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+})
+
+describe('Field', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Field />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot
