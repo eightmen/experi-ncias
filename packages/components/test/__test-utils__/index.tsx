@@ -49,4 +49,9 @@ export const theme = makeTheme({
   },
   links: {
     nav: {
-      textDecoration: '
+      textDecoration: 'none',
+      color: 'inherit',
+      fontWeight: 'normal',
+    },
+  },
+})
