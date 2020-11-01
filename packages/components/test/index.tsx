@@ -111,4 +111,91 @@ describe('Paragraph', () => {
     const variant = 'block'
     const json = renderJSON(
       <ThemeProvider theme={theme}>
-        <Paragraph varian
+        <Paragraph variant={variant}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Paragraph>
+      </ThemeProvider>
+    )
+    const style = theme.text[variant]
+    expect(json).toHaveStyleRule('text-align', style.textAlign)
+    expect(json).toHaveStyleRule('text-align-last', style.textAlignLast)
+    expect(json).toHaveStyleRule('text-justify', style.textJustify)
+  })
+
+  test('renders with sx prop', () => {
+    const margin = '8px'
+    const json = renderJSON(
+      <Paragraph
+        sx={{
+          margin,
+        }}
+      />
+    )
+    expect(json).toHaveStyleRule('margin', margin)
+  })
+
+  test('renders with space prop overrides', () => {
+    const margin = '8px'
+    const json = renderJSON(<Paragraph m={margin} />)
+    expect(json).toHaveStyleRule('margin', margin)
+  })
+
+  test('renders with theme override', () => {
+    const margin = '8px'
+    const json = renderJSON(
+      <ThemeProvider theme={{ text: { paragraph: { margin } } }}>
+        <Paragraph />
+      </ThemeProvider>
+    )
+    expect(json).toHaveStyleRule('margin', margin)
+  })
+
+  test('renders with theme variant', () => {
+    const margin = '8px'
+    const json = renderJSON(
+      <ThemeProvider theme={{ text: { override: { margin } } }}>
+        <Paragraph variant="override" />
+      </ThemeProvider>
+    )
+    expect(json).toHaveStyleRule('margin', margin)
+  })
+})
+
+describe('Text', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Text />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+})
+
+describe('Label', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Label />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+})
+
+describe('Input', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Input />
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+})
+
+describe('Select', () => {
+  test('renders', () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+    
