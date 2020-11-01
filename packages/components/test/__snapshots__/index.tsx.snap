@@ -1444,4 +1444,79 @@ input:disabled~.emotion-2 {
   -moz-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
-  
+  -webkit-transition: -webkit-transform 240ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  transition: transform 240ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
+
+input:checked~.emotion-2 {
+  background-color: primary;
+}
+
+input:checked~.emotion-2>div {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+<label
+  className="emotion-0"
+>
+  <input
+    className="emotion-1"
+    type="checkbox"
+  />
+  <div
+    className="emotion-2"
+  >
+    <div
+      className="emotion-3"
+    />
+  </div>
+  <span />
+</label>
+`;
+
+exports[`Text renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 20px;
+}
+
+<span
+  className="emotion-0"
+/>
+`;
+
+exports[`Textarea renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+<textarea
+  className="emotion-0"
+/>
+`;
