@@ -40,4 +40,69 @@ Thank you, William Pei ([@draekien](https://github.com/draekien)), for all your 
 
 #### 🐛 Bug Fix
 
-- Merge remote-tracking branch 'upstream/develop' into fix/color-scheme-media-query-api-update [#981
+- Merge remote-tracking branch 'upstream/develop' into fix/color-scheme-media-query-api-update [#981](https://github.com/system-ui/theme-ui/pull/981) ([@draekien](https://github.com/draekien))
+
+#### Authors: 6
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Julian Benegas ([@julianbenegas](https://github.com/julianbenegas))
+- Lachlan Campbell ([@lachlanjc](https://github.com/lachlanjc))
+- Lennart ([@LekoArts](https://github.com/LekoArts))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+- William Pei ([@draekien](https://github.com/draekien))
+
+---
+
+# v0.11.0 (Wed Aug 25 2021)
+
+#### 🚀 Enhancement
+
+- fix(color-modes): combine colors in nested providers [#1838](https://github.com/system-ui/theme-ui/pull/1838) ([@hasparus](https://github.com/hasparus))
+
+#### 🐛 Bug Fix
+
+- add types for css prop back [#1866](https://github.com/system-ui/theme-ui/pull/1866) ([@hasparus](https://github.com/hasparus))
+- fix(core): add `css` prop back to JSX types ([@hasparus](https://github.com/hasparus))
+- 0.10 chores [#1842](https://github.com/system-ui/theme-ui/pull/1842) ([@hasparus](https://github.com/hasparus))
+- fix(color-modes): properly combine colors from nested providers ([@hasparus](https://github.com/hasparus))
+
+#### 🏠 Internal
+
+- docs(css): add usage examples for core packages [#1877](https://github.com/system-ui/theme-ui/pull/1877) ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 1
+
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.10.0 (Sat Jun 19 2021)
+
+#### 🏠 Internal
+
+- Docs: update JSX pragma guide with automatic runtime section [#1718](https://github.com/system-ui/theme-ui/pull/1718) ([@flo-sch](https://github.com/flo-sch) [@hasparus](https://github.com/hasparus))
+
+#### Authors: 2
+
+- Florent SCHILDKNECHT ([@flo-sch](https://github.com/flo-sch))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.8.3 (Wed May 05 2021)
+
+#### ⚠️ Pushed to `stable`
+
+- Merge branch 'stable' into develop ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 1
+
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.8.1 (Wed May 05 2021)
+
+#### 🐛 Bug Fix
+
+- Wrap top level Them
