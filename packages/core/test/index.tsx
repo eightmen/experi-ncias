@@ -216,4 +216,110 @@ describe('jsx', () => {
         },
         jsx('div', {
           sx: {
-            color: 'ba
+            color: 'base.blue.0',
+            backgroundColor: 'base.primary',
+          },
+        })
+      )
+    )
+    expect(json).toHaveStyleRule('background-color', 'cyan')
+    expect(json).toHaveStyleRule('color', '#07c')
+  })
+
+  test('does not add css prop when not provided', () => {
+    jest.spyOn(global.console, 'warn')
+    const json = renderJSON(jsx(React.Fragment, null, 'hi'))
+    expect(json?.props).toEqual(undefined)
+    expect(console.warn).not.toBeCalled()
+  })
+})
+
+describe('merge', () => {
+  test('deeply merges objects', () => {
+    const result = merge(
+      {
+        // @ts-ignore
+        beep: 'boop',
+        hello: {
+          hi: 'howdy',
+        },
+      },
+      {
+        bleep: 'bloop',
+        hello: {
+          ohaiyo: 'osu',
+        },
+      }
+    )
+    expect(result).toEqual({
+      beep: 'boop',
+      bleep: 'bloop',
+      hello: {
+        hi: 'howdy',
+        ohaiyo: 'osu',
+      },
+    })
+  })
+
+  test('merges multiple objects', () => {
+    const result = merge.all(
+      {
+        beep: 'boop',
+      },
+      {
+        bleep: 'bloop',
+      },
+      {
+        plip: 'plop',
+      }
+    )
+    expect(result).toEqual({
+      beep: 'boop',
+      bleep: 'bloop',
+      plip: 'plop',
+    })
+  })
+
+  test('does not attempt to merge React components', () => {
+    const h1 = React.forwardRef<HTMLHeadingElement, {}>((props, ref) => (
+      // eslint-disable-next-line jsx-a11y/heading-has-content
+      <h1 ref={ref} {...props} />
+    ))
+    const result = (merge as any)(
+      {
+        // eslint-disable-next-line jsx-a11y/heading-has-content
+        h1: (props: {}) => <h1 {...props} />,
+      },
+      {
+        h1,
+      }
+    )
+    expect(result).toEqual({ h1 })
+  })
+
+  test('primitive types override arrays', () => {
+    const result = merge(
+      {
+        fontSizes: [3, 4, 5],
+      },
+      {
+        fontSizes: 4 as any,
+      }
+    )
+    expect(result).toEqual({
+      fontSizes: 4,
+    })
+  })
+
+  test('arrays override arrays', () => {
+    const result = merge(
+      {
+        fontSizes: [3, 4, 5],
+      },
+      {
+        fontSizes: [6, 7],
+      }
+    )
+    expect(result).toEqual({
+      fontSizes: [6, 7],
+    }
