@@ -24,4 +24,98 @@ describe('ThemeProvider', () => {
     const json = renderJSON(
       <ThemeProvider theme={{}}>
         <h1>Hello</h1>
-      </Them
+      </ThemeProvider>
+    )
+    expect(json).toMatchSnapshot()
+  })
+
+  test('warns when multiple versions of emotion are installed', () => {
+    const restore = mockConsole()
+    const _ = renderJSON(
+      <__ThemeUIContext.Provider
+        value={{
+          __EMOTION_VERSION__: '9.0.0',
+          theme: {},
+        }}
+      >
+        <ThemeProvider theme={{}}>Conflicting versions</ThemeProvider>
+      </__ThemeUIContext.Provider>
+    )
+    expect(console.warn).toBeCalled()
+    restore()
+  })
+
+  test('functional themes receive outer theme', () => {
+    const outer = {
+      colors: {
+        text: 'tomato',
+      },
+    }
+    const theme = jest.fn(() => ({}))
+    const json = renderJSON(
+      jsx(
+        ThemeProvider,
+        { theme: outer },
+        jsx(
+          ThemeProvider,
+          { theme },
+          jsx('div', {
+            sx: {
+              color: 'text',
+            },
+          })
+        )
+      )
+    )
+    expect(theme).toHaveBeenCalledWith(outer)
+    expect(json).toHaveStyleRule('color', 'text')
+  })
+
+  test('functional themes can be used at the top level', () => {
+    const theme = jest.fn(() => ({
+      config: {
+        useCustomProperties: false,
+      },
+      colors: {
+        primary: 'tomato',
+      },
+    }))
+    let json
+    expect(() => {
+      json = renderJSON(
+        jsx(
+          ThemeProvider,
+          { theme },
+          jsx(
+            'div',
+            {
+              sx: {
+                color: 'primary',
+              },
+            },
+            'hi'
+          )
+        )
+      )
+    }).not.toThrow()
+    expect(json).toHaveStyleRule('color', 'tomato')
+  })
+
+  test('variants support functional values', () => {
+    const theme: Theme = {
+      colors: {
+        primary: 'tomato',
+      },
+      cards: {
+        default: {
+          border: (t) => `1px solid ${t.colors!.primary}`,
+        },
+      },
+    }
+    const json = renderJSON(
+      jsx(
+        ThemeProvider,
+        { theme },
+        jsx('div', {
+          sx: {
+            variant: 'cards.d
