@@ -121,3 +121,49 @@ function mergeAll<T = Theme>(...args: Partial<T>[]) {
 }
 
 merge.all = mergeAll
+
+export interface __ThemeUIInternalBaseThemeProviderProps {
+  context: ThemeUIContextValue
+  children: React.ReactNode
+}
+/**
+ * @internal
+ */
+export const __ThemeUIInternalBaseThemeProvider = ({
+  context,
+  children,
+}: __ThemeUIInternalBaseThemeProviderProps) =>
+  jsx(
+    EmotionContext.Provider,
+    { value: context.theme },
+    jsx(__ThemeUIContext.Provider, {
+      value: context,
+      children,
+    })
+  )
+
+export interface ThemeProviderProps {
+  theme: Theme | ((outerTheme: Theme) => Theme)
+  children?: React.ReactNode
+}
+
+export function ThemeProvider({ theme, children }: ThemeProviderProps) {
+  const outer = useThemeUI()
+
+  if (process.env.NODE_ENV !== 'production') {
+    if (outer.__EMOTION_VERSION__ !== __EMOTION_VERSION__) {
+      console.warn(
+        'Multiple versions of Emotion detected,',
+        'and theming might not work as expected.',
+        'Please ensure there is only one copy of @emotion/react installed in your application.'
+      )
+    }
+  }
+
+  const context =
+    typeof theme === 'function'
+      ? { ...outer, theme: theme(outer.theme) }
+      : merge.all({}, outer, { theme })
+
+  return jsx(__ThemeUIInternalBaseThemeProvider, { context, children })
+}
