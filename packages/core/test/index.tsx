@@ -322,4 +322,43 @@ describe('merge', () => {
     )
     expect(result).toEqual({
       fontSizes: [6, 7],
+    })
+  })
+
+  test('arrays override primitive types', () => {
+    const result = merge(
+      {
+        fontSizes: 5 as any,
+      },
+      {
+        fontSizes: [6, 7],
+      }
+    )
+    expect(result).toEqual({
+      fontSizes: [6, 7],
+    })
+  })
+})
+
+describe('useThemeUI', () => {
+  test('returns theme context', () => {
+    let context: ThemeUIContextValue | undefined
+    const GetContext = () => {
+      context = useThemeUI()
+      return null
     }
+    renderJSON(
+      <ThemeProvider
+        theme={{
+          colors: {
+            text: 'tomato',
+          },
+        }}
+      >
+        <GetContext />
+      </ThemeProvider>
+    )
+    expect(context).toBeTruthy()
+    expect(context?.theme.colors?.text).toBe('tomato')
+  })
+})
