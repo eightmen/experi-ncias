@@ -75,4 +75,51 @@ interface AliasesCSSProperties {
    * **Initial value**: `0`
    *
    * | Chrome | Firefox | Safari |  Edge  |  IE   |
-   * | :----: | :-----: | :----: | :
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
+   */
+  mr?: StandardCSSProperties['marginRight']
+  /**
+   * The **`margin-bottom`** CSS property sets the margin area on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
+   */
+  mb?: StandardCSSProperties['marginBottom']
+  /**
+   * The **`margin-left`** CSS property sets the margin area on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
+   */
+  ml?: StandardCSSProperties['marginLeft']
+  /**
+   * The **`mx`** is shorthand for using both **`margin-left`** and **`margin-right`** CSS properties. They set the margin area on the left and right side of an element. A positive value placesit
+   * farther from its neighbors, while a negative value places it closer.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://styled-system.com/#margin-props
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
+   */
+  mx?: StandardCSSProperties['marginLeft']
+  /**
+   * The **`marginX`** is shorthand for using both **`margin-left`** and **`margin-right`** CSS properties. They set the margin area on the left and right side of an element. A positive value
+  
