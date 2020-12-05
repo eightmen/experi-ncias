@@ -122,4 +122,48 @@ interface AliasesCSSProperties {
   mx?: StandardCSSProperties['marginLeft']
   /**
    * The **`marginX`** is shorthand for using both **`margin-left`** and **`margin-right`** CSS properties. They set the margin area on the left and right side of an element. A positive value
-  
+   * places it farther from its neighbors, while a negative value places it closer.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://styled-system.com/#margin-props
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
+   */
+  marginX?: StandardCSSProperties['marginLeft']
+  /**
+   * The **`my`** is shorthard for using both **`margin-top`** and **`margin-bottom`** CSS properties. They set the margin area on the top and bottom of an element. A positive value places it
+   * farther from its neighbors, while a negative value places it closer.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://styled-system.com/#margin-props
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
+   */
+  my?: StandardCSSProperties['marginTop']
+  /**
+   * The **`marginY`** is shorthard for using both **`margin-top`** and **`margin-bottom`** CSS properties. They set the margin area on the top and bottom of an element. A positive value places
+   * it farther from its neighbors, while a negative value places it closer.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://styled-system.com/#margin-props
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
+   * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
+   */
+  marginY?: StandardCSSProperties['marginTop']
+  /**
+   * The **`padding`** CSS property sets the padding area on all four sides of an element. It is a shorthand for `padding-
