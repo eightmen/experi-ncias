@@ -309,4 +309,54 @@ interface AliasesCSSProperties {
    * The **`scrollPaddingX`** is shorthand property for CSS properties **`scroll-padding-left`** and **`scroll-padding-right`**. They set the width of the scroll padding area on the left and right side of an element.
    *
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-left
-   * @see https://developer.mozilla.org/en-US/
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-right
+   */
+  scrollPaddingX?: StandardCSSProperties['scrollPaddingLeft']
+
+  /**
+   * The **`scrollPaddingY`** is shorthand property for CSS properties **`scroll-padding-top`** and **`scroll-padding-bottom`**. They set the width of the scroll padding area on the top and bottom side of an element.
+   *
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-bottom
+   */
+  scrollPaddingY?: StandardCSSProperties['scrollPaddingTop']
+  size?: StandardCSSProperties['width']
+}
+
+interface OverwriteCSSProperties {
+  /**
+   * The **`box-shadow`** CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the
+   * element, blur and spread radii, and color.
+   *
+   * **Initial value**: `none`
+   *
+   * | Chrome  | Firefox | Safari  |  Edge  |  IE   |
+   * | :-----: | :-----: | :-----: | :----: | :---: |
+   * | **10**  |  **4**  | **5.1** | **12** | **9** |
+   * | 1 _-x-_ |         | 3 _-x-_ |        |       |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/box-shadow
+   */
+  boxShadow?: CSS.Property.BoxShadow | number
+  /**
+   * The **`font-weight`** CSS property specifies the weight (or boldness) of the font. The font weights available to you will depend on the `font-family` you are using. Some fonts are only
+   * available in `normal` and `bold`.
+   *
+   * **Initial value**: `normal`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **2**  |  **1**  | **1**  | **12** | **3** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/font-weight
+   */
+  fontWeight?: CSS.Property.FontWeight | string
+
+  /**
+   * The **`border-top-style`** CSS property sets the line style of an element's top `border`.
+   *
+   * **Initial value**: `none`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |   IE    |
+   * | :----: | :-----: | :----: | :----: | :-----: |
+ 
