@@ -224,4 +224,50 @@ interface AliasesCSSProperties {
    */
   pl?: StandardCSSProperties['paddingLeft']
   /**
-   * The **`px`** is shorthand property for CSS properties **`padd
+   * The **`px`** is shorthand property for CSS properties **`padding-left`** and **`padding-right`**. They set the width of the padding area on the left and right side of an element.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **4** |
+   *
+   * @see https://styled-system.com/#padding-props
+   * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
+   * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
+   */
+  px?: StandardCSSProperties['paddingLeft']
+  /**
+   * The **`paddingX`** is shorthand property for CSS properties **`padding-left`** and **`padding-right`**. They set the width of the padding area on the left and right side of an element.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **4** |
+   *
+   * @see https://styled-system.com/#padding-props
+   * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
+   * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
+   */
+  paddingX?: StandardCSSProperties['paddingLeft']
+  /**
+   * The **`py`** is shorthand property for CSS properties **`padding-top`** and **`padding-bottom`**. They set the width of the padding area on the top and bottom of an element.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **4** |
+   *
+   * @see https://styled-system.com/#padding-props
+   * @see https://developer.mozilla.org/docs/Web/CSS/padding-top
+   * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
+   */
+  py?: StandardCSSProperties['paddingTop']
+  /**
+   * The **`paddingY`** is shorthand property for CSS properties **`padding-top`** and **`padding-bottom`**. They set the width of the padding area on the top and bottom of an element.
+   *
+   * **Initial value**: `0`
+   *
+   * | Chrome | Firefox
