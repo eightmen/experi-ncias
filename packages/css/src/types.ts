@@ -725,4 +725,60 @@ export interface Theme {
   rawColors?: ColorModesScale
 
   /**
-   * Styles for elements rendered in MDX can be added to 
+   * Styles for elements rendered in MDX can be added to the theme.styles
+   * object. This is the primary, low-level way to control typographic and
+   * other styles in markdown content. Styles within this object are processed
+   * with @styled-system/css and have access to base theme values like colors,
+   * fonts, etc.
+   */
+  styles?: ThemeStyles
+
+  /**
+   * You can define additional CSS grid layouts by adding variants to the
+   * `theme.grids` object. These styles can be used to create a wide variety of
+   * different reusable layouts.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/grid#variants
+   */
+  grids?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Button variants can be defined in the `theme.buttons` object. The `Button`
+   * component uses `theme.buttons.primary` as its default variant style.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/button#variants
+   */
+  buttons?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Text style variants can be defined in the `theme.text` object. The `Text`
+   * component uses `theme.text.default` as its default variant style.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/text#variants
+   */
+  text?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Link variants can be defined in the `theme.links` object. By default the
+   * `Link` component will use styles defined in `theme.styles.a`.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/link#variants
+   */
+  links?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Image style variants can be defined in the `theme.images` object.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/image#variants
+   */
+  images?: Record<st
