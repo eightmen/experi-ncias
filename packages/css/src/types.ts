@@ -413,4 +413,82 @@ interface OverwriteCSSProperties {
   borderRadius?: CSS.Property.BorderRadius<string | number>
 
   /**
-   * Th
+   * The **`z-index`** CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
+   *
+   * **Initial value**: `auto`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |  IE   |
+   * | :----: | :-----: | :----: | :----: | :---: |
+   * | **1**  |  **1**  | **1**  | **12** | **4** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/z-index
+   */
+  zIndex?: CSS.Property.ZIndex | string
+}
+
+/**
+ * Map of all available CSS properties (including aliases and overwrites)
+ * and their raw value.
+ */
+export interface ThemeUIExtendedCSSProperties
+  extends Omit<CSSProperties, keyof OverwriteCSSProperties>,
+    AliasesCSSProperties,
+    OverwriteCSSProperties {}
+
+type ThemeUIStyleValue<T> = ResponsiveStyleValue<T | ObjectWithDefault<T> | T[]>
+
+export type StylePropertyValue<T> =
+  | ThemeUIStyleValue<Exclude<T, undefined>>
+  | ((theme: Theme) => ThemeUIStyleValue<Exclude<T, undefined>> | undefined)
+  | ThemeUIStyleObject
+  | ThemeUIEmpty
+
+export type ThemeUICSSProperties = {
+  [K in keyof ThemeUIExtendedCSSProperties]: StylePropertyValue<
+    ThemeUIExtendedCSSProperties[K]
+  >
+}
+
+export interface VariantProperty {
+  /**
+   * **`Variants`** can be useful for applying complex styles to a component based on a single prop.
+   *
+   * @example
+   * const theme = {
+   *   buttons: {
+   *     primary: {
+   *       p: 3,
+   *       fontWeight: 'bold',
+   *       color: 'white',
+   *       bg: 'primary',
+   *       borderRadius: 2,
+   *     },
+   *   },
+   * }
+   * const result = css({
+   *   variant: 'buttons.primary',
+   * })(theme)
+   *
+   * @see https://styled-system.com/variants
+   */
+  variant?: string
+}
+
+export interface ThemeDerivedStyles {
+  (theme: Theme): ThemeUICSSObject
+}
+
+export interface Label {
+  /**
+   * String appended to generated class name.
+   * @see https://emotion.sh/docs/labels
+   *
+   * You can style HTML <label> elements with `"& label": {}`.
+   */
+  label?: string
+}
+
+export interface CSSOthersObject {
+  // we want to match CSS selectors
+  // but index signature needs to be a supertype
+  // so as a side-effect we a
