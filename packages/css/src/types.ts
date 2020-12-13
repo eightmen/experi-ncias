@@ -648,4 +648,81 @@ export interface Theme {
   borderStyles?: Scale<CSS.Property.Border<{}>>
   borderWidths?: Scale<CSS.Property.BorderWidth<TLengthStyledSystem>>
   radii?: Scale<CSS.Property.BorderRadius<TLengthStyledSystem>>
-  shadows?: Scale<CSS.Prope
+  shadows?: Scale<CSS.Property.BoxShadow>
+  zIndices?: Scale<CSS.Property.ZIndex>
+  colorStyles?: Scale<ThemeUICSSProperties>
+  textStyles?: Scale<ThemeUICSSProperties>
+  opacities?: Scale<CSS.Property.Opacity>
+  transitions?: Scale<CSS.Property.Transition>
+
+  config?: ThemeUIConfig
+
+  /**
+   * @deprecated Deprecated in favor of nesting inside `config`
+   *
+   * Enable/disable custom CSS properties/variables if lower browser
+   * support is required (for eg. IE 11).
+   *
+   * References: https://theme-ui.com/color-modes/#turn-off-custom-properties
+   */
+  useCustomProperties?: boolean
+
+  /**
+   * @deprecated Deprecated in favor of nesting inside `config`
+   *
+   * Provide a value here to enable color modes
+   */
+  initialColorModeName?: string
+
+  /**
+   * @deprecated Deprecated in favor of nesting inside `config`
+   *
+   * Provide a value here to set a color mode for printing
+   */
+  printColorModeName?: string
+
+  /**
+   * @deprecated Deprecated in favor of nesting inside `config`
+   *
+   * Adds styles defined in theme.styles.root to the <html> element along with color and background-color
+   */
+  useRootStyles?: boolean
+
+  /**
+   * @deprecated Deprecated in favor of nesting inside `config`
+   *
+   * Initializes the color mode based on the prefers-color-scheme media query
+   */
+  useColorSchemeMediaQuery?: boolean
+
+  /**
+   * @deprecated Deprecated in favor of nesting inside `config`
+   *
+   * Adds a global box-sizing: border-box style
+   */
+  useBorderBox?: boolean
+
+  /**
+   * @deprecated Deprecated in favor of nesting inside `config`
+   *
+   * If false, does not save color mode as a localStorage value.
+   */
+  useLocalStorage?: boolean
+
+  /**
+   * Define the colors that are available through this theme
+   */
+  colors?: ColorModesScale
+
+  /**
+   * Colors are transformed into CSS custom properties.
+   *
+   * If you need to read their raw values to pass them somewhere where CSS
+   * custom properties are not supported, use `rawColors`.
+   *
+   * Additionally, you can access all the color modes in this objects.
+   */
+  rawColors?: ColorModesScale
+
+  /**
+   * Styles for elements rendered in MDX can be added to 
