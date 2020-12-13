@@ -580,4 +580,72 @@ export interface ColorMode extends ScaleDict<CSS.Property.Color> {
   accent?: ColorOrNestedColorScale
 
   /**
-   * A background color for hi
+   * A background color for highlighting text
+   */
+  highlight?: ColorOrNestedColorScale
+
+  /**
+   * A faint color for backgrounds, borders, and accents that do not require
+   * high contrast with the background color
+   */
+  muted?: ColorOrNestedColorScale
+}
+
+export type ColorModesScale = ColorMode & {
+  /**
+   * Nested color modes can provide overrides when used in conjunction with
+   * `Theme.initialColorModeName` and `useColorMode()`
+   */
+  modes?: {
+    [k: string]: ColorMode
+  }
+}
+
+export interface ThemeStyles {
+  tr?: ThemeUIStyleObject
+  th?: ThemeUIStyleObject
+  td?: ThemeUIStyleObject
+  em?: ThemeUIStyleObject
+  strong?: ThemeUIStyleObject
+  div?: ThemeUIStyleObject
+  p?: ThemeUIStyleObject
+  b?: ThemeUIStyleObject
+  i?: ThemeUIStyleObject
+  a?: ThemeUIStyleObject
+  h1?: ThemeUIStyleObject
+  h2?: ThemeUIStyleObject
+  h3?: ThemeUIStyleObject
+  h4?: ThemeUIStyleObject
+  h5?: ThemeUIStyleObject
+  h6?: ThemeUIStyleObject
+  img?: ThemeUIStyleObject
+  pre?: ThemeUIStyleObject
+  code?: ThemeUIStyleObject
+  ol?: ThemeUIStyleObject
+  ul?: ThemeUIStyleObject
+  li?: ThemeUIStyleObject
+  blockquote?: ThemeUIStyleObject
+  hr?: ThemeUIStyleObject
+  table?: ThemeUIStyleObject
+  delete?: ThemeUIStyleObject
+  inlineCode?: ThemeUIStyleObject
+  thematicBreak?: ThemeUIStyleObject
+  root?: ThemeUIStyleObject
+  [key: string]: ThemeUIStyleObject | undefined
+}
+
+export interface Theme {
+  breakpoints?: Array<string>
+  mediaQueries?: { [size: string]: string }
+  space?: Scale<CSS.Property.Margin<number | string>>
+  fontSizes?: Scale<CSS.Property.FontSize<number>>
+  fonts?: Scale<CSS.Property.FontFamily>
+  fontWeights?: Scale<CSS.Property.FontWeight>
+  lineHeights?: Scale<CSS.Property.LineHeight<TLengthStyledSystem>>
+  letterSpacings?: Scale<CSS.Property.LetterSpacing<TLengthStyledSystem>>
+  sizes?: Scale<CSS.Property.Height<{}> | CSS.Property.Width<{}>>
+  borders?: Scale<CSS.Property.Border<{}>>
+  borderStyles?: Scale<CSS.Property.Border<{}>>
+  borderWidths?: Scale<CSS.Property.BorderWidth<TLengthStyledSystem>>
+  radii?: Scale<CSS.Property.BorderRadius<TLengthStyledSystem>>
+  shadows?: Scale<CSS.Prope
