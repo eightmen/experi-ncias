@@ -491,4 +491,93 @@ export interface Label {
 export interface CSSOthersObject {
   // we want to match CSS selectors
   // but index signature needs to be a supertype
-  // so as a side-effect we a
+  // so as a side-effect we allow unknown CSS properties (Emotion does too)
+  [k: string]: StylePropertyValue<string | number>
+}
+
+export interface ThemeUICSSObject
+  extends ThemeUICSSProperties,
+    CSSPseudoSelectorProps,
+    CSSOthersObject,
+    VariantProperty,
+    Label {}
+
+/**
+ * The `ThemeUIStyleObject` extends [style props](https://emotion.sh/docs/object-styles)
+ * such that properties that are part of the `Theme` will be transformed to
+ * their corresponding values. Other valid CSS properties are also allowed.
+ */
+export type ThemeUIStyleObject = ThemeUICSSObject | ThemeDerivedStyles
+
+export type TLengthStyledSystem = string | 0 | number
+
+export interface ScaleDict<T> {
+  [K: string]: T | T[] | NestedScaleDict<T> | undefined
+  [I: number]: T
+}
+
+export interface ObjectWithDefault<T> {
+  /**
+   * Default value in nested scale.
+   *
+   * Given theme
+   * ```
+   * {
+   *   colors: {
+   *     primary: { __default: '#00f', light: '#33f' }
+   *   }
+   * }
+   * ```
+   * `sx={{ color: 'primary' }}` resolves to `color: #00f`.
+   */
+  __default?: T
+}
+
+export interface NestedScaleDict<T>
+  extends ScaleDict<T>,
+    ObjectWithDefault<T> {}
+
+/**
+ * An array or object (possibly nested) of related CSS properties
+ * @see https://theme-ui.com/theme-spec#theme-scales
+ */
+export type Scale<T> = T[] | ScaleDict<T>
+
+export type NestedScale<T> = T[] | NestedScaleDict<T>
+
+export type ColorOrNestedColorScale =
+  | CSS.Property.Color
+  | NestedScale<CSS.Property.Color>
+
+/**
+ * Color modes can be used to create a user-configurable dark mode
+ * or any number of other color modes.
+ */
+export interface ColorMode extends ScaleDict<CSS.Property.Color> {
+  /**
+   * Body background color
+   */
+  background?: ColorOrNestedColorScale
+
+  /**
+   * Body foreground color
+   */
+  text?: ColorOrNestedColorScale
+
+  /**
+   * Primary brand color for links, buttons, etc.
+   */
+  primary?: ColorOrNestedColorScale
+
+  /**
+   * A secondary brand color for alternative styling
+   */
+  secondary?: ColorOrNestedColorScale
+
+  /**
+   * A contrast color for emphasizing UI
+   */
+  accent?: ColorOrNestedColorScale
+
+  /**
+   * A background color for hi
