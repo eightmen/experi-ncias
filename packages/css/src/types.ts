@@ -359,4 +359,58 @@ interface OverwriteCSSProperties {
    *
    * | Chrome | Firefox | Safari |  Edge  |   IE    |
    * | :----: | :-----: | :----: | :----: | :-----: |
- 
+   * | **1**  |  **1**  | **1**  | **12** | **5.5** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/border-top-style
+   */
+  borderTopStyle?: CSS.Property.BorderTopStyle | string
+  /**
+   * The **`border-bottom-style`** CSS property sets the line style of an element's bottom `border`.
+   *
+   * **Initial value**: `none`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |   IE    |
+   * | :----: | :-----: | :----: | :----: | :-----: |
+   * | **1**  |  **1**  | **1**  | **12** | **5.5** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-style
+   */
+  borderBottomStyle?: CSS.Property.BorderBottomStyle | string
+  /**
+   * The **`border-right-style`** CSS property sets the line style of an element's right `border`.
+   *
+   * **Initial value**: `none`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |   IE    |
+   * | :----: | :-----: | :----: | :----: | :-----: |
+   * | **1**  |  **1**  | **1**  | **12** | **5.5** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/border-right-style
+   */
+  borderRightStyle?: CSS.Property.BorderRightStyle | string
+  /**
+   * The **`border-left-style`** CSS property sets the line style of an element's left `border`.
+   *
+   * **Initial value**: `none`
+   *
+   * | Chrome | Firefox | Safari |  Edge  |   IE    |
+   * | :----: | :-----: | :----: | :----: | :-----: |
+   * | **1**  |  **1**  | **1**  | **12** | **5.5** |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/border-left-style
+   */
+  borderLeftStyle?: CSS.Property.BorderLeftStyle | string
+  /**
+   * The **`border-radius`** CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
+   *
+   * | Chrome  | Firefox | Safari  |  Edge  |  IE   |
+   * | :-----: | :-----: | :-----: | :----: | :---: |
+   * |  **4**  |  **4**  |  **5**  | **12** | **9** |
+   * | 1 _-x-_ |         | 3 _-x-_ |        |       |
+   *
+   * @see https://developer.mozilla.org/docs/Web/CSS/border-radius
+   */
+  borderRadius?: CSS.Property.BorderRadius<string | number>
+
+  /**
+   * Th
