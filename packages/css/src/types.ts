@@ -832,4 +832,38 @@ export interface Theme {
    * @see https://theme-ui.com/components/input#variants
    * @see https://theme-ui.com/components/select#variants
    * @see https://theme-ui.com/components/textarea#variants
-   * @see https://theme-ui.com/comp
+   * @see https://theme-ui.com/components/radio#variants
+   * @see https://theme-ui.com/components/checkbox#variants
+   * @see https://theme-ui.com/components/slider#variants
+   */
+  forms?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Badge variants can be defined in `theme.badges`. The `Badge` component uses
+   * `theme.badges.primary` as its default variant.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/badge#variants
+   */
+  badges?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Alert variants can be defined in `theme.alerts`. The `Alert` component uses
+   * `theme.alerts.primary` as its default variant.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/alert#variants
+   */
+  alerts?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Message variants can be defined in the `theme.messages` object.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/message#variants
+   */
+  messages?: Record<string, ThemeUIStyleObject>
+}
