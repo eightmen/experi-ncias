@@ -781,4 +781,55 @@ export interface Theme {
    * @see https://theme-ui.com/components/variants
    * @see https://theme-ui.com/components/image#variants
    */
-  images?: Record<st
+  images?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Card style variants can be defined in `the theme.cards` object. By default
+   * the `Card` component uses the `theme.cards.primary` variant.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/card#variants
+   */
+  cards?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Container variants can be defined in the `theme.layout` object. The
+   * `Container` component uses `theme.layout.container` as its default variant
+   * style.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/container#variants
+   */
+  layout?: Record<string, ThemeUIStyleObject>
+
+  /**
+   * Label variants can be defined in `theme.forms` and the component uses the
+   * `theme.forms.label` variant by default.
+   *
+   * Input variants can be defined in `theme.forms` and the component uses the
+   * `theme.forms.input` variant by default.
+   *
+   * Select variants can be defined in `theme.forms` and the component uses the
+   * `theme.forms.select` variant by default.
+   *
+   * Textarea variants can be defined in `theme.forms` and the component uses
+   * the `theme.forms.textarea` variant by default.
+   *
+   * Radio variants can be defined in `theme.forms` and the component uses the
+   * `theme.forms.radio` variant by default.
+   *
+   * Checkbox variants can be defined in `theme.forms` and the component uses
+   * the `theme.forms.checkbox` variant by default.
+   *
+   * Slider variants can be defined in the `theme.forms` object. The `Slider`
+   * component uses `theme.forms.slider` as its default variant style.
+   *
+   * @see https://theme-ui.com/theme-spec#variants
+   * @see https://theme-ui.com/components/variants
+   * @see https://theme-ui.com/components/label#variants
+   * @see https://theme-ui.com/components/input#variants
+   * @see https://theme-ui.com/components/select#variants
+   * @see https://theme-ui.com/components/textarea#variants
+   * @see https://theme-ui.com/comp
