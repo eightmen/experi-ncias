@@ -160,4 +160,101 @@ test('returns nested responsive styles', () => {
     },
   })({ theme })
   expect(result).toEqual({
-    
+    color: 'tomato',
+    h1: {
+      paddingTop: 16,
+      paddingBottom: 16,
+      scrollPaddingBottom: 8,
+      scrollPaddingTop: 8,
+      '@media screen and (min-width: 40em)': {
+        paddingTop: 32,
+        paddingBottom: 32,
+        scrollPaddingBottom: 32,
+        scrollPaddingTop: 32,
+      },
+    },
+  })
+})
+
+test('handles all core styled system props', () => {
+  const result = css({
+    m: 0,
+    mb: 2,
+    mx: 'auto',
+    p: 3,
+    py: 4,
+    scrollMargin: 5,
+    scrollMarginY: 6,
+    scrollPadding: 1,
+    scrollPaddingY: 2,
+    textDecorationColor: 'secondary',
+    fontSize: 3,
+    fontWeight: 'bold',
+    color: 'primary',
+    bg: 'secondary',
+    opacity: 1,
+    transition: 'standard',
+    fontFamily: 'monospace',
+    lineHeight: 'body',
+    border: 'body',
+    boxShadow: 'card',
+    zIndex: 'nav',
+  })({ theme })
+  expect(result).toEqual({
+    margin: 0,
+    marginBottom: 8,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    padding: 16,
+    paddingTop: 32,
+    paddingBottom: 32,
+    scrollMargin: 64,
+    scrollMarginTop: 128,
+    scrollMarginBottom: 128,
+    scrollPadding: 4,
+    scrollPaddingTop: 8,
+    scrollPaddingBottom: 8,
+    textDecorationColor: 'cyan',
+    color: 'tomato',
+    backgroundColor: 'cyan',
+    opacity: '50%',
+    transition: '0.3s ease-in-out',
+    fontFamily: 'Menlo, monospace',
+    fontSize: 24,
+    fontWeight: 600,
+    lineHeight: 1.5,
+    border: '3px solid #000000',
+    boxShadow: '5px 5px 15px 5px #000000',
+    zIndex: 2,
+  })
+})
+
+test('handles css logical properties', () => {
+  const result = css({
+    borderInlineStartWidth: 'thin',
+    borderStartEndRadius: 'small',
+    marginInlineStart: 'auto',
+    maxBlockSize: 'large',
+    paddingInline: 0,
+    marginBlockEnd: 2,
+  })({ theme })
+  expect(result).toEqual({
+    borderInlineStartWidth: 1,
+    borderStartEndRadius: 5,
+    maxBlockSize: 16,
+    paddingInline: 0,
+    marginBlockEnd: 8,
+    marginInlineStart: 'auto',
+  })
+})
+
+test('works with the css prop', () => {
+  const result = css({
+    color: 'primary',
+    m: 0,
+    fontSize: 2,
+  })(theme)
+  expect(result).toEqual({
+    color: 'tomato',
+    margin: 0,
+    fo
