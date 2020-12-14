@@ -257,4 +257,93 @@ test('works with the css prop', () => {
   expect(result).toEqual({
     color: 'tomato',
     margin: 0,
-    fo
+    fontSize: 16,
+  })
+})
+
+test('works with functional arguments', () => {
+  const result = css((t) => ({
+    color: t.colors?.primary,
+  }))(theme)
+  expect(result).toEqual({
+    color: 'tomato',
+  })
+})
+
+test('supports functional values', () => {
+  const result = css({
+    color: (t) => t.colors?.primary,
+  })(theme)
+  expect(result).toEqual({
+    color: 'tomato',
+  })
+})
+
+test('returns `__default` key when accessing object value with default', () => {
+  const result = css({
+    color: 'purple',
+  })(theme)
+  expect(result).toEqual({
+    color: 'darkviolet',
+  })
+})
+
+test('returns nested key when accessing key from object value with __default', () => {
+  const result = css({
+    color: 'purple.100',
+  })(theme)
+  expect(result).toEqual({
+    color: 'rebeccapurple',
+  })
+})
+
+test('variant prop returns `__default` key when accessing variant object with default', () => {
+  const result = css({
+    variant: 'buttons',
+  })(theme)
+
+  expect(result).toEqual({
+    paddingLeft: 32,
+    paddingRight: 32,
+    paddingTop: 8,
+    paddingBottom: 8,
+    fontWeight: 600,
+    color: 'cyan',
+    backgroundColor: 'white',
+  })
+})
+
+test('returns object when accessing object value with no default key', () => {
+  const result = css({
+    color: 'pink',
+  })(theme)
+  // Note: Returning this object is the expected behavior; however, an object
+  // value like this isn't able to become valid CSS. Ensure the theme path
+  // points to a primitive value (such as 'pink.100') when intending to make
+  // CSS out of these values.
+  // Ref: https://github.com/system-ui/theme-ui/pull/951#discussion_r430697168
+  expect(result).toEqual({
+    color: {
+      100: 'mediumvioletred',
+      500: 'hotpink',
+      900: 'pink',
+    },
+  })
+})
+
+test('returns variants from theme', () => {
+  const result = css({
+    variant: 'buttons.primary',
+  })(theme)
+  expect(result).toEqual({
+    padding: 16,
+    fontWeight: 600,
+    color: 'white',
+    backgroundColor: 'tomato',
+    borderRadius: 2,
+  })
+})
+
+test('returns nested variants from theme', () => {
+  const result = css({
+    varian
