@@ -346,4 +346,102 @@ test('returns variants from theme', () => {
 
 test('returns nested variants from theme', () => {
   const result = css({
-    varian
+    variant: 'buttons.round',
+  })(theme)
+  expect(result).toEqual({
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden',
+    borderRadius: '50%',
+    backgroundColor: 'tomato',
+  })
+})
+
+test('handles variants with responsive values', () => {
+  const result = css({
+    variant: 'text.caps',
+  })(theme)
+  expect(result).toEqual({
+    fontSize: 14,
+    letterSpacing: '0.1em',
+    textTransform: 'uppercase',
+    '@media screen and (min-width: 40em)': {
+      fontSize: 16,
+    },
+  })
+})
+
+test('handles responsive variants', () => {
+  const result = css({
+    variant: 'text.title',
+  })(theme)
+  expect(result).toEqual({
+    fontSize: 24,
+    letterSpacing: '-0.01em',
+    '@media screen and (min-width: 40em)': {
+      fontSize: 36,
+      letterSpacing: '-0.02em',
+    },
+  })
+})
+
+test('handles negative margins from scale', () => {
+  const result = css({
+    mt: -3,
+    mx: -4,
+  })(theme)
+  expect(result).toEqual({
+    marginTop: -16,
+    marginLeft: -32,
+    marginRight: -32,
+  })
+})
+
+test('handles negative top, left, bottom, and right from scale', () => {
+  const result = css({
+    top: -1,
+    right: -4,
+    bottom: -3,
+    left: -2,
+  })(theme)
+  expect(result).toEqual({
+    top: -4,
+    right: -32,
+    bottom: -16,
+    left: -8,
+  })
+})
+
+test('handles negative margins from scale that is an object and value is string', () => {
+  const result = css({
+    mt: '-s',
+    mx: '-m',
+  })({ ...theme, space: { s: '16px', m: '32px' } })
+  expect(result).toEqual({
+    marginTop: '-16px',
+    marginLeft: '-32px',
+    marginRight: '-32px',
+  })
+})
+
+test('handles negative margins from scale that is an object and value is number', () => {
+  const result = css({
+    mt: '-s',
+    mx: '-m',
+  })({ ...theme, space: { s: 16, m: 32 } })
+  expect(result).toEqual({
+    marginTop: -16,
+    marginLeft: -32,
+    marginRight: -32,
+  })
+})
+
+test('skip breakpoints', () => {
+  const result = css({
+    width: ['100%', , '50%'],
+  })(theme)
+  expect(result).toEqual({
+    width: '100%',
+    '@media screen and (min-width: 40em)': {},
+    '@media screen and (min-width: 52em)': {
+      width:
