@@ -444,4 +444,100 @@ test('skip breakpoints', () => {
     width: '100%',
     '@media screen and (min-width: 40em)': {},
     '@media screen and (min-width: 52em)': {
-      width:
+      width: '50%',
+    },
+  })
+})
+
+test('padding shorthand does not collide with nested p selector', () => {
+  const result = css({
+    p: {
+      fontSize: 32,
+      color: 'tomato',
+      p: 2,
+    },
+    padding: 32,
+  })(theme)
+  expect(result).toEqual({
+    p: {
+      fontSize: 32,
+      color: 'tomato',
+      padding: 8,
+    },
+    padding: 32,
+  })
+})
+
+test('ignores array values longer than breakpoints', () => {
+  const result = css({
+    width: [32, 64, 128, 256, 512],
+  })({
+    breakpoints: ['32em', '40em'],
+  })
+  expect(result).toEqual({
+    width: 32,
+    '@media screen and (min-width: 32em)': {
+      width: 64,
+    },
+    '@media screen and (min-width: 40em)': {
+      width: 128,
+    },
+  })
+})
+
+test('functional values can return responsive arrays', () => {
+  const result = css({
+    color: (t) => [t.colors?.primary, t.colors?.secondary],
+  })(theme)
+  expect(result).toEqual({
+    '@media screen and (min-width: 40em)': {
+      color: 'cyan',
+    },
+    color: 'tomato',
+  })
+})
+
+test('object with __default key is accepted as style value', () => {
+  const actual = css({
+    width: { __default: 2 },
+    color: (t) => t.colors?.primary,
+    backgroundColor: (t) => [
+      t.colors?.background,
+      (t.colors?.background as NestedScaleDict<string>).inverted,
+    ],
+  })({
+    sizes: ['10px', '20px', '40px'],
+    colors: {
+      primary: {
+        __default: 'blue',
+        light: 'lightblue',
+      },
+      background: {
+        __default: 'whitesmoke',
+        inverted: 'black',
+      },
+    },
+  })
+
+  expect(actual).toEqual({
+    '@media screen and (min-width: 40em)': {
+      backgroundColor: 'black',
+    },
+    backgroundColor: 'whitesmoke',
+    color: 'blue',
+    width: 2, // yes, 2 not 40px
+  })
+})
+
+test('returns individual border styles', () => {
+  const result = css({
+    borderTopWidth: 'thin',
+    borderTopColor: 'primary',
+    borderTopStyle: 'thick',
+    borderTopLeftRadius: 'small',
+    borderTopRightRadius: 'small',
+    borderBottomWidth: 'thin',
+    borderBottomColor: 'primary',
+    borderBottomStyle: 'thick',
+    borderBottomLeftRadius: 'small',
+    borderBottomRightRadius: 'small'
