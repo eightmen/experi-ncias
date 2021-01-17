@@ -728,4 +728,28 @@ test('omits empty values', () => {
     css({
       color: false && 'blue',
       backgroundColor: undefined && 'whitesmoke',
-      textDecoration: null &
+      textDecoration: null && 'underline',
+      border: '1px solid black',
+    })(theme)
+  ).toStrictEqual({ border: '1px solid black' })
+})
+
+test('borderTopWidth accepts number', () => {
+  expect(
+    css({
+      borderTopWidth: 7,
+    })(theme)
+  ).toEqual({
+    borderTopWidth: 7,
+  })
+
+  expect(
+    css({
+      borderTopWidth: 1,
+    })({
+      borderWidths: ['10px', '20px'],
+    })
+  ).toEqual({
+    borderTopWidth: '20px',
+  })
+})
