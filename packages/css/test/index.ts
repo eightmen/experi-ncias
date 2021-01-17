@@ -540,4 +540,101 @@ test('returns individual border styles', () => {
     borderBottomColor: 'primary',
     borderBottomStyle: 'thick',
     borderBottomLeftRadius: 'small',
-    borderBottomRightRadius: 'small'
+    borderBottomRightRadius: 'small',
+    borderRightWidth: 'thin',
+    borderRightColor: 'primary',
+    borderRightStyle: 'thick',
+    borderLeftWidth: 'thin',
+    borderLeftColor: 'primary',
+    borderLeftStyle: 'thick',
+  })(theme)
+  expect(result).toEqual({
+    borderTopColor: 'tomato',
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    borderBottomColor: 'tomato',
+    borderBottomWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
+    borderRightColor: 'tomato',
+    borderRightWidth: 1,
+    borderRightStyle: 'solid',
+    borderLeftColor: 'tomato',
+    borderLeftWidth: 1,
+    borderLeftStyle: 'solid',
+  })
+})
+
+test('flexBasis uses theme.sizes', () => {
+  const style = css({
+    flexBasis: 'sidebar',
+  })(theme)
+  expect(style).toEqual({
+    flexBasis: 320,
+  })
+})
+
+test('fill and stroke and caretColor use theme.colors', () => {
+  const style = css({
+    fill: 'primary',
+    stroke: 'secondary',
+    caretColor: 'primary',
+  })(theme)
+  expect(style).toEqual({
+    fill: 'tomato',
+    stroke: 'cyan',
+    caretColor: 'tomato',
+  })
+})
+
+test('multiples are transformed', () => {
+  const style = css({
+    marginX: 2,
+    marginY: 2,
+    paddingX: 2,
+    paddingY: 2,
+    scrollMarginX: 2,
+    scrollMarginY: 2,
+    scrollPaddingX: 2,
+    scrollPaddingY: 2,
+
+    size: 'large',
+  })(theme)
+  expect(style).toEqual({
+    marginLeft: 8,
+    marginRight: 8,
+    marginTop: 8,
+    marginBottom: 8,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 8,
+    paddingBottom: 8,
+    scrollMarginLeft: 8,
+    scrollMarginRight: 8,
+    scrollMarginTop: 8,
+    scrollMarginBottom: 8,
+    scrollPaddingLeft: 8,
+    scrollPaddingRight: 8,
+    scrollPaddingTop: 8,
+    scrollPaddingBottom: 8,
+    width: 16,
+    height: 16,
+  })
+})
+
+test('returns outline color from theme', () => {
+  const result = css({
+    outlineColor: 'primary',
+  })(theme)
+  expect(result).toEqual({
+    outlineColor: 'tomato',
+  })
+})
+
+test('returns correct media query order', () => {
+  const result = css({
+    width: ['100%', , '50%'],
+    color: ['red', 'green', 'b
