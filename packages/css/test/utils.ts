@@ -57,4 +57,6 @@ describe(makeColorsScale, () => {
       },
     })
 
-    type _ = AssertTrue<IsExact<typeof colors, { blue: { light: '#e6f7ff'
+    type _ = AssertTrue<IsExact<typeof colors, { blue: { light: '#e6f7ff' } }>>
+  })
+})
