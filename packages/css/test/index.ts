@@ -637,4 +637,95 @@ test('returns outline color from theme', () => {
 test('returns correct media query order', () => {
   const result = css({
     width: ['100%', , '50%'],
-    color: ['red', 'green', 'b
+    color: ['red', 'green', 'blue'],
+  })(theme)
+  const keys = Object.keys(result)
+  expect(keys).toEqual([
+    'width',
+    '@media screen and (min-width: 40em)',
+    '@media screen and (min-width: 52em)',
+    'color',
+  ])
+  expect(result).toEqual({
+    width: '100%',
+    '@media screen and (min-width: 40em)': {
+      color: 'green',
+    },
+    '@media screen and (min-width: 52em)': {
+      width: '50%',
+      color: 'blue',
+    },
+    color: 'red',
+  })
+})
+
+test('returns correct media query order 2', () => {
+  const result = css({
+    flexDirection: 'column',
+    justifyContent: [null, 'flex-start', 'flex-end'],
+    color: 'background',
+    height: '100%',
+    px: [2, 3, 4],
+    py: 4,
+    scrollPadding: 4,
+  })(theme)
+  const keys = Object.keys(result)
+  expect(keys).toEqual([
+    'flexDirection',
+    'justifyContent',
+    '@media screen and (min-width: 40em)',
+    '@media screen and (min-width: 52em)',
+    'color',
+    'height',
+    'paddingLeft',
+    'paddingRight',
+    'paddingTop',
+    'paddingBottom',
+    'scrollPadding',
+  ])
+})
+
+test('returns custom media queries', () => {
+  const result = css({
+    fontSize: [2, 3, 4],
+    color: 'primary',
+  })({
+    theme: {
+      ...theme,
+      breakpoints: [
+        '32em',
+        '@media screen and (orientation: landscape) and (min-width: 40rem)',
+      ],
+    },
+  })
+  const keys = Object.keys(result)
+  expect(keys).toEqual([
+    'fontSize',
+    '@media screen and (min-width: 32em)',
+    '@media screen and (orientation: landscape) and (min-width: 40rem)',
+    'color',
+  ])
+  expect(result).toEqual({
+    fontSize: 16,
+    '@media screen and (min-width: 32em)': {
+      fontSize: 24,
+    },
+    '@media screen and (orientation: landscape) and (min-width: 40rem)': {
+      fontSize: 36,
+    },
+    color: 'tomato',
+  })
+})
+
+test('supports vendor properties', () => {
+  expect(css({ WebkitOverflowScrolling: 'touch' })(theme)).toStrictEqual({
+    WebkitOverflowScrolling: 'touch',
+  })
+})
+
+test('omits empty values', () => {
+  expect(
+    css({
+      color: false && 'blue',
+      backgroundColor: undefined && 'whitesmoke',
+      textDecoration: null &
