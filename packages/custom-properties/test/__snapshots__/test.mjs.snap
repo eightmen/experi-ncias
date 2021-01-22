@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transforms a theme config to CSS custom properties 1`] = `
+{
+  "--color-accent": "#609",
+  "--color-background": "#fff",
+  "--color-dark-background-surface": "#fff",
+  "--color-dark-foreground-text": "#000",
+  "--color-muted": "#f6f6f6",
+  "--color-primary": "#07c",
+  "--color-secondary": "#05a",
+  "--color-text": "#000",
+  "--font-body": "system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif",
+  "--font-heading": "system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif",
+  "--font-monospace": "Menlo, monospace",
+  "--fontWeight-body": 400,
+  "--fontWeight-bold": 700,
+  "--fontWeight-heading": 700,
+  "--lineHeight-0": 1.5,
+  "--lineHeight-1": 1.125,
+  "--radius-l": "0.5em",
+  "--radius-m": "0.25em",
+  "--radius-s": "0.125em",
+  "--size-0": "10em",
+  "--size-1": "20em",
+  "--size-2": "30em",
+  "--size-3": "40em",
+  "--space-0": 0,
+  "--space-1": 2,
+  "--space-2": 3,
+  "--space-3": 4,
+  "--space-4": 5,
+  "--space-5": 6,
+}
+`;
+
+exports[`transforms a theme config to CSS custom properties with prefix 1`] = `
+{
+  "--🍭-color-accent": "#609",
+  "--🍭-color-background": "#fff",
+  "--🍭-color-dark-background-surface": "#fff",
+  "--🍭-color-dark-foreground-text": "#000",
+  "--🍭-color-muted": "#f6f6f6",
+  "--🍭-color-primary": "#07c",
+  "--🍭-color-secondary": "#05a",
+  "--🍭-color-text": "#000",
+  "--🍭-font-body": "system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif",
+  "--🍭-font-heading": "system-ui, -apple-system,
