@@ -59,3 +59,11 @@ it('transforms a theme config to CSS custom properties with prefix', () => {
 })
 
 it('warns on invalid CSS custom property key', () => {
+  mockConsole()
+  toCustomProperties({ sizes: { '1/4': 1 / 4, '1/2': 1 / 2 } })
+
+  expect(console.warn).toHaveBeenCalledTimes(2)
+  expect(console.warn).toHaveBeenLastCalledWith(
+    '[theme-ui] Theme key "0.5" found will produce an invalid CSS custom property. Keys must only contain the following: A-Z, a-z, 0-9, hyphen, underscore.'
+  )
+})
