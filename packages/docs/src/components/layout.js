@@ -113,4 +113,82 @@ export default function DocsLayout(props) {
           </Flex>
         )}
         <Box
-  
+          sx={{
+            flex: '1 1 auto',
+            alignItems: 'flex-start',
+            display: ['block', 'flex'],
+            height: '100%',
+          }}
+        >
+          <Sidebar
+            role="navigation"
+            onFocus={(e) => {
+              setMenuOpen(true)
+            }}
+            onBlur={(e) => {
+              setMenuOpen(false)
+            }}
+            onClick={(e) => {
+              setMenuOpen(false)
+            }}
+            onKeyPress={(e) => {
+              setMenuOpen(false)
+            }}
+            open={menuOpen}
+            components={sidebar}
+            pathname={pathname}
+            sx={{
+              background: 'background',
+              display: [null, fullwidth ? 'none' : 'block'],
+              width: 256,
+              flex: 'none',
+              maxHeight: ['100%', 'calc(100vh - 64px)'],
+              overflowY: 'auto',
+              px: 3,
+              pt: 3,
+              pb: 4,
+              mt: [64, 0],
+              position: [null, 'sticky'],
+              top: [null, '64px'],
+            }}
+          />
+          <div
+            sx={{
+              width: '100%',
+              minWidth: 0,
+
+              position: 'relative',
+            }}
+          >
+            {!isLanding && <HeaderScrollShadow />}
+            <main
+              id="content"
+              sx={{
+                maxWidth: fullwidth ? 'none' : 768,
+                mx: 'auto',
+                px: fullwidth ? 0 : 3,
+              }}
+            >
+              {props.children}
+              <EditLink />
+              {!fullwidth && <Pagination />}
+            </main>
+          </div>
+        </Box>
+      </Flex>
+    </Fragment>
+  )
+}
+
+function HeaderScrollShadow() {
+  const ref = useRef()
+
+  useEffect(() => {
+    const onScroll = () => {
+      const { current } = ref
+      if (current) {
+        current.style.opacity = window.scrollY > 0 ? 1 : 0
+      }
+    }
+
+    window.addE
