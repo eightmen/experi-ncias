@@ -191,4 +191,25 @@ function HeaderScrollShadow() {
       }
     }
 
-    window.addE
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      sx={{
+        content: "''",
+        top: '64px',
+        transform: 'translateY(-64px)',
+        left: 0,
+        right: 0,
+        height: '64px',
+        position: 'sticky',
+        boxShadow: '0 12px 18px -3px rgb(0 0 0 / 0.03)',
+        transition: 'opacity 250ms linear',
+        opacity: 0,
+      }}
+    />
+  )
+}
