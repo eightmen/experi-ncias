@@ -11,3 +11,11 @@ export default ({ width = 1280, height = 720 }) => (
       display: 'block',
       color: 'white',
       width,
+      height,
+    }}>
+    <rect width="1280" height="720" fill="black" />
+    <g transform="translate(512 232)">
+      <Logo />
+    </g>
+  </svg>
+)
