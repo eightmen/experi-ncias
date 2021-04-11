@@ -57,4 +57,44 @@ export default function PresetsDemo() {
             ))}
           </Select>
         </label>
-        <ThemeProvider theme={pre
+        <ThemeProvider theme={preset}>
+          <Themed.root sx={{ bg: 'background', color: 'text', p: 3 }}>
+            <Themed.h2>Colors</Themed.h2>
+            <ColorPalette omit={['modes', 'header']} />
+            <Themed.h2>Typography</Themed.h2>
+            <TypeStyle fontSize={7}>
+              Body: <FontFamily name="body" />
+            </TypeStyle>
+            <HeadingStyle
+              fontFamily="heading"
+              fontWeight="heading"
+              lineHeight="heading"
+              fontSize={7}
+            >
+              Heading: <FontFamily name="heading" />
+            </HeadingStyle>
+            <Themed.h2>Type Scale</Themed.h2>
+            <TypeScale />
+            <Components />
+            <label htmlFor="json">Raw JSON</label>
+            <textarea
+              id="json"
+              value={JSON.stringify(preset, null, 2)}
+              rows={16}
+              readOnly
+              aria-labelledby="json"
+              sx={{
+                width: '100%',
+                fontFamily: 'monospace',
+                bg: 'muted',
+                border: 0,
+                borderRadius: 4,
+                color: 'text'
+              }}
+            />
+          </Themed.root>
+        </ThemeProvider>
+      </div>
+    </div>
+  )
+}
