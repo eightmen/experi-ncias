@@ -85,4 +85,9 @@ export default function ReadmeBadges() {
       <a href="https://percy.io/95212972/theme-ui">
         <img
           src="https://percy.io/static/images/percy-badge.svg"
-          alt="This project 
+          alt="This project is using Percy.io for visual regression testing."
+        />
+      </a>
+    </div>
+  )
+}
