@@ -48,4 +48,33 @@ export const setDocSearchComponents = ({
             var searchSelector = "#algolia-docs-search";
             var searchInput = document.querySelector(searchSelector);
 
-            if (searchIn
+            if (searchInput && (lastSearchInput !== searchInput)) {
+              docsearch({
+                apiKey: "84ed820927eee5fa5018c9f1abe70390",
+                indexName: "theme-ui",
+                inputSelector: searchSelector,
+                debug: true,
+                transformData: function(hits) {
+                  for (const hit of hits) {
+                    hit.url = hit.url.replace(
+                      "https://theme-ui.com",
+                      window.location.origin
+                    )
+                  }
+                }
+              })
+              lastSearchInput = searchInput;
+            }
+          });
+
+          document.addEventListener("DOMContentLoaded", function() {
+            observer.observe(document, {
+              childList: true,
+              subtree: true
+            });
+          });        
+      `,
+      }}
+    />,
+  ])
+}
