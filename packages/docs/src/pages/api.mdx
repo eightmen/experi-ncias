@@ -49,4 +49,80 @@ in the same way like the `/jsx-runtime` entrypoint.
 **Usage:**
 
 ```jsx
-/** @jsx jsx 
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+
+export default (props) => (
+  <div
+    {...props}
+    sx={{
+      color: 'primary',
+    }}
+  />
+)
+```
+
+### `ThemeProvider`
+
+The `ThemeProvider` component is a wrapper around Emotion's `ThemeProvider` and
+MDX's `MDXProvider`. It provides default styled components to MDX content that
+pick up values from `theme.styles`. It also handles color mode state.
+
+| Prop         | Type   | Description                    |
+| ------------ | ------ | ------------------------------ |
+| `theme`      | Object | Theming context object         |
+| `components` | Object | Optional custom MDX components |
+| `children`   | Node   | React children                 |
+
+### `useThemeUI`
+
+The `useThemeUI` hook returns the full Theme UI context object, which includes
+`theme`, and color mode.
+
+```js
+const context = useThemeUI()
+const { theme, components, colorMode, setColorMode } = context
+```
+
+### `useColorMode`
+
+The `useColorMode` hook returns an array with two values: the current color mode
+state and an updater function. The color mode state can be any string and should
+match the name of a color mode defined in `theme.colors.modes` or be a name for
+the default color mode.
+
+```js
+const [colorMode, setColorMode] = useColorMode()
+```
+
+### `BaseStyles`
+
+The `BaseStyles` component can be used to style child content that isn’t
+generated from MDX. This can be useful with content from a CMS or Markdown.
+
+<Note>
+
+Note that this will increase the CSS specificity of child elements, and you may
+run into issues with the cascade (i.e. specificity) when using this component.
+This component should _not_ be used at the root of your application, as it will
+override custom & component styling.
+
+</Note>
+
+```jsx
+<BaseStyles>
+  <h1>
+    Styled based on <code>theme.styles</code>
+  </h1>
+</BaseStyles>
+```
+
+### `Context`
+
+The React context used in Theme UI.
+
+### `css`
+
+As an alternative to using the `sx` prop, the `css` utility is intended for use
+with the Emotion `css` prop. It will attempt to use values from the `theme`
+object for many common CSS properties, and wil
