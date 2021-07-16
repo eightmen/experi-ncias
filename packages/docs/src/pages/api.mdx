@@ -125,4 +125,72 @@ The React context used in Theme UI.
 
 As an alternative to using the `sx` prop, the `css` utility is intended for use
 with the Emotion `css` prop. It will attempt to use values from the `theme`
-object for many common CSS properties, and wil
+object for many common CSS properties, and will fall back to raw values when
+there is no corresponding theme value.
+
+To see a list of supported CSS properties, see the [`sx` prop docs](/sx-prop).
+
+```js
+css(styleObject)(theme)
+```
+
+**Usage:**
+
+```jsx
+<div css={css(styles)} />
+```
+
+| Argument      | Type   | Description                                                                                          |
+| ------------- | ------ | ---------------------------------------------------------------------------------------------------- |
+| `styleObject` | Object | a theme-aware style object with support for responsive array values and Styled System prop shortcuts |
+| `theme`       | Object | the Emotion theming context object                                                                   |
+
+### `get`
+
+An existential getter function used internally to extract a field (or object)
+from a theme object.
+
+### `getObjectWithVariants`
+
+Similar to the `get` function above, but will also resolve any `variant` field
+if found inside the object.
+
+### `merge`
+
+A function to deeply merge themes.
+
+**Usage**
+
+```jsx
+import dark from '@theme-ui/preset-dark'
+
+const theme = merge(dark, {
+  fontWeights: {
+    body: 500,
+    heading: 700,
+    bold: 900,
+  },
+})
+```
+
+### `InitializeColorMode`
+
+this component can be rendered in HTML before the main application to help
+prevent the flash of colors that can occur during rehydration.
+
+**Usage**
+
+```jsx
+<InitializeColorMode />
+```
+
+This component is used internally by
+[`gatsby-plugin-theme-ui`](/packages/gatsby-plugin), but if you’re using Next.js
+or another React framework with static or server-side rendering, you’ll want to
+add it to the root level of your application.
+
+## Components
+
+For component API docs, see [Components](/components).
+
+[styled-system/css]: https://styled-system.com/css
