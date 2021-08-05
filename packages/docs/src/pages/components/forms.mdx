@@ -1,0 +1,26 @@
+---
+title: Forms
+---
+
+import { Note } from '../..'
+
+# Forms
+
+Several primitive components are included for building accessible forms.
+
+```js
+import {
+  Label,
+  Input,
+  Select,
+  Textarea,
+  Radio,
+  Checkbox,
+  Slider,
+} from 'theme-ui'
+```
+
+```jsx live=true
+<Box as="form" onSubmit={(e) => e.preventDefault()}>
+  <Label htmlFor="username">Username</Label>
+  <Input name=
