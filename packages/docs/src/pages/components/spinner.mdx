@@ -1,0 +1,44 @@
+---
+title: Spinner
+---
+
+# Spinner
+
+Spinning SVG loading indicator
+
+```js
+import { Spinner } from 'theme-ui'
+```
+
+```jsx live=true
+<Spinner />
+```
+
+## Props
+
+| Name          | Type   | Description                                      |
+| ------------- | ------ | ------------------------------------------------ |
+| `title`       | String | (default `'loading'`) Text for SVG `<title>` tag |
+| `size`        | Number | (default `48`) indicator diameter                |
+| `strokeWidth` | Number | (default `4`) stroke width                       |
+| `duration`    | Number | (default `750`) duration of animation in ms      |
+
+A `title` attribute should be provided to the component for accessibility
+purposes. The element uses `role='img'` by default. Pass any overrides or
+additional attributes for the SVG element as props.
+
+## Variants
+
+Spinner variants can be defined anywhere in the `theme` object.
+
+```js
+// example theme variants
+{
+  styles: {
+    spinner: {
+      color: 'red',
+    },
+  },
+}
+// <Spinner variant='styles.spinner' />
+```
