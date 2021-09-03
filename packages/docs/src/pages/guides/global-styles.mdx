@@ -1,0 +1,19 @@
+---
+title: 'Global Styles'
+---
+
+# Global Styles
+
+Theme UI offers a `Global` component (that wraps Emotion’s) for adding global
+CSS with theme-based values.
+
+By default (or, unless the
+[`useRootStyles` configuration option](/theming#configuration-flags)is
+disabled), the `ThemeProvider` component will apply styles in
+`theme.styles.root` to the `<html>` element. It will also apply `color` and
+`background-color` styles based on `theme.colors.text` and
+`theme.colors.background` respectively.
+
+<Note>
+  Generally, you should try to avoid adding CSS to global scope. Many styles can
+  be safely encapsulated into a component without the need for global styles
