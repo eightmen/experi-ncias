@@ -1,0 +1,41 @@
+
+---
+title: 'Layouts'
+---
+
+# Layouts
+
+By leveraging the [variants](/guides/variants) feature, you can create custom themeable layout components.
+The components can include some default styles,
+but still allow users to override styles such as colors or typography, by changing values in the theme object.
+
+To start, create a layout component that will wrap pages in your application.
+Feel free to customize the content and default styles however you like.
+
+```js
+// example src/layout.js
+/** @jsxImportSource theme-ui */
+
+export default (props) => (
+  <div
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh',
+    }}>
+    <header
+      sx={{
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+      }}>
+      Header content
+    </header>
+    <main
+      sx={{
+        width: '100%',
+        flex: '1 1 auto',
+      }}>
+      <div
+        sx={{
+          maxWidth: 768,

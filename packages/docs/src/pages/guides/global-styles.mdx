@@ -16,4 +16,22 @@ disabled), the `ThemeProvider` component will apply styles in
 
 <Note>
   Generally, you should try to avoid adding CSS to global scope. Many styles can
-  be safely encapsulated into a component without the need for global styles
+  be safely encapsulated into a component without the need for global styles.
+</Note>
+
+```jsx
+import { Global } from 'theme-ui'
+
+export default (props) => (
+  <Global
+    styles={{
+      button: {
+        m: 0,
+        bg: 'primary',
+        color: 'background',
+        border: 0,
+      },
+    }}
+  />
+)
+```
