@@ -1,0 +1,54 @@
+---
+title: TypeScript
+---
+
+# TypeScript
+
+Theme UI is written in TypeScript.
+
+While most APIs in Theme UI should _just work_ in TypeScript,
+there are a few advanced use cases which will differ slightly.
+This guide is intended to cover those use cases.
+
+## Exact theme type
+
+The [`Theme` type](/theme-spec) represents all possible themes.
+
+It might be what you need when you're writing a library of reusable components
+or an app where the theme object is provided by the user and kept in the database.
+However, it's not the most convenient way to think about the theme,
+when building a blog or a landing page.
+
+To know the exact type of your particular theme on type level,
+you can use an identity "constructor" function to narrow the type.
+
+```tsx
+const makeTheme = <T extends Theme>(t: T) => t
+
+const theme = makeTheme({
+  colors: {
+    background: 'white',
+    text: 'black',
+    blue: {
+      light: '#187abf',
+      dark: '#235a97',
+    },
+  },
+})
+
+export type ExactTheme = typeof theme
+
+// No error
+const lightBlue = theme.colors.blue.light
+```
+
+You can then reexport `useThemeUI` hook with narrowed type.
+
+```tsx
+import { ThemeUIContextValue } from 'theme-ui'
+
+interface ExactContextValue extends Omit<ThemeUIContextValue, 'theme'> {
+  theme: ExactTheme
+}
+
+export const useTheme = (useThemeUI as unk

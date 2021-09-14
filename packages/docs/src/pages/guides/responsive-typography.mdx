@@ -89,3 +89,28 @@ the `theme.styles.h1` responsive styles will apply at other breakpoints.
   }}
 />
 ```
+
+[`breakpoints`]: /theming/#breakpoints
+
+## Non-MDX content
+
+The [`Themed`][] components can be used to pick up responsive styles outside of
+MDX, but if you'd like to apply styles to other markdown or user generated
+content, you can use the `sx` prop with a variant to style child elements. What
+this does is take the entire `theme.styles` object, adds a scoped classname to
+the `<div>`, and injects CSS with child selectors based on the keys in
+`theme.styles`.
+
+```jsx
+export default (props) => (
+  <div
+    sx={{
+      variant: 'styles',
+    }}
+  >
+    {props.children}
+  </div>
+)
+```
+
+[`themed`]: /mdx/themed
