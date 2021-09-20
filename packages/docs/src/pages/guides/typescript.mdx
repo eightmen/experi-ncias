@@ -51,4 +51,80 @@ interface ExactContextValue extends Omit<ThemeUIContextValue, 'theme'> {
   theme: ExactTheme
 }
 
-export const useTheme = (useThemeUI as unk
+export const useTheme = (useThemeUI as unknown) as () => ExactContextValue
+```
+
+_[Try it on CodeSandbox.](https://codesandbox.io/s/theme-ui-typescript-tips-yh8u1?file=/src/exact-theme-type.ts)_
+
+## Accessing optional properties
+
+Because all properties of `Theme` are optional,
+accessing them requires usage of [`get` function](/api#get).
+
+```tsx
+/** @jsxImportSource theme-ui */
+import { Theme } from 'theme-ui'
+
+const theme: Theme = {
+  space: [0, 8, 16, 32, 64, 128, 256],
+  sizes: [0, 8, 16, 32, 64, 128, 256],
+}
+
+// Type error on `theme.space` and `theme.sizes`.
+// Object is possibly 'undefined'.ts(2532)
+return <div sx={{ size: (t) => t.space[3] + t.sizes[5] }} />
+```
+
+```tsx
+/** @jsxImportSource theme-ui */
+import { Theme, get } from 'theme-ui'
+
+// No error
+return <div sx={{ size: (t) => get(t, 'space.3') + get(t, 'sizes.5') }} />
+```
+
+Properties of scales can be accessed with optional chaining.
+Values under numeric keys can be accessed with bracket notation.
+
+```tsx
+/** @jsxImportSource theme-ui */
+
+const parse = (x: unknown) => parseInt(String(x))
+
+return (
+  <div sx={{
+    size: (t) => parse(t.space?.[3]) + parse(t.sizes?.[5]) }}
+  />
+)
+```
+
+_[Try it on CodeSandbox.](https://codesandbox.io/s/theme-ui-typescript-tips-yh8u1?file=/src/App.tsx)_
+
+## Additional properties in the theme
+
+If you need additional properties in theme object,
+you can add them with [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces).
+
+```tsx
+interface MySyntaxHighlightingTheme {
+  foreground: string
+}
+
+declare module 'theme-ui' {
+  interface Theme {
+    syntaxHighlighting: MySyntaxHighlightingTheme
+  }
+}
+
+const theme: Theme = {
+  syntaxHighlighting: {
+    foreground: '#222',
+  },
+}
+
+const syntaxHighlighting = theme.syntaxHighlighting
+```
+
+_[Try it in TypeScript Playground.](https://www.typescriptlang.org/v2/en/play?#code/JYWwDg9gTgLgBAbzgFQBYFMTrgXzgMyghDgHIYMsBaAV2FIG4AoJ4AOxnSnwEMBjbAFkAngGVhHHgA8AEsADmqADYLUMdvLSZsCJnALR08ojTYATAFxwAzjCgbmOFmfR8lPKNhAQzNJdnJKdFp6RD04dk5ufmwtLDD9fWsJGGk5RRVFdTZ5KxFxSVlVTLUNOPRwpycmPgg2WzgKbStyuABeBJsUtOLVbNzO-XxDYwhTSzIAYgAmWdIAGkqmHGYauobkwvTlPo12xqCAOk3UoozdnLX6+C4iKH2mrGPhGDYe86yNJiA)_
+
+## 
