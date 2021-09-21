@@ -175,4 +175,28 @@ components.
 
 ## `styles` variants
 
-Variants insi
+Variants inside the `styles` object, while usable through the same mechanisms as
+regular variants, are also used for other Theme UI APIs.
+
+- The entire [`styles` object](/theme-spec#styles) can style child HTML elements
+  or Markdown content, via the [`BaseStyles` component](/api/#basestyles)
+- If the [`useRootStyles` configuration option](/theming#configuration-flags) is
+  enabled, the `styles.root` object will style the `<html>` element
+- [`Themed` components](/mdx/themed) will use their respective variant from
+  inside `styles`, e.g. `<Themed.h2>` uses `styles.h2`
+
+## Themeable layout components
+
+Variants can also be used to create themeable layout components. This is
+especially useful when creating [Gatsby themes][], where you'd like certain
+parts of your page layout to be customizable.
+
+Using the `variant` key in the `sx` prop allows you to define styles for a
+component that can optionally be overridden from the `theme` object. When the
+variant is undefined in the `theme`, no additional styles are applied to the
+element.
+
+Read the [Layouts Guide](/guides/layouts) to learn more.
+
+[styled system css]: https://styled-system.com/css
+[gatsby themes]: https://www.gatsbyjs.org/docs/themes/
