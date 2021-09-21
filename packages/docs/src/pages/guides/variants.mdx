@@ -72,4 +72,107 @@ able to use `Grid`’s props combined with the variant styles.
 
 Variants can use any name you choose, and deeply nested objects can be accessed
 with dot notation. You could use this to organize more complex variants, like
-`<Button variant="outline.small" />`,
+`<Button variant="outline.small" />`, which would access the
+`buttons.outline.small` object from the theme.
+
+</Note>
+
+## Color Modes
+
+Variants will also work with [color modes](/color-modes). With the example
+below, the primary button will adapt its colors based on the current color mode.
+
+```js
+// example theme with button variants and color modes
+{
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#0c7',
+    modes: {
+      dark: {
+        text: '#000',
+        background: '#fff',
+        primary: '#0c7',
+      },
+    },
+  },
+  buttons: {
+    primary: {
+      color: 'background', // use the page background color for an inverted effect
+      bg: 'primary',
+    },
+  }
+}
+```
+
+## Typography
+
+Variants can also be used to create typographic styles, similar to how graphics
+applications store text styles. This allows you to define core typographic
+values and use them as complete styles, but still override individual values
+when needed.
+
+```js
+// example theme with typographic variants
+{
+  fonts: {
+    body: 'system-ui, sans-serif',
+    heading: 'Poppins, sans-serif',
+    monospace: 'Menlo, monospace',
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  fontWeights: {
+    body: 400,
+    heading: 900,
+    bold: 700,
+  },
+  letterSpacings: {
+    heading: '-0.05em',
+    caps: '0.1em',
+  },
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+      letterSpacing: 'heading',
+    },
+    display: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+      letterSpacing: 'heading',
+      fontSize: [ 5, 6, 7 ],
+    },
+    caps: {
+      textTransform: 'uppercase',
+      letterSpacing: 'caps',
+    },
+  },
+}
+```
+
+These variants can then be used in the `theme.styles` object, with the `sx`
+prop, or with the [`Text`](/components/text) or [`Heading`](/components/heading)
+components.
+
+```jsx
+// example usage of typographic variants
+<h1 sx={{ variant: 'text.display' }} />
+<p sx={{ variant: 'text.caps' }} />
+<h2
+  sx={{
+    variant: 'text.heading',
+    // overriding the default styles
+    fontWeight: 'body',
+  }}
+/>
+```
+
+## `styles` variants
+
+Variants insi
