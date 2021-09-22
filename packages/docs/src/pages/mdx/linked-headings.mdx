@@ -1,0 +1,20 @@
+---
+name: 'Linked Headings'
+---
+
+# Linked Headings
+
+Create anchor-linked headings in MDX.
+
+Use `remark-slug` with MDX to create IDs based on the heading’s content. If
+you’re using Gatsby, add this to your `gatsby-plugin-mdx` options.
+
+```js filename=gatsby-config.js
+const remarkSlug = require('remark-slug')
+
+module.exports = {
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        remarkPlugins: [remarkSlu
