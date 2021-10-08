@@ -69,4 +69,28 @@ component: header
   </div>
   <div
     sx={{
-      display: 'f
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+    }}>
+    <Link
+      to="/blog"
+      sx={{
+        variant: 'styles.navlink',
+        ml: 3,
+        py: 3,
+      }}>
+      Blog
+    </Link>
+    <Link
+      to="/about"
+      sx={{
+        variant: 'styles.navlink',
+        ml: 3,
+        py: 3,
+      }}>
+      About
+    </Link>
+  </div>
+</header>
+```
