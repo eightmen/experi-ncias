@@ -90,4 +90,85 @@ where the name can be anything, but typically `light` and `dark` are used for ap
         muted: '#111',
       },
       papaya: {
-        // this color mode will fall
+        // this color mode will fallback to the root color object
+        // for values not defined here
+        text: '#433',
+        background: 'papayawhip',
+      },
+    },
+  },
+}
+```
+
+<Note>
+
+Any undefined color keys in the nested color modes objects will fallback to values in the base colors object.
+
+</Note>
+
+## Typography
+
+To ensure that themes built for Theme UI are as portable and interoperable as possible, the following keys should be defined within each theme scale.
+Additional keys can be included for more complex styling.
+
+- `fonts`
+  - `body`: default body font family
+  - `heading`: default heading font family
+  - `monospace`: default monospace font family for `<pre>`, `<code>`, etc.
+- `fontWeights`
+  - `body`: body font weight
+  - `heading`: default heading font weight
+  - `bold`: default bold font weight
+- `lineHeights`
+  - `body`: body line height
+  - `heading`: default heading line height
+
+## Font Sizes (Typographic Scale)
+
+Font sizes are typically defined as an array, from smallest to largest.
+
+```js
+// example fontSizes scale
+{
+  fontSizes: [
+    12, 14, 16, 20, 24, 32, 48, 64,
+  ],
+}
+```
+
+Number values will be converted to pixel units. For other units, use string values, e.g. `'1em'`.
+
+<Note>
+
+Arrays are _not_ required, and plain objects will work as well.
+
+</Note>
+
+For illustration purposes, the index values of the array can be thought of as loosely mapping to heading levels,
+but these values are _not_ in any way tied to HTML elements.
+
+| Index | Heading-Level Equivalent |
+| ----- | ------------------------ |
+| 0     | `h6`                     |
+| 1     | `h5`                     |
+| 2     | `h4`                     |
+| 3     | `h3`                     |
+| 4     | `h2`                     |
+| 5     | `h1`                     |
+
+## Variants
+
+Use variants to define custom groups of styles.
+These are commonly used for typographic styles, buttons, and themeable layout components.
+Variants are also used to style built-in [components](/components).
+
+```js
+// example typographic style variants
+{
+  colors: {
+    white: '#FFFFFF',
+    primary: '#663399',
+    text: '#393939',
+    secondary: '#DAA520',
+  },
+  fonts
