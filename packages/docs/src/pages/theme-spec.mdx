@@ -10,4 +10,84 @@ import ColorKeys from '../components/color-keys'
 Theme UI is based on a theme specification, which can be used in other libraries and applications for increased interoperability.
 This specification is also intended to help ensure that themes created for Theme UI are suitable for white-label applications and general purpose theming.
 
-The theme obje
+The theme object is made up of the following data types:
+
+- _Scales:_ plain objects or arrays of values for related CSS properties
+- _Variants:_ partial style objects that can be used for stylistic component variants or making part of an application themeable
+- _Styles:_ a collection of styles for MDX content
+
+## Theme Scales
+
+The `theme` object is made up of the following scales (i.e. property-specific objects) for use in CSS styles.
+
+<ThemeScales />
+
+<Note>
+
+A theme does not require that all these fields be present and can include additional values as needed.
+
+</Note>
+
+```js
+// example theme
+{
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+    secondary: '#05a',
+    accent: '#609',
+    muted: '#f6f6f6',
+  },
+  fonts: {
+    body: 'system-ui, sans-serif',
+    heading: 'system-ui, sans-serif',
+    monospace: 'Menlo, monospace',
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+}
+```
+
+## Color
+
+The `theme.colors` scale (i.e. color palette) should be an object literal with the following keys.
+
+<ColorKeys />
+
+Other color keys can be added, including raw color values for aliasing the values above.
+
+## Color Modes
+
+To use Theme UI color modes, color scales should include _at least_ a `text` and `background` color.
+These values are used to set body foreground and background colors.
+Color modes should be defined as nested objects within a `theme.colors.modes` object.
+Each key in this object should correspond to a color mode name,
+where the name can be anything, but typically `light` and `dark` are used for applications with a dark mode.
+
+```js
+// example color scale with modes
+{
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+    secondary: '#05a',
+    muted: '#f6f6f6',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#000',
+        primary: '#0cf',
+        secondary: '#09c',
+        muted: '#111',
+      },
+      papaya: {
+        // this color mode will fall
