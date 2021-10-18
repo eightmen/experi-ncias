@@ -171,4 +171,106 @@ Variants are also used to style built-in [components](/components).
     text: '#393939',
     secondary: '#DAA520',
   },
-  fonts
+  fonts: {
+    body: 'system-ui, sans-serif',
+    heading: 'system-ui, sans-serif',
+    monospace: 'Menlo, monospace',
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  // variants can use custom, user-defined names
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+    },
+    caps: {
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+    },
+  },
+  // variants for buttons
+  buttons: {
+    primary: {
+      // you can reference other values defined in the theme
+      color: 'white',
+      bg: 'primary',
+    },
+    secondary: {
+      color: 'text',
+      bg: 'secondary',
+    },
+  }
+}
+```
+
+User-defined variants can then be referenced in the `sx` prop or in `theme.styles`.
+
+```js
+// example using variants
+<h1
+  sx={{
+    variant: 'text.heading',
+  }}>
+  Hello
+</h1>
+<button
+  sx={{
+    variant: 'buttons.primary',
+  }}>
+  Beep
+</button>
+```
+
+Variants support the same style objects as the `sx` prop, which means responsive array values, functional values, and extending other variants are supported.
+
+## Styles
+
+The Theme UI `styles` object is primarily used as a way to style MDX content and
+helps avoid the need to use global CSS. The styles defined within this object
+can also be used with the [`Themed`](/mdx/themed) component.
+
+<Note>
+
+The `styles` object is essentially an MDX-specific _variant_
+that maps directly to each MDX component.
+
+</Note>
+
+The `theme.styles` object may include the following keys, which map to elements that can be rendered by markdown:
+
+- `p` (paragraph)
+- `a` (anchor link)
+- `h1` (heading)
+- `h2`
+- `h3`
+- `h4`
+- `h5`
+- `h6`
+- `img`
+- `pre`
+- `code`
+- `ol` (ordered list)
+- `ul` (unordered list)
+- `li` (list item)
+- `blockquote`
+- `hr` (horizontal rule)
+- `em` (emphasis)
+- `table`
+- `tr` (table row)
+- `th` (table header)
+- `td` (table data)
+- `strong`
+- `del`
+- `b` (bold)
+- `i` (italic)
+- `inlineCode` (MDX-specific key for `<code>` that is not a child of `<pre>`
+- `thematicBreak` (MDX-specif
