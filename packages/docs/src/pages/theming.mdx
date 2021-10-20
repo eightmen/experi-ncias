@@ -1,0 +1,196 @@
+
+---
+title: Theming
+---
+
+import ColorKeys from '../components/color-keys'
+
+# Theming
+
+Theming with Theme UI is based on a [Theme Specification][] including a `theme.styles` object for styling MDX elements and other components.
+By adhering to a standard Theme Specification, Theme UI is designed to be interoperable with as many other libraries as possible.
+
+[theme specification]: /theme-spec
+
+## Colors
+
+Add a `theme.colors` object to provide colors for a theme.
+In order to ensure color palettes are as interoperable as possible, the following color keys should be used for defining a base set of colors:
+
+<ColorKeys />
+
+Beyond these base colors, any additional values can be added to a theme to augment the base color palette.
+
+### Color modes
+
+Multiple color modes, i.e. _dark mode_, can be handled with a nested `modes` object that matches the shape of the default colors.
+
+```js
+// example colors with dark mode
+colors: {
+  text: '#000',
+  background: '#fff',
+  primary: '#07c',
+  modes: {
+    dark: {
+      text: '#fff',
+      background: '#000',
+      primary: '#0cf',
+    }
+  }
+}
+```
+
+Learn more in the [color mode docs](/color-modes).
+
+## Typography
+
+Core typographic values can be stored in the following theme keys:
+
+- `fonts` (font families)
+- `fontSizes`
+- `fontWeights`
+- `lineHeights`
+- `letterSpacings`
+
+<Note>
+
+Values defined as numbers are converted to pixel units where appropriate.
+For other units, use string values, e.g. `'1em'`.
+
+</Note>
+
+```js
+// example theme object
+{
+  colors,
+  fonts: {
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'Georgia, serif',
+    monospace: 'Menlo, monospace',
+  },
+  fontSizes: [
+    12, 14, 16, 20, 24, 32, 48, 64
+  ],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  letterSpacings: {
+    body: 'normal',
+    caps: '0.2em',
+  },
+}
+```
+
+## Value scales
+
+The following theme keys are used to define scales for values that can be used in other parts of a theme:
+
+- `space` (margin, padding, gap, etc)
+- `sizes` (width, height, etc)
+- `borders` (border)
+- `borderWidths` (border-width)
+- `borderStyles` (border-style)
+- `radii` (border-radius)
+- `shadows` (box-shadow)
+- `zIndices` (z-index)
+
+For example, after setting `space` like this in your theme:
+
+```js
+space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+```
+
+You can reference the array values in your theme styles, by index:
+
+```js
+<Box
+  sx={{
+    padding: 2 // Equals 8px
+  }}
+/>
+```
+
+The values can also be named using an object, like this:
+
+```js
+sizes: {
+  wide: 2048,
+  container: 1024,
+  narrow: 512,
+},
+```
+
+Then used by name, such as `sx={{ maxWidth: 'narrow' /* 512px */ }}`.
+
+## Styles
+
+Styles for elements rendered in MDX can be added to the `theme.styles` object.
+This is the primary API for applying typographic styles in Markdown content.
+Styles within this object have access to other values in the theme object, such as colors, fonts, and space.
+
+```js
+// example theme styles
+{
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+  },
+  fonts: {
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'Georgia, serif',
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+  },
+  styles: {
+    h1: {
+      fontSize: 32,
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      color: 'primary',
+      mt: 4,
+      mb: 2,
+    },
+  }
+}
+```
+
+<Note>
+
+To use these styles arbitrarily, such as for markup from a CMS, see the [BaseStyles component](/api#basestyles).
+
+</Note>
+
+## Root styles
+
+To add base, top-level styles to the `<html>` element, use `theme.styles.root`.
+
+```js
+// example with root styles
+{
+  fonts: {
+    body: 'system-ui, sans-serif',
+    heading: 'Georgia, serif',
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+  },
+  styles: {
+    root: {
+      // uses the theme values provided above
+      fontFamily: 'body',
+      fontWeight: 'body',
+    },
+  },
+}
+```

@@ -273,4 +273,77 @@ The `theme.styles` object may include the following keys, which map to elements 
 - `b` (bold)
 - `i` (italic)
 - `inlineCode` (MDX-specific key for `<code>` that is not a child of `<pre>`
-- `thematicBreak` (MDX-specif
+- `thematicBreak` (MDX-specific key for `<hr>`)
+- `div` (not rendered in MDX)
+- `root` (theme-ui-specific)
+
+<Note>
+
+Not all HTML elements are available with the dot notation syntax.
+For example `button` is not rendered by markdown,
+and not included.
+See [variants](#variants) for an alternative way to style elements.
+
+</Note>
+
+Objects within `theme.styles` can reference other values in the `theme` object.
+For example, headings can be defined with values from the typographic scales.
+
+```js
+// example heading styles
+{
+  styles: {
+    h1: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+      fontSize: 5,
+    },
+  },
+}
+```
+
+Variants can also be used within the `theme.styles` object.
+
+```js
+// example heading using text styles variant
+{
+  // ...base theme object
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+    }
+  },
+  styles: {
+    h1: {
+      variant: 'text.heading',
+      fontSize: 5,
+    }
+  }
+}
+```
+
+## Aliasing Colors and Other Scales
+
+In many design systems, developers choose to create an additional layer of abstraction for mapping individual components to specific scale values.
+With Theme UI, _variants_ are the mechanism to use for such abstractions.
+
+## Breakpoints
+
+To configure the default breakpoints used in responsive array values, add a `breakpoints` array to your theme.
+Each breakpoint should be a string with a CSS length unit included or a string including a CSS media query.
+String values with a CSS length unit will be used to generate a mobile-first (i.e. `min-width`) media query. 
+The breakpoints can then be used to apply [responsive styles](/sx-prop/#responsive-values).
+
+```js
+// example custom breakpoints
+{
+  breakpoints: [
+    '40em', '@media (min-width: 56em) and (orientation: landscape)', '64em',
+  ],
+}
+```
+
+[system ui theme specification]: https://system-ui.com/theme
