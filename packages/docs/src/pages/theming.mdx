@@ -194,3 +194,155 @@ To add base, top-level styles to the `<html>` element, use `theme.styles.root`.
   },
 }
 ```
+
+<Note>
+
+To disable applying styles to the `<html>` element, add the `config: { useRootStyles: false }` flag to your theme.
+
+</Note>
+
+## Breakpoints
+
+To configure the default breakpoints used in responsive array values, add a `breakpoints` array to your theme.
+Each breakpoint should be a string with a CSS length unit included or a string including a CSS media query.
+String values with a CSS length unit will be used to generate a mobile-first (i.e. `min-width`) media query. 
+The breakpoints can then be used to apply [responsive styles](/sx-prop/#responsive-values).
+
+```js
+// example custom breakpoints
+{
+  breakpoints: [
+    '40em', '@media (min-width: 56em) and (orientation: landscape)', '64em',
+  ],
+}
+```
+
+## Configuration flags
+
+The theme object can also include configuration options for Theme UI, which are nested in the `config` object.
+The following keys can be used to enable and disable certain features.
+
+| Flag                       | Default             | Description                                                                                                                                 |
+| -------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `useCustomProperties`      | `true`              | Enables CSS custom properties to help mitigate a flash of unstyled content during rehydration                                               |
+| `useRootStyles`            | `true`              | Adds styles defined in `theme.styles.root` to the `<html>` element along with `color` and `background-color`                                |
+| `initialColorModeName`     | `'default'`         | The key used for the top-level color palette in `theme.colors`                                                                              |
+| `useColorSchemeMediaQuery` | `true`             | Initializes the color mode based on the `prefers-color-scheme` media query                                                                  |
+| `useBorderBox`             | `true`              | Adds a global `box-sizing: border-box` style                                                                                                |
+| `useLocalStorage`          | `true`              | Persists the color mode in `localStorage`                                                                                                   |
+
+## Default theme
+
+If your custom theme doesn’t override these properties, Theme UI will use these default values.
+
+```js
+{
+  breakpoints: [40, 52, 64].map((n) => n + 'em'),
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+}
+```
+
+## Example theme
+
+The following example is from the [Base Preset][example].
+
+```js
+// example base theme from @theme-ui/presets
+export const theme = {
+  breakpoints: ['40em', '52em', '64em'],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fonts: {
+    body:
+      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'inherit',
+    monospace: 'Menlo, monospace',
+  },
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+    secondary: '#30c',
+    muted: '#f6f6f6',
+  },
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+    },
+  },
+  styles: {
+    root: {
+      fontFamily: 'body',
+      lineHeight: 'body',
+      fontWeight: 'body',
+    },
+    h1: {
+      variant: 'text.heading',
+      fontSize: 5,
+    },
+    h2: {
+      variant: 'text.heading',
+      fontSize: 4,
+    },
+    h3: {
+      variant: 'text.heading',
+      fontSize: 3,
+    },
+    h4: {
+      variant: 'text.heading',
+      fontSize: 2,
+    },
+    h5: {
+      variant: 'text.heading',
+      fontSize: 1,
+    },
+    h6: {
+      variant: 'text.heading',
+      fontSize: 0,
+    },
+    pre: {
+      fontFamily: 'monospace',
+      overflowX: 'auto',
+      code: {
+        color: 'inherit',
+      },
+    },
+    code: {
+      fontFamily: 'monospace',
+      fontSize: 'inherit',
+    },
+    table: {
+      width: '100%',
+      borderCollapse: 'separate',
+      borderSpacing: 0,
+    },
+    th: {
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
+    },
+    td: {
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
+    },
+  },
+}
+```
+
+For alternative pre-made themes, check out the [presets package](/packages/presets),
+and to see open source custom themes, check out [this collection](/resources#custom-themes).
+For more information on the Theme UI `theme` object, see the [Theme Specification docs](/theme-spec).
+
+[example]: https://github.com/system-ui/theme-ui/tree/develop/packages/preset-base/src/index.ts
+[emotion]: https://emotion.sh
