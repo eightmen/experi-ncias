@@ -1,0 +1,22 @@
+{
+  "name": "e2e",
+  "private": true,
+  "version": "0.15.6-develop.0",
+  "description": "Cypress tests ran against Theme UI docs and examples",
+  "scripts": {
+    "open": "cypress open",
+    "start": "percy exec -- cypress run",
+    "record": "wait-on 'http://localhost:9000' && percy exec -- cypress run --record",
+    "serve-docs": "cd ../.. && pnpm run --filter docs serve",
+    "build-and-serve-docs": "cd ../.. && pnpm run --filter docs build && pnpm run --filter docs serve"
+  },
+  "optionalDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.2",
+    "@percy/cli": "^1.1.0",
+    "@percy/cypress": "^3.1.1",
+    "@testing-library/cypress": "^8.0.2",
+    "cypress": "10.4.0",
+    "esbuild": "^0.15.6",
+    "wait-on": "^6.0.1"
+  }
+}

@@ -43,4 +43,31 @@ describe('docs navigation', () => {
 
     for (const packageName of [
       'css',
-     
+      'core',
+      'components',
+      'presets',
+      'color',
+    ]) {
+      cy.findAllByText('@theme-ui/' + packageName, { selector: 'li > a' })
+        .first()
+        .click()
+      cy.location().should(
+        'have.property',
+        'pathname',
+        `/packages/${packageName}`
+      )
+    }
+
+    cy.window().then((win) => win.scrollTo(0, 200))
+
+    cy.percySnapshot('@theme-ui/color docs')
+  })
+
+  it('displays 404 page', () => {
+    cy.visit(`/not-found-${Math.random()}`, { failOnStatusCode: false })
+    cy.findByRole('heading').should('have.text', '404')
+    cy.findByText('Page not found')
+  })
+})
+
+export {}
