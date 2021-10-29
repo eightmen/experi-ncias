@@ -49,4 +49,15 @@ exports.sourceNodes = (
   }
 
   createNode({
-    ...themeUi
+    ...themeUiConfig,
+    id: `gatsby-plugin-theme-ui-config`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `ThemeUiConfig`,
+      contentDigest: createContentDigest(themeUiConfig),
+      content: JSON.stringify(themeUiConfig),
+      description: `Options for gatsby-plugin-theme-ui`,
+    },
+  })
+}
