@@ -45,4 +45,6 @@ test('renders with theme context', () => {
     },
     styles: {
       pre: {},
-    }
+    },
+  })
+})
