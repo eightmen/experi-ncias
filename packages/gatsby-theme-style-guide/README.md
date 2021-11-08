@@ -34,4 +34,14 @@ module.exports = {
 
 ## Shadowing
 
-You can customize the layout an
+You can customize the layout and order of the page by [shadowing](https://www.gatsbyjs.org/docs/themes/shadowing/) the theme.
+
+| component           | description                      |
+| ------------------- | -------------------------------- |
+| `src/template.js`   | the root component for the page  |
+| `src/layout.js`     | wrapper for adding a page layout |
+| `src/header.js`     | header for the top of the page   |
+| `src/typography.js` | section for typography styles    |
+| `src/colors.js`     | section for colors               |
+
+For example, to shadow the `template.js` file, you would create a file named `your-site/src/gatsby-theme-style-guide/template.js`.
