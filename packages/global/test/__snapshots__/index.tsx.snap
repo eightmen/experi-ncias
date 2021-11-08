@@ -1,0 +1,43 @@
+
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders global and component styles 1`] = `
+.emotion-0 {
+  color: pink;
+}
+
+<html>
+  <head>
+    <style
+      data-emotion="css"
+      data-s=""
+    >
+      
+      .css-2cx43c{}
+    </style>
+    <style
+      data-emotion="css"
+      data-s=""
+    >
+      
+      .css-2cx43c html{background-color:hotpink;}
+    </style>
+    <style
+      data-emotion="css"
+      data-s=""
+    >
+      
+      .emotion-0{color:pink;}
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <div
+          class="emotion-0"
+        />
+      </header>
+    </div>
+  </body>
+</html>
+`;

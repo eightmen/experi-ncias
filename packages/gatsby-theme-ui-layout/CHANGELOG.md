@@ -70,4 +70,8 @@ Thank you, William Pei ([@draekien](https://github.com/draekien)), for all your 
 
 - Merge branch 'develop' into stable ([@hasparus](https://github.com/hasparus))
 
-###
+#### Authors: 3
+
+- Alex Chan ([@alexanderchan](https://github.com/alexanderchan))
+- Lennart ([@LekoArts](https://github.com/LekoArts))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
