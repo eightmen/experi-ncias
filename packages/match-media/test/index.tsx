@@ -82,4 +82,67 @@ describe('reads breakpoints from theme', () => {
   })
 
   test('breakpoints containing media queries', () => {
-    const matchMedia = (window.matchMedia
+    const matchMedia = (window.matchMedia = mockMediaQueries([
+      'screen and (min-width: 300px)',
+      'screen and (min-width: 500px) and (max-width: 899px)',
+    ]))
+
+    const theme: Theme = {
+      breakpoints: [
+        '300px',
+        '@media screen and (min-width: 500px) and (max-width: 899px)',
+        '@media screen and (min-width: 900px)',
+      ],
+    }
+
+    const { result } = renderHook(
+      () => {
+        return {
+          value: useResponsiveValue(['a', 'b', 'c', 'd']),
+          index: useBreakpointIndex(),
+        }
+      },
+      { theme }
+    )
+
+    expect(matchMedia).toHaveBeenCalledWith('screen and (min-width: 300px)')
+    expect(matchMedia).toHaveBeenCalledWith(
+      'screen and (min-width: 500px) and (max-width: 899px)'
+    )
+    expect(matchMedia).toHaveBeenCalledWith('screen and (min-width: 900px)')
+
+    expect(result).toEqual({ value: 'c', index: 2 })
+  })
+})
+
+test('responds to resize event', () => {
+  window.matchMedia = mockMediaQueries([
+    'screen and (min-width: 40em)',
+    'screen and (min-width: 52em)',
+    'screen and (min-width: 64em)',
+  ])
+
+  let onResize: () => void
+  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
+    if (event === 'resize') onResize = cb
+  })
+
+  const rendered = renderHook(() => useResponsiveValue(['a', 'b', 'c', 'd']))
+
+  expect(rendered.result).toEqual('d')
+
+  window.matchMedia = mockMediaQueries([
+    'screen and (min-width: 40em)',
+    'screen and (min-width: 52em)',
+  ])
+  act(() => onResize())
+  expect(rendered.result).toEqual('c')
+
+  window.matchMedia = mockMediaQueries(['screen and (min-width: 40em)'])
+  act(() => onResize())
+  expect(rendered.result).toEqual('b')
+
+  window.matchMedia = mockMediaQueries([])
+  act(() => onResize())
+  expect(rendered.result).toEqual('a')
+})
