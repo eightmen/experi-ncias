@@ -32,4 +32,38 @@ describe('defaultMdxComponents with MDX v2', () => {
       const tdSpy = jest.spyOn(defaultMdxComponents, 'td')
 
       function MyProvider({ children }) {
-        const components = useThe
+        const components = useThemedStylesWithMdx(useMDXComponents())
+
+        return <MDXProvider components={components}>{children}</MDXProvider>
+      }
+
+      const tree = render(
+        <MyProvider>
+          <MarkdownTable />
+        </MyProvider>
+      )
+
+      const thProps = thSpy.mock.calls.map((call) => call[0].align)
+      expect(thProps).toEqual(['left', 'center', 'right'])
+
+      const tdProps = tdSpy.mock.calls.map((call) => call[0].align)
+      expect(tdProps).toEqual(['left', 'center', 'right'])
+
+      expect(tree.getByText('Left')).toHaveStyleRule('text-align', 'left')
+      expect(tree.getByText('Center')).toHaveStyleRule('text-align', 'center')
+      expect(tree.getByText('Right')).toHaveStyleRule('text-align', 'right')
+      expect(tree.getByText('Left-aligned text')).toHaveStyleRule(
+        'text-align',
+        'left'
+      )
+      expect(tree.getByText('Center-aligned text')).toHaveStyleRule(
+        'text-align',
+        'center'
+      )
+      expect(tree.getByText('Right-aligned text')).toHaveStyleRule(
+        'text-align',
+        'right'
+      )
+    })
+  })
+})
