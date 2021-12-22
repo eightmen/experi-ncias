@@ -99,4 +99,36 @@ describe(`${useThemedStylesWithMdx.name} with MDX v2`, () => {
     function MyProvider({ children }) {
       const components = useThemedStylesWithMdx(
         useMDXComponents({
-          h1: 
+          h1: ({ children, ...rest }) => {
+            const props = /** @type {any} */ (rest)
+            return <pre {...props}># {children}</pre>
+          },
+        })
+      )
+
+      return (
+        <ThemeProvider
+          theme={{
+            config: { useCustomProperties: false },
+            styles: { h1: { color: 'tomato' } },
+          }}
+        >
+          <MDXProvider components={components}>{children}</MDXProvider>
+        </ThemeProvider>
+      )
+    }
+
+    const BlogPost = await evalMdx(`
+      # Heading
+    `)
+
+    const json = renderJSON(
+      <MyProvider>
+        <BlogPost />
+      </MyProvider>
+    )
+
+    expect(json).toHaveStyleRule('color', 'tomato')
+    expect(json?.type).toBe('pre')
+  })
+})
