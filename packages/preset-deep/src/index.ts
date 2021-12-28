@@ -1,3 +1,4 @@
+
 import { makeTheme } from '@theme-ui/css/utils'
 
 const heading = {
@@ -6,16 +7,16 @@ const heading = {
   lineHeight: 'heading',
 }
 
-export const dark = makeTheme({
+export const deep = makeTheme({
   colors: {
-    text: '#fff',
-    background: '#060606',
-    primary: '#3cf',
-    secondary: '#e0f',
-    muted: '#191919',
-    highlight: '#29112c',
-    gray: '#999',
-    purple: '#c0f',
+    text: 'hsl(210, 50%, 96%)',
+    background: 'hsl(230, 25%, 18%)',
+    primary: 'hsl(260, 100%, 80%)',
+    secondary: 'hsl(290, 100%, 80%)',
+    highlight: 'hsl(260, 20%, 40%)',
+    purple: 'hsl(290, 100%, 80%)',
+    muted: 'hsla(230, 20%, 0%, 20%)',
+    gray: 'hsl(210, 50%, 60%)',
   },
   fonts: {
     body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
@@ -154,4 +155,4 @@ export const dark = makeTheme({
   },
 })
 
-export default dark
+export default deep
