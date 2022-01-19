@@ -1,3 +1,50 @@
+
+# v0.12.0 (Thu Oct 28 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, William Pei ([@draekien](https://github.com/draekien)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Merge remote-tracking branch 'upstream/develop' into fix/color-scheme-media-query-api-update [#981](https://github.com/system-ui/theme-ui/pull/981) ([@draekien](https://github.com/draekien))
+
+#### Authors: 1
+
+- William Pei ([@draekien](https://github.com/draekien))
+
+---
+
+# v0.11.0 (Wed Aug 25 2021)
+
+### Release Notes
+
+#### Add @theme-ui/css/utils with TypeScript CIF functions and fix preset types ([#1862](https://github.com/system-ui/theme-ui/pull/1862))
+
+- Added TypeScript [Constrained identity functions](https://kentcdodds.com/blog/how-to-write-a-constrained-identity-function-in-typescript) `makeTheme`, `makeStyles` and `makeColorsScale` which can be imported from _@theme-ui/css/utils_.
+- Used aformentioned functions to properly define types of presets. Exported themes are now assignable to _Theme_ but their types narrowly describe their exact values.
+
+---
+
+---
+
+#### 🚀 Enhancement
+
+- Add @theme-ui/css/utils with TypeScript CIF functions and fix preset types [#1862](https://github.com/system-ui/theme-ui/pull/1862) ([@tornewuff](https://github.com/tornewuff) [@hasparus](https://github.com/hasparus))
+- feat(css): add makeTheme constrained identity function ([@hasparus](https://github.com/hasparus))
+
+#### 🐛 Bug Fix
+
+- Define as actual tests to satisfy jest ([@tornewuff](https://github.com/tornewuff))
+- Add tests and use const instead ([@tornewuff](https://github.com/tornewuff))
+
+#### Authors: 2
+
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+- Torne Wuff ([@tornewuff](https://github.com/tornewuff))
+
+---
+
 # v0.10.0 (Sat Jun 19 2021)
 
 #### 🐛 Bug Fix
@@ -45,6 +92,18 @@
 
 - Brent Jackson ([@jxnblk](https://github.com/jxnblk))
 - Lachlan Campbell ([@lachlanjc](https://github.com/lachlanjc))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
+
+---
+
+# v0.7.5 (Wed Apr 28 2021)
+
+#### ⚠️ Pushed to `stable`
+
+- Merge branch 'develop' into stable ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 1
+
 - Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))
 
 ---
