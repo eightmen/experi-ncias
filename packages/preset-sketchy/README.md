@@ -23,4 +23,16 @@ This preset uses _Architects Daughter_ font, so you need to copy this code into 
 
 <link
   rel="stylesheet"
-  hre
+  href="https://fonts.googleapis.com/css?family=Architects+Daughter"
+/>
+
+[See all built-in presets][demo]
+
+## Contributing
+
+We'd love to have more presets added to the Theme UI project.
+If you'd like to add a new preset or improve upon the existing ones, please open an [issue][] or [pull request][].
+
+[issue]: https://github.com/system-ui/theme-ui/issues
+[pull request]: https://github.com/system-ui/theme-ui/pulls
+[demo]: https://theme-ui.com/demo
