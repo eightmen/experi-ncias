@@ -1,0 +1,23 @@
+{
+  "name": "@theme-ui/presets",
+  "version": "0.15.6-develop.0",
+  "main": "dist/theme-ui-presets.cjs.js",
+  "module": "dist/theme-ui-presets.esm.js",
+  "types": "dist/theme-ui-presets.cjs.d.ts",
+  "source": "src/index.ts",
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {
+    "@theme-ui/preset-base": "workspace:^",
+    "@theme-ui/preset-bootstrap": "workspace:^",
+    "@theme-ui/preset-bulma": "workspace:^",
+    "@theme-ui/preset-dark": "workspace:^",
+    "@theme-ui/preset-deep": "workspace:^",
+    "@theme-ui/preset-funk": "workspace:^",
+    "@theme-ui/preset-future": "workspace:^",
+    "@theme-ui/preset-polaris": "workspace:^",
+    "@theme-ui/preset-roboto": "workspace:^",
+    "@theme-ui/preset-sketchy": "workspace:^",
+    "@theme-ui/preset-swiss": "workspace:^",
+    "@theme-ui/preset-sys
