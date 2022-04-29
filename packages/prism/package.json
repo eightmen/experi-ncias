@@ -1,0 +1,11 @@
+{
+  "name": "@theme-ui/prism",
+  "version": "0.15.6-develop.0",
+  "main": "dist/theme-ui-prism.cjs.js",
+  "module": "dist/theme-ui-prism.esm.js",
+  "types": "dist/theme-ui-prism.cjs.d.ts",
+  "source": "src/index.tsx",
+  "author": "John Otander",
+  "license": "MIT",
+  "repository": "system-ui/theme-ui",
+  "publishConfig": {

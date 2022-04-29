@@ -20,4 +20,23 @@
     "@theme-ui/preset-roboto": "workspace:^",
     "@theme-ui/preset-sketchy": "workspace:^",
     "@theme-ui/preset-swiss": "workspace:^",
-    "@theme-ui/preset-sys
+    "@theme-ui/preset-system": "workspace:^",
+    "@theme-ui/preset-tailwind": "workspace:^",
+    "@theme-ui/preset-tosh": "workspace:^"
+  },
+  "devDependencies": {
+    "@theme-ui/css": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "theme-ui",
+    "css",
+    "css-in-js",
+    "style",
+    "emotion"
+  ],
+  "repository": "system-ui/theme-ui",
+  "gitHead": "621199460fa3bdb0100748441e62517b7529b8c8"
+}
