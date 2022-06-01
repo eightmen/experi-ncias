@@ -19,4 +19,28 @@
   ".attr-name": {
     "color": "#896724"
   },
-  ".boolean,.string,.entity,.url,.attr-value,.keyword,.control,.directive,.unit,.statement,.
+  ".boolean,.string,.entity,.url,.attr-value,.keyword,.control,.directive,.unit,.statement,.regex,.at-rule": {
+    "color": "#728fcb"
+  },
+  ".placeholder,.variable": {
+    "color": "#93abdc"
+  },
+  ".deleted": {
+    "textDecorationLine": "line-through"
+  },
+  ".inserted": {
+    "textDecorationLine": "underline"
+  },
+  ".italic": {
+    "fontStyle": "italic"
+  },
+  ".important,.bold": {
+    "fontWeight": "bold"
+  },
+  ".important": {
+    "color": "#896724"
+  },
+  ".highlight": {
+    "background": "hsla(0, 0%, 70%, .5)"
+  }
+}
