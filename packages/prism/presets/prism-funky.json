@@ -13,4 +13,31 @@
   ".property,.tag,.boolean,.number,.constant,.symbol": {
     "color": "#0cf"
   },
-  ".selector,.attr-name,.st
+  ".selector,.attr-name,.string,.char,.builtin": {
+    "color": "yellow"
+  },
+  ".operator,.entity,.url,.language-css .string,.variable,.inserted": {
+    "color": "yellowgreen"
+  },
+  ".atrule,.attr-value,.keyword": {
+    "color": "deeppink"
+  },
+  ".regex,.important": {
+    "color": "orange"
+  },
+  ".important,.bold": {
+    "fontWeight": "bold"
+  },
+  ".italic": {
+    "fontStyle": "italic"
+  },
+  ".entity": {
+    "cursor": "help"
+  },
+  ".deleted": {
+    "color": "red"
+  },
+  ".highlight": {
+    "background": "hsla(0, 0%, 40%, .5)"
+  }
+}
