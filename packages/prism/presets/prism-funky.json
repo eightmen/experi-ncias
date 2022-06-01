@@ -1,0 +1,16 @@
+{
+  "color": "white",
+  "backgroundColor": "black",
+  ".comment,.prolog,.doctype,.cdata": {
+    "color": "#aaa"
+  },
+  ".punctuation": {
+    "color": "#999"
+  },
+  ".namespace": {
+    "opacity": 0.7
+  },
+  ".property,.tag,.boolean,.number,.constant,.symbol": {
+    "color": "#0cf"
+  },
+  ".selector,.attr-name,.st

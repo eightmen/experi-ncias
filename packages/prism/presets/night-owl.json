@@ -24,4 +24,34 @@
     "color": "rgb(214, 222, 235)"
   },
   ".number": {
-    "color": "rgb(24
+    "color": "rgb(247, 140, 108)"
+  },
+  ".builtin,.char,.constant,.function": {
+    "color": "rgb(130, 170, 255)"
+  },
+  ".punctuation": {
+    "color": "rgb(199, 146, 234)"
+  },
+  ".selector,.doctype": {
+    "color": "rgb(199, 146, 234)",
+    "fontStyle": "italic"
+  },
+  ".class-name": {
+    "color": "rgb(255, 203, 139)"
+  },
+  ".tag,.operator,.keyword": {
+    "color": "rgb(127, 219, 202)"
+  },
+  ".boolean": {
+    "color": "rgb(255, 88, 116)"
+  },
+  ".property": {
+    "color": "rgb(128, 203, 196)"
+  },
+  ".namespace": {
+    "color": "rgb(178, 204, 214)"
+  },
+  ".highlight": {
+    "background": "hsla(0, 0%, 30%, .5)"
+  }
+}
