@@ -31,4 +31,12 @@
     "color": "#cb4b16"
   },
   ".important,.bold": {
-    "font
+    "fontWeight": "bold"
+  },
+  ".italic": {
+    "fontStyle": "italic"
+  },
+  ".highlight": {
+    "background": "hsla(0, 70%, 40%, .2)"
+  }
+}
