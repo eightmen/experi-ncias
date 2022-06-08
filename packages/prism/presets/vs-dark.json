@@ -1,0 +1,10 @@
+{
+  "color": "#9CDCFE",
+  "backgroundColor": "#1E1E1E",
+  ".prolog": {
+    "color": "rgb(0, 0, 128)"
+  },
+  ".comment": {
+    "color": "rgb(106, 153, 85)"
+  },
+  ".builtin,.changed,.keyword"
