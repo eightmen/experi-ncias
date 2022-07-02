@@ -151,4 +151,110 @@ exports[`AccordionNav renders open 1`] = `
 }
 
 .emotion-2 {
-  display: -webk
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  color: primary;
+}
+
+.emotion-5:disabled {
+  opacity: 0.25;
+}
+
+.emotion-6 {
+  transform-origin: 8 8;
+  -webkit-transition: -webkit-transform .1s ease-out;
+  transition: transform .1s ease-out;
+}
+
+<div
+    className="emotion-0"
+  >
+    <ul
+      className="emotion-1"
+    >
+      <li>
+        <div
+          className="emotion-2"
+        >
+          <a
+            href="/"
+          >
+            Beep
+          </a>
+        </div>
+      </li>
+      <li>
+        <div
+          className="emotion-2"
+        >
+          <a
+            href="/boop"
+          >
+            Boop
+          </a>
+        </div>
+      </li>
+      <li>
+        <div
+          className="emotion-2"
+        >
+          <a
+            href="/bop"
+          >
+            Bop
+          </a>
+          <button
+            className="emotion-5"
+            disabled={false}
+            href="/bop"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            pathname=""
+            title="Expand Section"
+          >
+            <svg
+              height="12"
+              viewBox="0 0 16 16"
+              width="12"
+            >
+              <g
+                className="emotion-6"
+                transform="rotate(0 8 8)"
+              >
+                <path
+                  d="M14 6 L8 12 L2 6"
+                  fill="none"
+                  stroke="currentcolor"
+      
