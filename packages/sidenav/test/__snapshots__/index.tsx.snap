@@ -365,4 +365,129 @@ exports[`AccordionNav renders with nested links 1`] = `
   <ul
     className="emotion-1"
   >
-    <li
+    <li>
+      <div
+        className="emotion-2"
+      >
+        <a
+          href="/"
+        >
+          Beep
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="emotion-2"
+      >
+        <a
+          href="/boop"
+        >
+          Boop
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="emotion-2"
+      >
+        <a
+          href="/bop"
+        >
+          Bop
+        </a>
+        <button
+          className="emotion-5"
+          disabled={false}
+          href="/bop"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          pathname=""
+          title="Expand Section"
+        >
+          <svg
+            height="12"
+            viewBox="0 0 16 16"
+            width="12"
+          >
+            <g
+              className="emotion-6"
+              transform="rotate(0 8 8)"
+            >
+              <path
+                d="M14 6 L8 12 L2 6"
+                fill="none"
+                stroke="currentcolor"
+                strokeWidth="2"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Pagination renders 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emotion-2 {
+  font-size: 14px;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.emotion-3 {
+  font-size: 20px;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  />
+  <a
+    className="emotion-2"
+    href="/boop"
+  >
+    <div>
+      Next:
+    </div>
+    <div
+      className="emotion-3"
+    >
+      Boop
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Sidenav renders 1`] = `
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  min-width: 0;
+  width: 256px;
+  max-height: 100vh;
+  overflow-x: visible;
+  overflow-y: auto;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+  -webkit-transform:
