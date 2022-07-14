@@ -257,4 +257,112 @@ exports[`AccordionNav renders open 1`] = `
                   d="M14 6 L8 12 L2 6"
                   fill="none"
                   stroke="currentcolor"
-      
+                  strokeWidth="2"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>,
+]
+`;
+
+exports[`AccordionNav renders with nested links 1`] = `
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  min-width: 0;
+  width: 256px;
+  max-height: 100vh;
+  overflow-x: visible;
+  overflow-y: auto;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+  -webkit-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  transform: translate(-100%);
+  background-color: background;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 40em) {
+  .emotion-0 {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: auto;
+    max-height: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+    background-color: transparent;
+  }
+}
+
+.emotion-1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  color: primary;
+}
+
+.emotion-5:disabled {
+  opacity: 0.25;
+}
+
+.emotion-6 {
+  transform-origin: 8 8;
+  -webkit-transition: -webkit-transform .1s ease-out;
+  transition: transform .1s ease-out;
+}
+
+<div
+  className="emotion-0"
+>
+  <ul
+    className="emotion-1"
+  >
+    <li
