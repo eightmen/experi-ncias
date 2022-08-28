@@ -615,3 +615,12 @@ exports[`Sidenav renders open 1`] = `
       <li>
         <a
           href="/bop"
+          mdxType="a"
+        >
+          Bop
+        </a>
+      </li>
+    </ul>
+  </div>,
+]
+`;
