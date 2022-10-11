@@ -72,4 +72,9 @@
 
 #### ⚠️ Pushed to `stable`
 
-- Merge branch 'develop' into stable ([@hasparus](https://github.co
+- Merge branch 'develop' into stable ([@hasparus](https://github.com/hasparus))
+
+#### Authors: 2
+
+- Alex Chan ([@alexanderchan](https://github.com/alexanderchan))
+- Piotr Monwid-Olechnowicz ([@hasparus](https://github.com/hasparus))

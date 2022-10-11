@@ -1,0 +1,33 @@
+{
+  "name": "@theme-ui/tachyons",
+  "description": "⚠ DEPRECATED: Generate static CSS for use outside of React with Theme UI and Tachyons",
+  "version": "0.15.6-develop.0",
+  "private": true,
+  "main": "dist/theme-ui-tachyons.cjs.js",
+  "module": "dist/theme-ui-tachyons.esm.js",
+  "source": "src/index.ts",
+  "author": "John Otander <johnotander@gmail.com>",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "@theme-ui/css": "workspace:^",
+    "babel-polyfill": "^6.26.0",
+    "execa": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tachyons-generator": "^0.23.0"
+  },
+  "keywords": [
+    "theme-ui",
+    "tachyons",
+    "css",
+    "emotion",
+    "css-in-js",
+    "style"
+  ],
+  "repository": "system-ui/theme-ui",
+  "gitHead": "621199460fa3bdb0100748441e62517b7529b8c8"
+}
