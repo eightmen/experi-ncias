@@ -549,3 +549,493 @@ video {
   --tw-backdrop-contrast:  ;
   --tw-backdrop-grayscale:  ;
   --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-x-0 {
+  left: 0;
+  right: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.-mr-2 {
+  margin-right: -8px;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}
+
+.mt-5 {
+  margin-top: 64px;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.origin-top-right {
+  transform-origin: top right;
+}
+
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(4px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4px * var(--tw-space-y-reverse));
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 119 204 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 8px;
+}
+
+.px-4 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.px-5 {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.px-3 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.py-3 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.pt-4 {
+  padding-top: 32px;
+}
+
+.pt-2 {
+  padding-top: 8px;
+}
+
+.pb-3 {
+  padding-bottom: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-heading {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-heading {
+  font-weight: 700;
+}
+
+.tracking-0 {
+  letter-spacing: -0.04em;
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(0 85 170 / var(--tw-text-opacity));
+}
+
+.text-muted {
+  --tw-text-opacity: 1;
+  color: rgb(246 246 246 / var(--tw-text-opacity));
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(0 119 204 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-opacity-5 {
+  --tw-ring-opacity: 0.05;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.hover\\:text-muted:hover {
+  --tw-text-opacity: 1;
+  color: rgb(246 246 246 / var(--tw-text-opacity));
+}
+
+.hover\\:text-secondary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 85 170 / var(--tw-text-opacity));
+}
+
+.focus\\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\\:ring-inset:focus {
+  --tw-ring-inset: inset;
+}
+
+.focus\\:ring-primary:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 119 204 / var(--tw-ring-opacity));
+}
+
+@media (min-width: 30em) {
+  .\\30\\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .\\30\\:mt-5 {
+    margin-top: 64px;
+  }
+
+  .\\30\\:mt-0 {
+    margin-top: 0;
+  }
+
+  .\\30\\:ml-3 {
+    margin-left: 16px;
+  }
+
+  .\\30\\:flex {
+    display: flex;
+  }
+
+  .\\30\\:justify-center {
+    justify-content: center;
+  }
+
+  .\\30\\:text-left {
+    text-align: left;
+  }
+
+  .\\30\\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .\\30\\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 45em) {
+  .\\31\\:mt-5 {
+    margin-top: 64px;
+  }
+
+  .\\31\\:block {
+    display: block;
+  }
+
+  .\\31\\:hidden {
+    display: none;
+  }
+
+  .\\31\\:py-4 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .\\31\\:pr-4 {
+    padding-right: 32px;
+  }
+
+  .\\31\\:text-center {
+    text-align: center;
+  }
+
+  .\\31\\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .\\31\\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .\\31\\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 55em) {
+  .\\32\\:mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .\\32\\:flex-grow-0 {
+    flex-grow: 0;
+  }
+
+  .\\32\\:justify-start {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 75em) {
+  .\\33\\:inline {
+    display: inline;
+  }
+}
+"
+`;
+
+exports[`transforms a theme config to a Tailwind config 1`] = `
+{
+  "theme": {
+    "boxShadow": {
+      "0": "0 0 2px rgba(0,0,0,0.125)",
+      "1": "0 0 8px rgba(0,0,0,0.25)",
+    },
+    "colors": {
+      "accent": "#609",
+      "background": "#fff",
+      "muted": "#f6f6f6",
+      "primary": "#07c",
+      "secondary": "#05a",
+      "text": "#000",
+      "white": "#fff",
+    },
+    "fontFamily": {
+      "body": "system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif",
+      "heading": "system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif",
+      "monospace": "Menlo, monospace",
+    },
+    "fontWeight": {
+      "body": 400,
+      "bold": 700,
+      "heading": 700,
+    },
+    "height": {
+      "0": "10em",
+      "1": "20em",
+      "2": "30em",
+      "3": "40em",
+    },
+    "letterSpacing": {
+      "0": "-0.04em",
+      "1": "0",
+      "2": "0.04em",
+    },
+    "lineHeight": {
+      "body": 1.5,
+      "heading": 1.125,
+    },
+    "maxHeight": {
+      "0": "10em",
+      "1": "20em",
+      "2": "30em",
+      "3": "40em",
+    },
+    "maxWidth": {
+      "0": "10em",
+      "1": "20em",
+      "2": "30em",
+      "3": "40em",
+    },
+    "screens": {
+      "0": "30em",
+      "1": "45em",
+      "2": "55em",
+      "3": "75em",
+    },
+    "spacing": {
+      "0": "0",
+      "1": "4px",
+      "2": "8px",
+      "3": "16px",
+      "4": "32px",
+      "5": "64px",
+    },
+    "width": {
+      "0": "10em",
+      "1": "20em",
+      "2": "30em",
+      "3": "40em",
+    },
+  },
+}
+`;
