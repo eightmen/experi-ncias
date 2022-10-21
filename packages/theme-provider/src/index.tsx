@@ -20,4 +20,41 @@ const RootStyles = () =>
         return null
       }
 
-      const
+      const boxSizing =
+        theme.config?.useBorderBox === false ? undefined : 'border-box'
+
+      return css({
+        '*': {
+          boxSizing,
+        },
+        html: {
+          variant: 'styles.root',
+        },
+        body: {
+          margin: 0,
+        },
+      })(theme)
+    },
+  })
+
+interface ThemeProviderProps extends Pick<CoreThemeProviderProps, 'theme'> {
+  children?: React.ReactNode
+}
+
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({
+  theme,
+  children,
+}) => {
+  const outer = useThemeUI()
+
+  const isTopLevel = outer === __themeUiDefaultContextValue
+
+  return (
+    <CoreProvider theme={theme}>
+      <ColorModeProvider>
+        {isTopLevel && <RootStyles />}
+        {children}
+      </ColorModeProvider>
+    </CoreProvider>
+  )
+}
