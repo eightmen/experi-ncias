@@ -56,4 +56,24 @@ it('transforms a theme config to a Tailwind config', () => {
 
 it('does not error when using the Tailwind CLI', async () => {
   expect.assertions(1)
-  const fi
+  const filePath = path.join(__dirname, 'tailwind.config.js')
+  const contentFilename = path.join(__dirname, 'index.html')
+  fs.writeFileSync(
+    filePath,
+    toJS(toTailwind(theme, { content: [contentFilename] }))
+  )
+  // , { content: [contentFilename] }))
+
+  const fixtureFilename = path.join(__dirname, 'fixture.css')
+  const outputFilename = path.join(__dirname, 'out.css')
+
+  await execa(
+    '../node_modules/.bin/tailwind',
+    ['build', '-i', fixtureFilename, '-o', outputFilename],
+    { cwd: __dirname }
+  )
+
+  const result = fs.readFileSync(outputFilename, 'utf8')
+
+  expect(result).toMatchSnapshot()
+})
