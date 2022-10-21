@@ -70,4 +70,50 @@ export const renderJSON = (
  *
  * expectSnippet(`
  *   const x = add(10, 20)
- *
+ * `).toInfer('x', 'number')
+ */
+export const expecter = (
+  setupCode: string,
+  options: { jsx?: boolean } = {}
+) => {
+  options = { jsx: true, ...options }
+
+  const fileName = 'snippet.tsx'
+
+  return (code: string) => {
+    const compiler = new tsSnippet.Compiler({
+      // same settings as our root tsconfig
+      resolveJsonModule: true,
+      esModuleInterop: true,
+      moduleResolution: 'node',
+      strict: true,
+      jsx: 'react',
+      isolatedModules: true,
+
+      // for better error message snapshots
+      noErrorTruncation: true,
+
+      types: ['node'],
+    })
+
+    const snippets = tsSnippet.snippet(
+      {
+        [fileName]: `
+        ${
+          options.jsx
+            ? `
+            /** @jsx jsx **/
+            import { jsx } from './packages/theme-ui'
+          `
+            : ''
+        }
+        ${setupCode}
+        ${code}
+      `,
+      },
+      compiler
+    )
+
+    return snippets.expect(fileName)
+  }
+}
