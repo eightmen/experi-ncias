@@ -1,0 +1,27 @@
+
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseStyles renders 1`] = `
+.emotion-0 {
+  font-family: system-ui,sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`BaseStyles renders sx prop styles 1`] = `
+.emotion-0 {
+  font-family: body;
+  line-height: body;
+  font-weight: body;
+  color: var(--theme-ui-colors-custom);
+}
+
+<div
+  className="emotion-0"
+/>
+`;
