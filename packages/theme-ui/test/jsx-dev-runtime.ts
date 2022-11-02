@@ -58,4 +58,7 @@ describe('automatic JSX dev runtime in theme-ui package', () => {
       'background-color',
       'hotpink'
     )
-    expect(screen
+    expect(screen.getByTestId('mx-20')).toHaveStyleRule('margin-left', '20px')
+    expect(screen.getByTestId('mx-20')).toHaveStyleRule('margin-right', '20px')
+  })
+})
