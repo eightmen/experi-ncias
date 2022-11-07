@@ -43,4 +43,26 @@
     "typography-theme-stow-lake": "^0.16.19",
     "typography-theme-sutro": "^0.16.19",
     "typography-theme-trajan": "^0.1.3",
-    "typography-theme-tw
+    "typography-theme-twin-peaks": "^0.16.19",
+    "typography-theme-us-web-design-standards": "^0.16.19",
+    "typography-theme-wikipedia": "^0.16.19",
+    "typography-theme-wordpress-2010": "^0.16.19",
+    "typography-theme-wordpress-2011": "^0.16.19",
+    "typography-theme-wordpress-2012": "^0.16.19",
+    "typography-theme-wordpress-2013": "^0.16.19",
+    "typography-theme-wordpress-2014": "^0.16.19",
+    "typography-theme-wordpress-2015": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19",
+    "typography-theme-wordpress-kubrick": "^0.16.19",
+    "typography-theme-zacklive": "^1.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "typography",
+    "css"
+  ],
+  "repository": "system-ui/theme-ui",
+  "gitHead": "621199460fa3bdb0100748441e62517b7529b8c8"
+}
