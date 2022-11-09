@@ -1,0 +1,1997 @@
+
+lockfileVersion: 5.4
+
+overrides:
+  '@types/readable-stream': 2.3.11
+  '@types/eslint': 7.29.0
+  '@types/react': ^18.0.8
+  '@emotion/react': 11.10.0
+
+importers:
+
+  .:
+    specifiers:
+      '@auto-it/all-contributors': ^10.37.6
+      '@auto-it/conventional-commits': ^10.37.6
+      '@auto-it/core': ^10.37.6
+      '@auto-it/first-time-contributor': ^10.37.6
+      '@auto-it/magic-zero': ^10.37.6
+      '@auto-it/npm': ^10.37.6
+      '@auto-it/omit-commits': ^10.37.6
+      '@auto-it/released': ^10.37.6
+      '@babel/cli': ^7.13.14
+      '@babel/core': ^7.15.8
+      '@babel/helper-string-parser': ^7.18.10
+      '@babel/helper-validator-identifier': ^7.12.11
+      '@babel/plugin-transform-runtime': ^7.16.4
+      '@babel/preset-env': ^7.16.4
+      '@babel/preset-react': ^7.13.13
+      '@babel/preset-typescript': ^7.13.0
+      '@babel/runtime': ^7.16.3
+      '@codechecks/build-size-watcher': ^0.1.0
+      '@codechecks/client': 0.1.10-beta
+      '@emotion/jest': ^11.10.0
+      '@jest/types': ^29
+      '@preconstruct/cli': ^2.1.5
+      '@testing-library/react': ^13.4.0
+      '@types/eslint': 7.29.0
+      '@types/jest': ^29.0.3
+      '@types/node': ^18.7.18
+      '@types/react-dom': ^18.0.6
+      '@types/react-test-renderer': ^18.0.0
+      '@types/semver': ^7.3.12
+      '@typescript-eslint/eslint-plugin': ^5.37.0
+      '@typescript-eslint/parser': ^5.37.0
+      auto: ^10.37.6
+      babel-jest: ^29.0.3
+      babel-preset-gatsby: ^2.2.0
+      cross-env: ^7.0.3
+      egzek: ^1.2.0
+      eslint: ^8
+      eslint-config-react-app: ^7.0.1
+      jest: ^29.0.3
+      jest-canvas-mock: ^2.4.0
+      jest-environment-jsdom: ^29.0.3
+      jest-mock-console: ^2.0.0
+      jest-ts-webcompat-resolver: ^1.0.0
+      postinstall-postinstall: ^2.1.0
+      prettier: ^2.2.1
+      react-test-renderer: ^18.2.0
+      rimraf: ^3.0.2
+      semver: ^7.3.7
+      ts-jest: ^29.0.1
+      ts-toolbelt: ^9.6.0
+      typecov: ^0.2.3
+      typescript: ^4
+    dependencies:
+      '@types/semver': 7.3.12
+      semver: 7.3.7
+    devDependencies:
+      '@auto-it/all-contributors': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/conventional-commits': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/first-time-contributor': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/magic-zero': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/npm': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/omit-commits': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/released': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@babel/cli': 7.18.10_@babel+core@7.18.13
+      '@babel/core': 7.18.13
+      '@babel/helper-string-parser': 7.18.10
+      '@babel/helper-validator-identifier': 7.18.6
+      '@babel/plugin-transform-runtime': 7.18.10_@babel+core@7.18.13
+      '@babel/preset-env': 7.18.10_@babel+core@7.18.13
+      '@babel/preset-react': 7.18.6_@babel+core@7.18.13
+      '@babel/preset-typescript': 7.18.6_@babel+core@7.18.13
+      '@babel/runtime': 7.18.9
+      '@codechecks/build-size-watcher': 0.1.0_v76cdw5cnhhhwc7x27ojxbm6mu
+      '@codechecks/client': 0.1.10-beta_typescript@4.8.2
+      '@emotion/jest': 11.10.0_@types+jest@29.0.3
+      '@jest/types': 29.0.1
+      '@preconstruct/cli': 2.2.1
+      '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
+      '@types/eslint': 7.29.0
+      '@types/jest': 29.0.3
+      '@types/node': 18.7.18
+      '@types/react-dom': 18.0.6
+      '@types/react-test-renderer': 18.0.0
+      '@typescript-eslint/eslint-plugin': 5.37.0_xqhjzecfscsilsaymwwmmzqgbe
+      '@typescript-eslint/parser': 5.37.0_yqf6kl63nyoq5megxukfnom5rm
+      auto: 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      babel-jest: 29.0.3_@babel+core@7.18.13
+      babel-preset-gatsby: 2.21.0_z7xfqpjx4fjaj52kxoobbtpxnq
+      cross-env: 7.0.3
+      egzek: 1.2.0
+      eslint: 8.23.0
+      eslint-config-react-app: 7.0.1_qbascfw7byzczac6k5lnsowqm4
+      jest: 29.0.3_@types+node@18.7.18
+      jest-canvas-mock: 2.4.0
+      jest-environment-jsdom: 29.0.3
+      jest-mock-console: 2.0.0_jest@29.0.3
+      jest-ts-webcompat-resolver: 1.0.0_jest-resolve@29.0.3
+      postinstall-postinstall: 2.1.0
+      prettier: 2.7.1
+      react-test-renderer: 18.2.0_react@18.2.0
+      rimraf: 3.0.2
+      ts-jest: 29.0.1_gljagjxbls6s25ehqshcsf72oq
+      ts-toolbelt: 9.6.0
+      typecov: 0.2.3_5p32yrjpqxa7sxzwo7vfykgghm
+      typescript: 4.8.2
+
+  examples/gatsby:
+    specifiers:
+      '@babel/core': ^7.15.8
+      '@emotion/react': 11.10.0
+      '@mdx-js/react': ^2
+      '@theme-ui/mdx': workspace:^
+      '@types/react': ^18.0.8
+      babel-eslint: ^10
+      gatsby: ^4.21.0
+      gatsby-plugin-mdx: ^4.0.0
+      gatsby-source-filesystem: latest
+      graphql: ^15
+      react: ^18.1.0
+      react-dom: ^18.1.0
+      theme-ui: workspace:^
+      typescript: ^4
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@mdx-js/react': 2.1.3_react@18.2.0
+      '@theme-ui/mdx': link:../../packages/mdx
+      gatsby: 4.21.1_ygwdrcfl3m6rdu4ibcq7rpa2au
+      gatsby-plugin-mdx: 4.0.0_p463e5ujixl6uoianntvxnxv6u
+      gatsby-source-filesystem: 5.4.0_gatsby@4.21.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      theme-ui: link:../../packages/theme-ui
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@types/react': 18.0.17
+      babel-eslint: 10.1.0_eslint@8.23.0
+      graphql: 15.8.0
+      typescript: 4.8.2
+
+  examples/gatsby-plugin:
+    specifiers:
+      '@emotion/react': 11.10.0
+      '@types/react': ^18.0.8
+      babel-eslint: ^10
+      gatsby: ^4.21.0
+      gatsby-plugin-mdx: ^3.7.1
+      gatsby-plugin-theme-ui: workspace:^
+      react: ^18.1.0
+      react-dom: ^18.1.0
+      theme-ui: workspace:^
+      typescript: ^4
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      gatsby: 4.21.1_ygwdrcfl3m6rdu4ibcq7rpa2au
+      gatsby-plugin-mdx: 3.20.0_ma2eejsrishpdj3d54cmsqa36e
+      gatsby-plugin-theme-ui: link:../../packages/gatsby-plugin-theme-ui
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      theme-ui: link:../../packages/theme-ui
+    devDependencies:
+      '@types/react': 18.0.17
+      babel-eslint: 10.1.0_eslint@8.23.0
+      typescript: 4.8.2
+
+  examples/next:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': 11.10.0
+      '@mdx-js/loader': ^2.1.2
+      '@mdx-js/react': ^2.1.2
+      '@next/mdx': ^12.0.7
+      '@theme-ui/css': workspace:^
+      '@types/react': ^18.0.8
+      next: ^12.1.0
+      react: ^18
+      react-dom: ^18
+      theme-ui: workspace:^
+      typescript: ^4
+      webpack: ^4
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@mdx-js/loader': 2.1.3_webpack@4.46.0
+      '@mdx-js/react': 2.1.3_react@18.2.0
+      '@next/mdx': 12.2.5_hbo3tj2k5fhsh63l2ltjrymaq4
+      '@theme-ui/css': link:../../packages/css
+      next: 12.2.5_rlaikcoslzwwtqyk7brpdzej5y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      theme-ui: link:../../packages/theme-ui
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@types/react': 18.0.17
+      typescript: 4.8.2
+      webpack: 4.46.0
+
+  examples/prism:
+    specifiers:
+      babel-eslint: ^10
+      gatsby: ^4.21.0
+      gatsby-plugin-mdx: ^1.6.0
+      gatsby-remark-prismjs: ^3.2.9
+      prismjs: ^1.16.0
+      react: ^18.1.0
+      react-dom: ^18.1.0
+      theme-ui: workspace:^
+      typescript: ^4
+    dependencies:
+      gatsby: 4.21.1_ygwdrcfl3m6rdu4ibcq7rpa2au
+      gatsby-plugin-mdx: 1.10.1_ecih36s6orllhyip6wdwtjygdu
+      gatsby-remark-prismjs: 3.13.0_mtz4du36lz6vjin37uif4px6mu
+      prismjs: 1.29.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      theme-ui: link:../../packages/theme-ui
+    devDependencies:
+      babel-eslint: 10.1.0_eslint@8.23.0
+      typescript: 4.8.2
+
+  examples/typography:
+    specifiers:
+      '@babel/core': ^7.15.8
+      '@mdx-js/react': ^2.0.0
+      '@types/lodash.merge': ^4.6.7
+      '@types/react': ^18.0.8
+      babel-eslint: ^10
+      eslint: ^8
+      gatsby: ^4.21.0
+      gatsby-plugin-google-fonts: ^1.0.0
+      gatsby-plugin-mdx: ^4.0.0
+      gatsby-source-filesystem: ^4
+      graphql: ^15
+      lodash.merge: ^4.6.1
+      react: ^18.1.0
+      react-dom: ^18.1.0
+      theme-ui: workspace:^
+      theme-ui-typography: ^0.1.7
+      typescript: ^4
+      typography-theme-fairy-gates: ^0.16.19
+    dependencies:
+      '@mdx-js/react': 2.1.3_react@18.2.0
+      gatsby: 4.21.1_ygwdrcfl3m6rdu4ibcq7rpa2au
+      gatsby-plugin-google-fonts: 1.0.1
+      gatsby-plugin-mdx: 4.0.0_hijfqeve3et5ytqhh5mg4zvida
+      gatsby-source-filesystem: 4.21.1_gatsby@4.21.1
+      lodash.merge: 4.6.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      theme-ui: link:../../packages/theme-ui
+      theme-ui-typography: 0.1.7
+      typography-theme-fairy-gates: 0.16.19
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@types/lodash.merge': 4.6.7
+      '@types/react': 18.0.17
+      babel-eslint: 10.1.0_eslint@8.23.0
+      eslint: 8.23.0
+      graphql: 15.8.0
+      typescript: 4.8.2
+
+  packages/color:
+    specifiers:
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@theme-ui/theme-provider': workspace:^
+      polished: ^4.0.5
+    dependencies:
+      '@theme-ui/css': link:../css
+      polished: 4.2.2
+    devDependencies:
+      '@theme-ui/core': link:../core
+      '@theme-ui/test-utils': link:../test-utils
+      '@theme-ui/theme-provider': link:../theme-provider
+
+  packages/color-modes:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': ^11
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      deepmerge: ^4.2.2
+      react: ^18.0
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@theme-ui/core': link:../core
+      '@theme-ui/css': link:../css
+      deepmerge: 4.2.2
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+      react: 18.2.0
+
+  packages/components:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': ^11
+      '@styled-system/color': ^5.1.2
+      '@styled-system/should-forward-prop': ^5.1.2
+      '@styled-system/space': ^5.1.2
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      '@types/styled-system': ^5.1.13
+      react: ^18.1.0
+      theme-ui: workspace:^
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@styled-system/color': 5.1.2
+      '@styled-system/should-forward-prop': 5.1.5
+      '@styled-system/space': 5.1.2
+      '@theme-ui/css': link:../css
+      '@types/styled-system': 5.1.15
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@theme-ui/core': link:../core
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+      react: 18.2.0
+      theme-ui: link:../theme-ui
+
+  packages/core:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': ^11
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      deepmerge: ^4.2.2
+      react: '>=18 || 18'
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@theme-ui/css': link:../css
+      deepmerge: 4.2.2
+      react: 18.2.0
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+
+  packages/css:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': ^11
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      csstype: ^3.0.10
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      csstype: 3.1.0
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+
+  packages/custom-properties:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@types/pluralize': ^0.0.29
+      pluralize: ^8.0.0
+    dependencies:
+      pluralize: 8.0.0
+    devDependencies:
+      '@theme-ui/css': link:../css
+      '@types/pluralize': 0.0.29
+
+  packages/docs:
+    specifiers:
+      '@babel/core': ^7
+      '@babel/helper-string-parser': ^7.18.10
+      '@babel/register': ^7.8.6
+      '@emotion/react': 11.10.0
+      '@mdx-js/mdx': ^1
+      '@mdx-js/react': ^1
+      '@theme-ui/color': workspace:^
+      '@theme-ui/components': workspace:^
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/global': workspace:^
+      '@theme-ui/match-media': workspace:^
+      '@theme-ui/mdx': workspace:^
+      '@theme-ui/presets': workspace:^
+      '@theme-ui/prism': workspace:^
+      '@theme-ui/sidenav': workspace:^
+      '@theme-ui/style-guide': workspace:^
+      '@theme-ui/tachyons': workspace:^
+      '@theme-ui/tailwind': workspace:^
+      '@theme-ui/typography': workspace:^
+      '@types/react': ^18.0.8
+      babel-eslint: ^10
+      copy-to-clipboard: ^3.2.0
+      eslint: ^8
+      gatsby: ^4.21.0
+      gatsby-plugin-catch-links: ^4.2.0
+      gatsby-plugin-compile-es6-packages: ^2.1.1
+      gatsby-plugin-mdx: ^3
+      gatsby-plugin-pnpm: ^1.2.10
+      gatsby-plugin-react-helmet: ^5.2.0
+      gatsby-plugin-theme-ui: workspace:^
+      gatsby-theme-style-guide: workspace:^
+      is-absolute-url: ^4.0.1
+      lodash.merge: ^4.6.1
+      lodash.omit: ^4.5.0
+      prismjs: ^1.16.0
+      react: ^18.1.0
+      react-dom: ^18.1.0
+      react-helmet: ^6.1.0
+      react-live: ^2.1.2
+      remark-slug: ^6
+      stringify-object: ^3
+      theme-ui: workspace:^
+      typescript: ^4
+      typography-theme-alton: ^0.16.19
+      typography-theme-anonymous: ^0.15.10
+      typography-theme-bootstrap: ^0.16.19
+      typography-theme-de-young: ^0.16.19
+      typography-theme-doelger: ^0.16.19
+      typography-theme-elk-glen: ^0.16.19
+      typography-theme-fairy-gates: ^0.16.19
+      typography-theme-funston: ^0.16.19
+      typography-theme-github: ^0.16.19
+      typography-theme-grand-view: ^0.16.19
+      typography-theme-irving: ^0.16.19
+      typography-theme-judah: ^0.16.19
+      typography-theme-kirkham: ^0.16.19
+      typography-theme-lawton: ^0.16.19
+      typography-theme-legible: ^0.16.19
+      typography-theme-lincoln: ^0.16.19
+      typography-theme-moraga: ^0.16.19
+      typography-theme-noriega: ^0.16.19
+      typography-theme-ocean-beach: ^0.16.19
+      typography-theme-parnassus: ^0.16.19
+      typography-theme-st-annes: ^0.16.19
+      typography-theme-stardust: ^0.16.19
+      typography-theme-stern-grove: ^0.16.19
+      typography-theme-stow-lake: ^0.16.19
+      typography-theme-sutro: ^0.16.19
+      typography-theme-trajan: ^0.1.3
+      typography-theme-twin-peaks: ^0.16.19
+      typography-theme-us-web-design-standards: ^0.16.19
+      typography-theme-wikipedia: ^0.16.19
+      typography-theme-wordpress-2010: ^0.16.19
+      typography-theme-wordpress-2011: ^0.16.19
+      typography-theme-wordpress-2012: ^0.16.19
+      typography-theme-wordpress-2013: ^0.16.19
+      typography-theme-wordpress-2014: ^0.16.19
+      typography-theme-wordpress-2015: ^0.16.19
+      typography-theme-wordpress-2016: ^0.16.19
+      typography-theme-wordpress-kubrick: ^0.16.19
+      typography-theme-zacklive: ^1.0.2
+    dependencies:
+      '@babel/helper-string-parser': 7.18.10
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@mdx-js/mdx': 1.6.22
+      '@mdx-js/react': 1.6.22_react@18.2.0
+      '@theme-ui/color': link:../color
+      '@theme-ui/components': link:../components
+      '@theme-ui/core': link:../core
+      '@theme-ui/css': link:../css
+      '@theme-ui/global': link:../global
+      '@theme-ui/match-media': link:../match-media
+      '@theme-ui/mdx': link:../mdx
+      '@theme-ui/presets': link:../presets
+      '@theme-ui/prism': link:../prism
+      '@theme-ui/sidenav': link:../sidenav
+      '@theme-ui/style-guide': link:../style-guide
+      '@theme-ui/tachyons': link:../tachyons
+      '@theme-ui/tailwind': link:../tailwind
+      '@theme-ui/typography': link:../typography
+      '@types/react': 18.0.17
+      copy-to-clipboard: 3.3.2
+      gatsby: 4.21.1_ygwdrcfl3m6rdu4ibcq7rpa2au
+      gatsby-plugin-catch-links: 4.21.0_gatsby@4.21.1
+      gatsby-plugin-compile-es6-packages: 2.1.1_gatsby@4.21.1
+      gatsby-plugin-mdx: 3.20.0_ma2eejsrishpdj3d54cmsqa36e
+      gatsby-plugin-pnpm: 1.2.10_gatsby@4.21.1
+      gatsby-plugin-react-helmet: 5.21.0_5xse5ignlkghq32fbxfefygaaq
+      gatsby-plugin-theme-ui: link:../gatsby-plugin-theme-ui
+      gatsby-theme-style-guide: link:../gatsby-theme-style-guide
+      is-absolute-url: 4.0.1
+      lodash.merge: 4.6.2
+      lodash.omit: 4.5.0
+      prismjs: 1.29.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-helmet: 6.1.0_react@18.2.0
+      react-live: 2.4.1_biqbaboplfbrettd7655fr4n2y
+      remark-slug: 6.1.0
+      stringify-object: 3.3.0
+      theme-ui: link:../theme-ui
+      typography-theme-alton: 0.16.19
+      typography-theme-anonymous: 0.15.10
+      typography-theme-bootstrap: 0.16.19
+      typography-theme-de-young: 0.16.19
+      typography-theme-doelger: 0.16.19
+      typography-theme-elk-glen: 0.16.19
+      typography-theme-fairy-gates: 0.16.19
+      typography-theme-funston: 0.16.19
+      typography-theme-github: 0.16.19
+      typography-theme-grand-view: 0.16.19
+      typography-theme-irving: 0.16.19
+      typography-theme-judah: 0.16.19
+      typography-theme-kirkham: 0.16.19
+      typography-theme-lawton: 0.16.19
+      typography-theme-legible: 0.16.19
+      typography-theme-lincoln: 0.16.19
+      typography-theme-moraga: 0.16.19
+      typography-theme-noriega: 0.16.19
+      typography-theme-ocean-beach: 0.16.19
+      typography-theme-parnassus: 0.16.19
+      typography-theme-st-annes: 0.16.19
+      typography-theme-stardust: 0.16.19
+      typography-theme-stern-grove: 0.16.19
+      typography-theme-stow-lake: 0.16.19
+      typography-theme-sutro: 0.16.19
+      typography-theme-trajan: 0.1.3
+      typography-theme-twin-peaks: 0.16.19
+      typography-theme-us-web-design-standards: 0.16.19
+      typography-theme-wikipedia: 0.16.19
+      typography-theme-wordpress-2010: 0.16.19
+      typography-theme-wordpress-2011: 0.16.19
+      typography-theme-wordpress-2012: 0.16.19
+      typography-theme-wordpress-2013: 0.16.19
+      typography-theme-wordpress-2014: 0.16.19
+      typography-theme-wordpress-2015: 0.16.19
+      typography-theme-wordpress-2016: 0.16.19
+      typography-theme-wordpress-kubrick: 0.16.19
+      typography-theme-zacklive: 1.0.2
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@babel/register': 7.18.9_@babel+core@7.18.13
+      babel-eslint: 10.1.0_eslint@8.23.0
+      eslint: 8.23.0
+      typescript: 4.8.2
+
+  packages/e2e:
+    specifiers:
+      '@bahmutov/cypress-esbuild-preprocessor': ^2.1.2
+      '@percy/cli': ^1.1.0
+      '@percy/cypress': ^3.1.1
+      '@testing-library/cypress': ^8.0.2
+      cypress: 10.4.0
+      esbuild: ^0.15.6
+      wait-on: ^6.0.1
+    optionalDependencies:
+      '@bahmutov/cypress-esbuild-preprocessor': 2.1.3_esbuild@0.15.6
+      '@percy/cli': 1.10.0
+      '@percy/cypress': 3.1.2_cypress@10.4.0
+      '@testing-library/cypress': 8.0.3_cypress@10.4.0
+      cypress: 10.4.0
+      esbuild: 0.15.6
+      wait-on: 6.0.1
+
+  packages/gatsby-plugin-theme-ui:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': ^11
+      '@mdx-js/react': ^1
+      '@theme-ui/css': workspace:^
+      '@theme-ui/mdx': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      gatsby: ^4 || ^5
+      react: '>=18 || 18'
+      theme-ui: workspace:^
+      typescript: ^4
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@theme-ui/css': link:../css
+      '@theme-ui/mdx': link:../mdx
+      gatsby: 4.21.1_szel5ggy6oiqgqxwc4a6yc2j34
+      react: 18.2.0
+      theme-ui: link:../theme-ui
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@mdx-js/react': 1.6.22_react@18.2.0
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+      typescript: 4.8.2
+
+  packages/gatsby-theme-style-guide:
+    specifiers:
+      '@theme-ui/mdx': workspace:^
+      '@theme-ui/style-guide': workspace:^
+      babel-eslint: ^10
+      eslint: ^8
+      gatsby: ^4.21.0
+      react: ^18
+      react-dom: ^18
+      theme-ui: workspace:^
+      typescript: '>=4'
+    dependencies:
+      '@theme-ui/mdx': link:../mdx
+      '@theme-ui/style-guide': link:../style-guide
+      theme-ui: link:../theme-ui
+    devDependencies:
+      babel-eslint: 10.1.0_eslint@8.23.0
+      eslint: 8.23.0
+      gatsby: 4.21.1_ygwdrcfl3m6rdu4ibcq7rpa2au
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      typescript: 4.8.2
+
+  packages/gatsby-theme-ui-layout:
+    specifiers:
+      babel-eslint: ^10
+      gatsby: ^4 || ^5
+      react: '>=18 || 18'
+      react-dom: '>=18'
+      typescript: ^4
+    dependencies:
+      gatsby: 4.21.1_ygwdrcfl3m6rdu4ibcq7rpa2au
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    devDependencies:
+      babel-eslint: 10.1.0_eslint@8.23.0
+      typescript: 4.8.2
+
+  packages/global:
+    specifiers:
+      '@babel/core': ^7.0.0
+      '@emotion/react': ^11
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      react: '>=18 || 18'
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@theme-ui/core': link:../core
+      '@theme-ui/css': link:../css
+      react: 18.2.0
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+
+  packages/match-media:
+    specifiers:
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      react: ^18.1.0
+      react-dom: ^18
+      theme-ui: workspace:^
+    devDependencies:
+      '@theme-ui/core': link:../core
+      '@theme-ui/css': link:../css
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      theme-ui: link:../theme-ui
+
+  packages/mdx:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': ^11
+      '@mdx-js/mdx-v2': npm:@mdx-js/mdx@^2.1.2
+      '@mdx-js/react-v2': npm:@mdx-js/react@^2.1.2
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/mdx': ^2.0.2
+      '@types/react': ^18.0.8
+      react: ^18.1.0
+      remark-gfm: ^3.0.1
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@theme-ui/core': link:../core
+      '@theme-ui/css': link:../css
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@mdx-js/mdx-v2': /@mdx-js/mdx/2.1.3
+      '@mdx-js/react-v2': /@mdx-js/react/2.1.3_react@18.2.0
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/mdx': 2.0.2
+      '@types/react': 18.0.17
+      react: 18.2.0
+      remark-gfm: 3.0.1
+
+  packages/preset-base:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    devDependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-bootstrap:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-bulma:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@theme-ui/preset-base': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+      '@theme-ui/preset-base': link:../preset-base
+
+  packages/preset-dark:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-deep:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-funk:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@theme-ui/preset-base': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+      '@theme-ui/preset-base': link:../preset-base
+
+  packages/preset-future:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@theme-ui/preset-base': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+      '@theme-ui/preset-base': link:../preset-base
+
+  packages/preset-polaris:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@theme-ui/preset-base': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+      '@theme-ui/preset-base': link:../preset-base
+
+  packages/preset-roboto:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@theme-ui/preset-base': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+      '@theme-ui/preset-base': link:../preset-base
+
+  packages/preset-sketchy:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-swiss:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-system:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-tailwind:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/preset-tosh:
+    specifiers:
+      '@theme-ui/css': workspace:^
+    dependencies:
+      '@theme-ui/css': link:../css
+
+  packages/presets:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@theme-ui/preset-base': workspace:^
+      '@theme-ui/preset-bootstrap': workspace:^
+      '@theme-ui/preset-bulma': workspace:^
+      '@theme-ui/preset-dark': workspace:^
+      '@theme-ui/preset-deep': workspace:^
+      '@theme-ui/preset-funk': workspace:^
+      '@theme-ui/preset-future': workspace:^
+      '@theme-ui/preset-polaris': workspace:^
+      '@theme-ui/preset-roboto': workspace:^
+      '@theme-ui/preset-sketchy': workspace:^
+      '@theme-ui/preset-swiss': workspace:^
+      '@theme-ui/preset-system': workspace:^
+      '@theme-ui/preset-tailwind': workspace:^
+      '@theme-ui/preset-tosh': workspace:^
+    dependencies:
+      '@theme-ui/preset-base': link:../preset-base
+      '@theme-ui/preset-bootstrap': link:../preset-bootstrap
+      '@theme-ui/preset-bulma': link:../preset-bulma
+      '@theme-ui/preset-dark': link:../preset-dark
+      '@theme-ui/preset-deep': link:../preset-deep
+      '@theme-ui/preset-funk': link:../preset-funk
+      '@theme-ui/preset-future': link:../preset-future
+      '@theme-ui/preset-polaris': link:../preset-polaris
+      '@theme-ui/preset-roboto': link:../preset-roboto
+      '@theme-ui/preset-sketchy': link:../preset-sketchy
+      '@theme-ui/preset-swiss': link:../preset-swiss
+      '@theme-ui/preset-system': link:../preset-system
+      '@theme-ui/preset-tailwind': link:../preset-tailwind
+      '@theme-ui/preset-tosh': link:../preset-tosh
+    devDependencies:
+      '@theme-ui/css': link:../css
+
+  packages/prism:
+    specifiers:
+      '@theme-ui/mdx': workspace:^
+      '@types/react': ^18.0.8
+      param-case: ^3.0.4
+      postcss: ^8.1.10
+      postcss-js: ^3.0.3
+      prism-react-renderer: ^1.1.1
+      react: ^18
+      theme-ui: workspace:^
+    dependencies:
+      prism-react-renderer: 1.3.5_react@18.2.0
+    devDependencies:
+      '@theme-ui/mdx': link:../mdx
+      '@types/react': 18.0.17
+      param-case: 3.0.4
+      postcss: 8.4.16
+      postcss-js: 3.0.3
+      react: 18.2.0
+      theme-ui: link:../theme-ui
+
+  packages/sidenav:
+    specifiers:
+      '@babel/core': ^7
+      '@emotion/react': ^11
+      '@mdx-js/react': ^1
+      '@theme-ui/test-utils': workspace:^
+      '@types/mdx-js__react': ^1
+      '@types/react': ^18.0.8
+      deepmerge: ^4.0.0
+      react: ^18.1.0
+      theme-ui: workspace:^
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@mdx-js/react': 1.6.22_react@18.2.0
+      deepmerge: 4.2.2
+      theme-ui: link:../theme-ui
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/mdx-js__react': 1.5.5
+      '@types/react': 18.0.17
+      react: 18.2.0
+
+  packages/style-guide:
+    specifiers:
+      '@theme-ui/color': workspace:^
+      '@theme-ui/presets': workspace:^
+      '@types/color': ^3.0.3
+      '@types/react': ^18.0.8
+      color: ^3.1.2
+      lodash.get: ^4.4.2
+      react: ^18
+      theme-ui: workspace:^
+    dependencies:
+      '@theme-ui/color': link:../color
+      '@theme-ui/presets': link:../presets
+      '@types/color': 3.0.3
+      color: 3.2.1
+      lodash.get: 4.4.2
+    devDependencies:
+      '@types/react': 18.0.17
+      react: 18.2.0
+      theme-ui: link:../theme-ui
+
+  packages/tachyons:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      babel-polyfill: ^6.26.0
+      execa: ^5.0.0
+      tachyons-generator: ^0.23.0
+    dependencies:
+      tachyons-generator: 0.23.0
+    devDependencies:
+      '@theme-ui/css': link:../css
+      babel-polyfill: 6.26.0
+      execa: 5.1.1
+
+  packages/tailwind:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      babel-polyfill: ^6.26.0
+      execa: ^5.0.0
+      tailwindcss: ^3.0.15
+    devDependencies:
+      '@theme-ui/css': link:../css
+      babel-polyfill: 6.26.0
+      execa: 5.1.1
+      tailwindcss: 3.1.8_postcss@8.4.16
+
+  packages/test-utils:
+    specifiers:
+      '@testing-library/react': ^13.3.0
+      '@types/react': ^18.0.8
+      conditional-type-checks: ^1.0.6
+      react: ^18
+      react-dom: '>=18'
+      react-test-renderer: ^18.2.0
+      theme-ui: workspace:^
+      ts-snippet: ^5.0.0
+      typescript: '>=4'
+    dependencies:
+      '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
+      conditional-type-checks: 1.0.6
+      react-test-renderer: 18.2.0_react@18.2.0
+      ts-snippet: 5.0.2_typescript@4.8.2
+    devDependencies:
+      '@types/react': 18.0.17
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      theme-ui: link:../theme-ui
+      typescript: 4.8.2
+
+  packages/theme-provider:
+    specifiers:
+      '@babel/core': ^7.0.0
+      '@emotion/react': ^11
+      '@theme-ui/color-modes': workspace:^
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@types/react': ^18.0.8
+      react: '>=18 || 18'
+    dependencies:
+      '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
+      '@theme-ui/color-modes': link:../color-modes
+      '@theme-ui/core': link:../core
+      '@theme-ui/css': link:../css
+      react: 18.2.0
+    devDependencies:
+      '@babel/core': 7.18.13
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+
+  packages/theme-ui:
+    specifiers:
+      '@theme-ui/color-modes': workspace:^
+      '@theme-ui/components': workspace:^
+      '@theme-ui/core': workspace:^
+      '@theme-ui/css': workspace:^
+      '@theme-ui/global': workspace:^
+      '@theme-ui/test-utils': workspace:^
+      '@theme-ui/theme-provider': workspace:^
+      '@types/react': ^18.0.8
+      react: '>=18'
+      react-dom: '>=18'
+    dependencies:
+      '@theme-ui/color-modes': link:../color-modes
+      '@theme-ui/components': link:../components
+      '@theme-ui/core': link:../core
+      '@theme-ui/css': link:../css
+      '@theme-ui/global': link:../global
+      '@theme-ui/theme-provider': link:../theme-provider
+    devDependencies:
+      '@theme-ui/test-utils': link:../test-utils
+      '@types/react': 18.0.17
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+
+  packages/typography:
+    specifiers:
+      '@theme-ui/css': workspace:^
+      '@types/compass-vertical-rhythm': ^1.4.2
+      '@types/modularscale': ^2.0.0
+      '@types/typography': ^0.16.4
+      compass-vertical-rhythm: ^1.4.5
+      csstype: ^3.0.10
+      modularscale: ^2.0.1
+      type-fest: ^2.18.0
+      typography: ^0.16.21
+      typography-theme-alton: ^0.16.19
+      typography-theme-anonymous: ^0.15.10
+      typography-theme-bootstrap: ^0.16.19
+      typography-theme-de-young: ^0.16.19
+      typography-theme-doelger: ^0.16.19
+      typography-theme-elk-glen: ^0.16.19
+      typography-theme-funston: ^0.16.19
+      typography-theme-github: ^0.16.19
+      typography-theme-grand-view: ^0.16.19
+      typography-theme-irving: ^0.16.19
+      typography-theme-judah: ^0.16.19
+      typography-theme-kirkham: ^0.16.19
+      typography-theme-lawton: ^0.16.19
+      typography-theme-legible: ^0.16.19
+      typography-theme-moraga: ^0.16.19
+      typography-theme-noriega: ^0.16.19
+      typography-theme-ocean-beach: ^0.16.19
+      typography-theme-parnassus: ^0.16.19
+      typography-theme-st-annes: ^0.16.19
+      typography-theme-stardust: ^0.16.19
+      typography-theme-stern-grove: ^0.16.19
+      typography-theme-stow-lake: ^0.16.19
+      typography-theme-sutro: ^0.16.19
+      typography-theme-trajan: ^0.1.3
+      typography-theme-twin-peaks: ^0.16.19
+      typography-theme-us-web-design-standards: ^0.16.19
+      typography-theme-wikipedia: ^0.16.19
+      typography-theme-wordpress-2010: ^0.16.19
+      typography-theme-wordpress-2011: ^0.16.19
+      typography-theme-wordpress-2012: ^0.16.19
+      typography-theme-wordpress-2013: ^0.16.19
+      typography-theme-wordpress-2014: ^0.16.19
+      typography-theme-wordpress-2015: ^0.16.19
+      typography-theme-wordpress-2016: ^0.16.19
+      typography-theme-wordpress-kubrick: ^0.16.19
+      typography-theme-zacklive: ^1.0.2
+    dependencies:
+      '@theme-ui/css': link:../css
+      '@types/compass-vertical-rhythm': 1.4.2
+      '@types/modularscale': 2.0.0
+      '@types/typography': 0.16.4
+      compass-vertical-rhythm: 1.4.5
+      csstype: 3.1.0
+      modularscale: 2.0.1
+      type-fest: 2.19.0
+    devDependencies:
+      typography: 0.16.21
+      typography-theme-alton: 0.16.19
+      typography-theme-anonymous: 0.15.10
+      typography-theme-bootstrap: 0.16.19
+      typography-theme-de-young: 0.16.19
+      typography-theme-doelger: 0.16.19
+      typography-theme-elk-glen: 0.16.19
+      typography-theme-funston: 0.16.19
+      typography-theme-github: 0.16.19
+      typography-theme-grand-view: 0.16.19
+      typography-theme-irving: 0.16.19
+      typography-theme-judah: 0.16.19
+      typography-theme-kirkham: 0.16.19
+      typography-theme-lawton: 0.16.19
+      typography-theme-legible: 0.16.19
+      typography-theme-moraga: 0.16.19
+      typography-theme-noriega: 0.16.19
+      typography-theme-ocean-beach: 0.16.19
+      typography-theme-parnassus: 0.16.19
+      typography-theme-st-annes: 0.16.19
+      typography-theme-stardust: 0.16.19
+      typography-theme-stern-grove: 0.16.19
+      typography-theme-stow-lake: 0.16.19
+      typography-theme-sutro: 0.16.19
+      typography-theme-trajan: 0.1.3
+      typography-theme-twin-peaks: 0.16.19
+      typography-theme-us-web-design-standards: 0.16.19
+      typography-theme-wikipedia: 0.16.19
+      typography-theme-wordpress-2010: 0.16.19
+      typography-theme-wordpress-2011: 0.16.19
+      typography-theme-wordpress-2012: 0.16.19
+      typography-theme-wordpress-2013: 0.16.19
+      typography-theme-wordpress-2014: 0.16.19
+      typography-theme-wordpress-2015: 0.16.19
+      typography-theme-wordpress-2016: 0.16.19
+      typography-theme-wordpress-kubrick: 0.16.19
+      typography-theme-zacklive: 1.0.2
+
+packages:
+
+  /@ampproject/remapping/2.2.0:
+    resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@jridgewell/gen-mapping': 0.1.1
+      '@jridgewell/trace-mapping': 0.3.15
+
+  /@ardatan/aggregate-error/0.0.6:
+    resolution: {integrity: sha512-vyrkEHG1jrukmzTPtyWB4NLPauUw5bQeg4uhn8f+1SSynmrOcyvlb1GKQjjgoBzElLdfXCRYX8UnBlhklOHYRQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      tslib: 2.0.3
+
+  /@ardatan/relay-compiler/12.0.0_graphql@15.8.0:
+    resolution: {integrity: sha512-9anThAaj1dQr6IGmzBMcfzOQKTa5artjuPmw8NYK/fiGEMjADbSguBY2FMDykt+QhilR3wc9VA/3yVju7JHg7Q==}
+    hasBin: true
+    peerDependencies:
+      graphql: '*'
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/generator': 7.18.13
+      '@babel/parser': 7.18.13
+      '@babel/runtime': 7.20.7
+      '@babel/traverse': 7.18.13
+      '@babel/types': 7.18.13
+      babel-preset-fbjs: 3.4.0_@babel+core@7.18.13
+      chalk: 4.1.2
+      fb-watchman: 2.0.1
+      fbjs: 3.0.4
+      glob: 7.2.3
+      graphql: 15.8.0
+      immutable: 3.7.6
+      invariant: 2.2.4
+      nullthrows: 1.1.1
+      relay-runtime: 12.0.0
+      signedsource: 1.0.0
+      yargs: 15.4.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  /@auto-it/all-contributors/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-3Y+rI44VG2GHqb4G3houTOk2e5dzRMiQY05pzgzuNzl7DyBNbImzkvUKptFd9du0hfVftw8iVJBEMkKtyzeBlw==}
+    dependencies:
+      '@auto-it/bot-list': 10.37.6
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@octokit/rest': 18.12.0
+      all-contributors-cli: 6.19.0
+      anymatch: 3.1.2
+      await-to-js: 3.0.0
+      endent: 2.1.0
+      env-ci: 5.5.0
+      fp-ts: 2.12.2
+      fromentries: 1.3.2
+      io-ts: 2.2.17_fp-ts@2.12.2
+      tslib: 2.1.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@auto-it/bot-list/10.37.6:
+    resolution: {integrity: sha512-ltcLZEzXOOWh24qgNE4mPYJR25Dh9mQy2QwyD8uOE01Vy0yu89RGLi0TahUlUNZUSPBjLYUCxNOcp9WHKBJ7Sg==}
+    engines: {node: '>=10.x'}
+    dev: true
+
+  /@auto-it/conventional-commits/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-IJvKrEST7iOlKsohTPgSDkKLTRBF+5RD8arAXc7ZV9QMI9A/BmyoaMhj8uh9wt5QuSpNmw2C3EJWldbvmu695Q==}
+    dependencies:
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      array.prototype.flatmap: 1.3.0
+      conventional-changelog-core: 4.2.4
+      conventional-changelog-preset-loader: 2.3.4
+      conventional-commits-parser: 3.2.4
+      endent: 2.1.0
+      fp-ts: 2.12.2
+      io-ts: 2.2.17_fp-ts@2.12.2
+      tslib: 2.1.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@auto-it/core/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-XfQq+DmUAg7hXSwq0KxOCGyPLlri8hJoEAp3QDaAa42CSnM5A5oZ67VaL7D/mFcSPDYK8o3w69mQfwcmOENjBA==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@auto-it/bot-list': 10.37.6
+      '@endemolshinegroup/cosmiconfig-typescript-loader': 3.0.2_g6m3ayci76ihfqsas62cuqfuga
+      '@octokit/core': 3.6.0
+      '@octokit/plugin-enterprise-compatibility': 1.3.0
+      '@octokit/plugin-retry': 3.0.9
+      '@octokit/plugin-throttling': 3.7.0_@octokit+core@3.6.0
+      '@octokit/rest': 18.12.0
+      await-to-js: 3.0.0
+      chalk: 4.1.2
+      cosmiconfig: 7.0.0
+      deepmerge: 4.2.2
+      dotenv: 8.6.0
+      endent: 2.1.0
+      enquirer: 2.3.6
+      env-ci: 5.5.0
+      fast-glob: 3.2.11
+      fp-ts: 2.12.2
+      fromentries: 1.3.2
+      gitlog: 4.0.4
+      https-proxy-agent: 5.0.1
+      import-cwd: 3.0.0
+      import-from: 3.0.0
+      io-ts: 2.2.17_fp-ts@2.12.2
+      lodash.chunk: 4.2.0
+      log-symbols: 4.1.0
+      node-fetch: 2.6.7
+      parse-author: 2.0.0
+      parse-github-url: 1.0.2
+      pretty-ms: 7.0.1
+      requireg: 0.2.2
+      semver: 7.3.7
+      signale: 1.4.0
+      tapable: 2.2.1
+      terminal-link: 2.1.1
+      tinycolor2: 1.4.2
+      ts-node: 10.9.1_sqdlidqb5kymhugfdzbb24uaie
+      tslib: 2.1.0
+      type-fest: 0.21.3
+      typescript: 4.8.2
+      typescript-memoize: 1.1.0
+      url-join: 4.0.1
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+    dev: true
+
+  /@auto-it/first-time-contributor/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-+weXEHUaXSBJfLmI5F7MZKUPrRvQM8Fr+e2lCcDW4ChyfR2YE70/wv9e3oxenZp9Ed0pHN7THH718O9Tz4GtHw==}
+    dependencies:
+      '@auto-it/bot-list': 10.37.6
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      array.prototype.flatmap: 1.3.0
+      endent: 2.1.0
+      tslib: 2.1.0
+      url-join: 4.0.1
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@auto-it/magic-zero/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-1bcV6OUuOX0GnVR7cIHWOmdsHsC/bnLnLPjSTiM4OOxB8QJtRzAYDFNg1Amh5EAmzVXlqch8wX+TkWxtw1pVVA==}
+    dependencies:
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      fp-ts: 2.12.2
+      io-ts: 2.2.17_fp-ts@2.12.2
+      semver: 7.3.7
+      tslib: 2.1.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@auto-it/npm/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-18CpaX3YfpJ6vwONYEBy9ORiPGplrtQ30pzRtDpKZzHin5wakdOyPd1P5lWeZBmCQCyiszdRteeQsXzFbaSuoQ==}
+    dependencies:
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      '@auto-it/package-json-utils': 10.37.6
+      await-to-js: 3.0.0
+      endent: 2.1.0
+      env-ci: 5.5.0
+      fp-ts: 2.12.2
+      get-monorepo-packages: 1.2.0
+      io-ts: 2.2.17_fp-ts@2.12.2
+      registry-url: 5.1.0
+      semver: 7.3.7
+      tslib: 2.1.0
+      typescript-memoize: 1.1.0
+      url-join: 4.0.1
+      user-home: 2.0.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@auto-it/omit-commits/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-Lw2Z5S5p+eje6N3+AswKn7rX8h1+SJvgttdNO2+SyZVxhLyUOKKS46n27w2gOilf1RdmjViDfhbGwFk+AHaGNQ==}
+    dependencies:
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      fp-ts: 2.12.2
+      io-ts: 2.2.17_fp-ts@2.12.2
+      tslib: 2.1.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@auto-it/package-json-utils/10.37.6:
+    resolution: {integrity: sha512-rUoEcEnPgHG8X/XkPe3PKFHhXD3AsplXB0Rpr7lJQta5XzDqmWzc/xVL1vMmM4IpXMI5lK7A9OZosWjgJVI7jA==}
+    engines: {node: '>=10.x'}
+    dependencies:
+      parse-author: 2.0.0
+      parse-github-url: 1.0.2
+    dev: true
+
+  /@auto-it/released/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-988nCdYApyzKwZx6W6lHNHS9aEw9xLFbfDcTWrSKUOChjT8yDcGadDDXVhj3M0uhHojr8jXKbrRATEPyEeTDlg==}
+    dependencies:
+      '@auto-it/bot-list': 10.37.6
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      deepmerge: 4.2.2
+      fp-ts: 2.12.2
+      io-ts: 2.2.17_fp-ts@2.12.2
+      tslib: 2.1.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@auto-it/version-file/10.37.6_sqdlidqb5kymhugfdzbb24uaie:
+    resolution: {integrity: sha512-BO7f1bWrUFkhp7RwwmkegBUc/VwJrIlQQaFm7l/cc5IGZ7DL0rPap8UbytSL3aWV9YzoZpqgWNj2KPRGvwguag==}
+    dependencies:
+      '@auto-it/core': 10.37.6_sqdlidqb5kymhugfdzbb24uaie
+      fp-ts: 2.12.2
+      io-ts: 2.2.17_fp-ts@2.12.2
+      semver: 7.3.7
+      tslib: 1.10.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - supports-color
+      - typescript
+    dev: true
+
+  /@babel/cli/7.18.10_@babel+core@7.18.13:
+    resolution: {integrity: sha512-dLvWH+ZDFAkd2jPBSghrsFBuXrREvFwjpDycXbmUoeochqKYe4zNSLEJYErpLg8dvxvZYe79/MkN461XCwpnGw==}
+    engines: {node: '>=6.9.0'}
+    hasBin: true
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@jridgewell/trace-mapping': 0.3.15
+      commander: 4.1.1
+      convert-source-map: 1.8.0
+      fs-readdir-recursive: 1.1.0
+      glob: 7.2.3
+      make-dir: 2.1.0
+      slash: 2.0.0
+    optionalDependencies:
+      '@nicolo-ribaudo/chokidar-2': 2.1.8-no-fsevents.3
+      chokidar: 3.5.3
+    dev: true
+
+  /@babel/code-frame/7.12.11:
+    resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}
+    dependencies:
+      '@babel/highlight': 7.18.6
+
+  /@babel/code-frame/7.18.6:
+    resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/highlight': 7.18.6
+
+  /@babel/compat-data/7.18.13:
+    resolution: {integrity: sha512-5yUzC5LqyTFp2HLmDoxGQelcdYgSpP9xsnMWBphAscOdFrHSAVbLNzWiy32sVNDqJRDiJK6klfDnAgu6PAGSHw==}
+    engines: {node: '>=6.9.0'}
+
+  /@babel/core/7.12.9:
+    resolution: {integrity: sha512-gTXYh3M5wb7FRXQy+FErKFAv90BnlOuNn1QkCK2lREoPAjrQCO49+HVSrFoe5uakFAF5eenS75KbO2vQiLrTMQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/code-frame': 7.18.6
+      '@babel/generator': 7.18.13
+      '@babel/helper-module-transforms': 7.18.9
+      '@babel/helpers': 7.18.9
+      '@babel/parser': 7.18.13
+      '@babel/template': 7.18.10
+      '@babel/traverse': 7.18.13
+      '@babel/types': 7.18.13
+      convert-source-map: 1.8.0
+      debug: 4.3.4
+      gensync: 1.0.0-beta.2
+      json5: 2.2.1
+      lodash: 4.17.21
+      resolve: 1.22.1
+      semver: 5.7.1
+      source-map: 0.5.7
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@babel/core/7.18.13:
+    resolution: {integrity: sha512-ZisbOvRRusFktksHSG6pjj1CSvkPkcZq/KHD45LAkVP/oiHJkNBZWfpvlLmX8OtHDG8IuzsFlVRWo08w7Qxn0A==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@ampproject/remapping': 2.2.0
+      '@babel/code-frame': 7.18.6
+      '@babel/generator': 7.18.13
+      '@babel/helper-compilation-targets': 7.18.9_@babel+core@7.18.13
+      '@babel/helper-module-transforms': 7.18.9
+      '@babel/helpers': 7.18.9
+      '@babel/parser': 7.18.13
+      '@babel/template': 7.18.10
+      '@babel/traverse': 7.18.13
+      '@babel/types': 7.18.13
+      convert-source-map: 1.8.0
+      debug: 4.3.4
+      gensync: 1.0.0-beta.2
+      json5: 2.2.1
+      semver: 6.3.0
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/eslint-parser/7.18.9_f6qngz4m6vfa3g3bk2x4qa2a2q:
+    resolution: {integrity: sha512-KzSGpMBggz4fKbRbWLNyPVTuQr6cmCcBhOyXTw/fieOVaw5oYAwcAj4a7UKcDYCPxQq+CG1NCDZH9e2JTXquiQ==}
+    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
+    peerDependencies:
+      '@babel/core': '>=7.11.0'
+      eslint: ^7.5.0 || ^8.0.0 || 8
+    dependencies:
+      '@babel/core': 7.18.13
+      eslint: 8.23.0
+      eslint-scope: 5.1.1
+      eslint-visitor-keys: 2.1.0
+      semver: 6.3.0
+    dev: true
+
+  /@babel/eslint-parser/7.18.9_yvyxucxu4syjjccj52qfaafshm:
+    resolution: {integrity: sha512-KzSGpMBggz4fKbRbWLNyPVTuQr6cmCcBhOyXTw/fieOVaw5oYAwcAj4a7UKcDYCPxQq+CG1NCDZH9e2JTXquiQ==}
+    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
+    peerDependencies:
+      '@babel/core': '>=7.11.0'
+      eslint: ^7.5.0 || ^8.0.0 || 8
+    dependencies:
+      '@babel/core': 7.18.13
+      eslint: 7.32.0
+      eslint-scope: 5.1.1
+      eslint-visitor-keys: 2.1.0
+      semver: 6.3.0
+
+  /@babel/generator/7.18.13:
+    resolution: {integrity: sha512-CkPg8ySSPuHTYPJYo7IRALdqyjM9HCbt/3uOBEFbzyGVP6Mn8bwFPB0jX6982JVNBlYzM1nnPkfjuXSOPtQeEQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+      '@jridgewell/gen-mapping': 0.3.2
+      jsesc: 2.5.2
+
+  /@babel/helper-annotate-as-pure/7.18.6:
+    resolution: {integrity: sha512-duORpUiYrEpzKIop6iNbjnwKLAKnJ47csTyRACyEmWj0QdUrm5aqNJGHSSEQSUAvNW0ojX0dOmK9dZduvkfeXA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-builder-binary-assignment-operator-visitor/7.18.9:
+    resolution: {integrity: sha512-yFQ0YCHoIqarl8BCRwBL8ulYUaZpz3bNsA7oFepAzee+8/+ImtADXNOmO5vJvsPff3qi+hvpkY/NYBTrBQgdNw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-explode-assignable-expression': 7.18.6
+      '@babel/types': 7.18.13
+
+  /@babel/helper-compilation-targets/7.18.9_@babel+core@7.18.13:
+    resolution: {integrity: sha512-tzLCyVmqUiFlcFoAPLA/gL9TeYrF61VLNtb+hvkuVaB5SUjW7jcfrglBIX1vUIoT7CLP3bBlIMeyEsIl2eFQNg==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/compat-data': 7.18.13
+      '@babel/core': 7.18.13
+      '@babel/helper-validator-option': 7.18.6
+      browserslist: 4.21.3
+      semver: 6.3.0
+
+  /@babel/helper-create-class-features-plugin/7.18.13_@babel+core@7.18.13:
+    resolution: {integrity: sha512-hDvXp+QYxSRL+23mpAlSGxHMDyIGChm0/AwTfTAAK5Ufe40nCsyNdaYCGuK91phn/fVu9kqayImRDkvNAgdrsA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-annotate-as-pure': 7.18.6
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-function-name': 7.18.9
+      '@babel/helper-member-expression-to-functions': 7.18.9
+      '@babel/helper-optimise-call-expression': 7.18.6
+      '@babel/helper-replace-supers': 7.18.9
+      '@babel/helper-split-export-declaration': 7.18.6
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/helper-create-regexp-features-plugin/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-7LcpH1wnQLGrI+4v+nPp+zUvIkF9x0ddv1Hkdue10tg3gmRnLy97DXh4STiOf1qeIInyD69Qv5kKSZzKD8B/7A==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-annotate-as-pure': 7.18.6
+      regexpu-core: 5.1.0
+
+  /@babel/helper-define-polyfill-provider/0.3.2_@babel+core@7.18.13:
+    resolution: {integrity: sha512-r9QJJ+uDWrd+94BSPcP6/de67ygLtvVy6cK4luE6MOuDsZIdoaPBnfSpbO/+LTifjPckbKXRuI9BB/Z2/y3iTg==}
+    peerDependencies:
+      '@babel/core': ^7.4.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-compilation-targets': 7.18.9_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      debug: 4.3.4
+      lodash.debounce: 4.0.8
+      resolve: 1.22.1
+      semver: 6.3.0
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/helper-environment-visitor/7.18.9:
+    resolution: {integrity: sha512-3r/aACDJ3fhQ/EVgFy0hpj8oHyHpQc+LPtJoY9SzTThAsStm4Ptegq92vqKoE3vD706ZVFWITnMnxucw+S9Ipg==}
+    engines: {node: '>=6.9.0'}
+
+  /@babel/helper-explode-assignable-expression/7.18.6:
+    resolution: {integrity: sha512-eyAYAsQmB80jNfg4baAtLeWAQHfHFiR483rzFK+BhETlGZaQC9bsfrugfXDCbRHLQbIA7U5NxhhOxN7p/dWIcg==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-function-name/7.18.9:
+    resolution: {integrity: sha512-fJgWlZt7nxGksJS9a0XdSaI4XvpExnNIgRP+rVefWh5U7BL8pPuir6SJUmFKRfjWQ51OtWSzwOxhaH/EBWWc0A==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/template': 7.18.10
+      '@babel/types': 7.18.13
+
+  /@babel/helper-hoist-variables/7.18.6:
+    resolution: {integrity: sha512-UlJQPkFqFULIcyW5sbzgbkxn2FKRgwWiRexcuaR8RNJRy8+LLveqPjwZV/bwrLZCN0eUHD/x8D0heK1ozuoo6Q==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-member-expression-to-functions/7.18.9:
+    resolution: {integrity: sha512-RxifAh2ZoVU67PyKIO4AMi1wTenGfMR/O/ae0CCRqwgBAt5v7xjdtRw7UoSbsreKrQn5t7r89eruK/9JjYHuDg==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-module-imports/7.18.6:
+    resolution: {integrity: sha512-0NFvs3VkuSYbFi1x2Vd6tKrywq+z/cLeYC/RJNFrIX/30Bf5aiGYbtvGXolEktzJH8o5E5KJ3tT+nkxuuZFVlA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-module-transforms/7.18.9:
+    resolution: {integrity: sha512-KYNqY0ICwfv19b31XzvmI/mfcylOzbLtowkw+mfvGPAQ3kfCnMLYbED3YecL5tPd8nAYFQFAd6JHp2LxZk/J1g==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-module-imports': 7.18.6
+      '@babel/helper-simple-access': 7.18.6
+      '@babel/helper-split-export-declaration': 7.18.6
+      '@babel/helper-validator-identifier': 7.18.6
+      '@babel/template': 7.18.10
+      '@babel/traverse': 7.18.13
+      '@babel/types': 7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/helper-optimise-call-expression/7.18.6:
+    resolution: {integrity: sha512-HP59oD9/fEHQkdcbgFCnbmgH5vIQTJbxh2yf+CdM89/glUNnuzr87Q8GIjGEnOktTROemO0Pe0iPAYbqZuOUiA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-plugin-utils/7.10.4:
+    resolution: {integrity: sha512-O4KCvQA6lLiMU9l2eawBPMf1xPP8xPfB3iEQw150hOVTqj/rfXz0ThTb4HEzqQfs2Bmo5Ay8BzxfzVtBrr9dVg==}
+    dev: false
+
+  /@babel/helper-plugin-utils/7.18.9:
+    resolution: {integrity: sha512-aBXPT3bmtLryXaoJLyYPXPlSD4p1ld9aYeR+sJNOZjJJGiOpb+fKfh3NkcCu7J54nUJwCERPBExCCpyCOHnu/w==}
+    engines: {node: '>=6.9.0'}
+
+  /@babel/helper-remap-async-to-generator/7.18.9_@babel+core@7.18.13:
+    resolution: {integrity: sha512-dI7q50YKd8BAv3VEfgg7PS7yD3Rtbi2J1XMXaalXO0W0164hYLnh8zpjRS0mte9MfVp/tltvr/cfdXPvJr1opA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-annotate-as-pure': 7.18.6
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-wrap-function': 7.18.11
+      '@babel/types': 7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/helper-replace-supers/7.18.9:
+    resolution: {integrity: sha512-dNsWibVI4lNT6HiuOIBr1oyxo40HvIVmbwPUm3XZ7wMh4k2WxrxTqZwSqw/eEmXDS9np0ey5M2bz9tBmO9c+YQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-member-expression-to-functions': 7.18.9
+      '@babel/helper-optimise-call-expression': 7.18.6
+      '@babel/traverse': 7.18.13
+      '@babel/types': 7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/helper-simple-access/7.18.6:
+    resolution: {integrity: sha512-iNpIgTgyAvDQpDj76POqg+YEt8fPxx3yaNBg3S30dxNKm2SWfYhD0TGrK/Eu9wHpUW63VQU894TsTg+GLbUa1g==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-skip-transparent-expression-wrappers/7.18.9:
+    resolution: {integrity: sha512-imytd2gHi3cJPsybLRbmFrF7u5BIEuI2cNheyKi3/iOBC63kNn3q8Crn2xVuESli0aM4KYsyEqKyS7lFL8YVtw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-split-export-declaration/7.18.6:
+    resolution: {integrity: sha512-bde1etTx6ZyTmobl9LLMMQsaizFVZrquTEHOqKeQESMKo4PlObf+8+JA25ZsIpZhT/WEd39+vOdLXAFG/nELpA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/helper-string-parser/7.18.10:
+    resolution: {integrity: sha512-XtIfWmeNY3i4t7t4D2t02q50HvqHybPqW2ki1kosnvWCwuCMeo81Jf0gwr85jy/neUdg5XDdeFE/80DXiO+njw==}
+    engines: {node: '>=6.9.0'}
+
+  /@babel/helper-validator-identifier/7.18.6:
+    resolution: {integrity: sha512-MmetCkz9ej86nJQV+sFCxoGGrUbU3q02kgLciwkrt9QqEB7cP39oKEY0PakknEO0Gu20SskMRi+AYZ3b1TpN9g==}
+    engines: {node: '>=6.9.0'}
+
+  /@babel/helper-validator-option/7.18.6:
+    resolution: {integrity: sha512-XO7gESt5ouv/LRJdrVjkShckw6STTaB7l9BrpBaAHDeF5YZT+01PCwmR0SJHnkW6i8OwW/EVWRShfi4j2x+KQw==}
+    engines: {node: '>=6.9.0'}
+
+  /@babel/helper-wrap-function/7.18.11:
+    resolution: {integrity: sha512-oBUlbv+rjZLh2Ks9SKi4aL7eKaAXBWleHzU89mP0G6BMUlRxSckk9tSIkgDGydhgFxHuGSlBQZfnaD47oBEB7w==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-function-name': 7.18.9
+      '@babel/template': 7.18.10
+      '@babel/traverse': 7.18.13
+      '@babel/types': 7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/helpers/7.18.9:
+    resolution: {integrity: sha512-Jf5a+rbrLoR4eNdUmnFu8cN5eNJT6qdTdOg5IHIzq87WwyRw9PwguLFOWYgktN/60IP4fgDUawJvs7PjQIzELQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/template': 7.18.10
+      '@babel/traverse': 7.18.13
+      '@babel/types': 7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/highlight/7.18.6:
+    resolution: {integrity: sha512-u7stbOuYjaPezCuLj29hNW1v64M2Md2qupEKP1fHc7WdOA3DgLh37suiSrZYY7haUB7iBeQZ9P1uiRF359do3g==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.18.6
+      chalk: 2.4.2
+      js-tokens: 4.0.0
+
+  /@babel/parser/7.18.13:
+    resolution: {integrity: sha512-dgXcIfMuQ0kgzLB2b9tRZs7TTFFaGM2AbtA4fJgUUYukzGH4jwsS7hzQHEGs67jdehpm22vkgKwvbU+aEflgwg==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+    dependencies:
+      '@babel/types': 7.18.13
+
+  /@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-Dgxsyg54Fx1d4Nge8UnvTrED63vrwOdPmyvPzlNN/boaliRP54pm3pGzZD1SJUwrBA+Cs/xdG8kXX6Mn/RfISQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining/7.18.9_@babel+core@7.18.13:
+    resolution: {integrity: sha512-AHrP9jadvH7qlOj6PINbgSuphjQUAK7AOT7DPjBo9EHoLhQTnnK5u45e1Hd4DbSQEO9nqPWtQ89r+XEOWFScKg==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.13.0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-skip-transparent-expression-wrappers': 7.18.9
+      '@babel/plugin-proposal-optional-chaining': 7.18.9_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-async-generator-functions/7.18.10_@babel+core@7.18.13:
+    resolution: {integrity: sha512-1mFuY2TOsR1hxbjCo4QL+qlIjV07p4H4EUYw2J/WCqsvFV6V9X9z9YhXbWndc/4fw+hYGlDT7egYxliMp5O6Ew==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-remap-async-to-generator': 7.18.9_@babel+core@7.18.13
+      '@babel/plugin-syntax-async-generators': 7.8.4_@babel+core@7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/plugin-proposal-class-properties/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-cumfXOF0+nzZrrN8Rf0t7M+tF6sZc7vhQwYQck9q1/5w2OExlD+b4v4RpMJFaV1Z7WcDRgO6FqvxqxGlwo+RHQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/plugin-proposal-class-static-block/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-+I3oIiNxrCpup3Gi8n5IGMwj0gOCAjcJUSQEcotNnCCPMEnixawOQ+KeJPlgfjzx+FKQ1QSyZOWe7wmoJp7vhw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.12.0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-class-static-block': 7.14.5_@babel+core@7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/plugin-proposal-decorators/7.18.10_@babel+core@7.18.13:
+    resolution: {integrity: sha512-wdGTwWF5QtpTY/gbBtQLAiCnoxfD4qMbN87NYZle1dOZ9Os8Y6zXcKrIaOU8W+TIvFUWVGG9tUgNww3CjXRVVw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-replace-supers': 7.18.9
+      '@babel/helper-split-export-declaration': 7.18.6
+      '@babel/plugin-syntax-decorators': 7.18.6_@babel+core@7.18.13
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@babel/plugin-proposal-dynamic-import/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-1auuwmK+Rz13SJj36R+jqFPMJWyKEDd7lLSdOj4oJK0UTgGueSAtkrCvz9ewmgyU/P941Rv2fQwZJN8s6QruXw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-dynamic-import': 7.8.3_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-export-namespace-from/7.18.9_@babel+core@7.18.13:
+    resolution: {integrity: sha512-k1NtHyOMvlDDFeb9G5PhUXuGj8m/wiwojgQVEhJ/fsVsMCpLyOP4h0uGEjYJKrRI+EVPlb5Jk+Gt9P97lOGwtA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-export-namespace-from': 7.8.3_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-json-strings/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-lr1peyn9kOdbYc0xr0OdHTZ5FMqS6Di+H0Fz2I/JwMzGmzJETNeOFq2pBySw6X/KFL5EWDjlJuMsUGRFb8fQgQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-json-strings': 7.8.3_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-logical-assignment-operators/7.18.9_@babel+core@7.18.13:
+    resolution: {integrity: sha512-128YbMpjCrP35IOExw2Fq+x55LMP42DzhOhX2aNNIdI9avSWl2PI0yuBWarr3RYpZBSPtabfadkH2yeRiMD61Q==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-logical-assignment-operators': 7.10.4_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-nullish-coalescing-operator/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-wQxQzxYeJqHcfppzBDnm1yAY0jSRkUXR2z8RePZYrKwMKgMlE8+Z6LUno+bd6LvbGh8Gltvy74+9pIYkr+XkKA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-numeric-separator/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-ozlZFogPqoLm8WBr5Z8UckIoE4YQ5KESVcNudyXOR8uqIkliTEgJ3RoketfG6pmzLdeZF0H/wjE9/cCEitBl7Q==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-numeric-separator': 7.10.4_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-object-rest-spread/7.12.1_@babel+core@7.12.9:
+    resolution: {integrity: sha512-s6SowJIjzlhx8o7lsFx5zmY4At6CTtDvgNQDdPzkBQucle58A6b/TTeEBYtyDgmcXjUTM+vE8YOGHZzzbc/ioA==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.12.9
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3_@babel+core@7.12.9
+      '@babel/plugin-transform-parameters': 7.18.8_@babel+core@7.12.9
+    dev: false
+
+  /@babel/plugin-proposal-object-rest-spread/7.18.9_@babel+core@7.18.13:
+    resolution: {integrity: sha512-kDDHQ5rflIeY5xl69CEqGEZ0KY369ehsCIEbTGb4siHG5BE9sga/T0r0OUwyZNLMmZE79E1kbsqAjwFCW4ds6Q==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/compat-data': 7.18.13
+      '@babel/core': 7.18.13
+      '@babel/helper-compilation-targets': 7.18.9_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3_@babel+core@7.18.13
+      '@babel/plugin-transform-parameters': 7.18.8_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-optional-catch-binding/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-Q40HEhs9DJQyaZfUjjn6vE8Cv4GmMHCYuMGIWUnlxH6400VGxOuwWsPt4FxXxJkC/5eOzgn0z21M9gMT4MOhbw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-optional-catch-binding': 7.8.3_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-optional-chaining/7.18.9_@babel+core@7.18.13:
+    resolution: {integrity: sha512-v5nwt4IqBXihxGsW2QmCWMDS3B3bzGIk/EQVZz2ei7f3NJl8NzAJVvUmpDW5q1CRNY+Beb/k58UAH1Km1N411w==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-skip-transparent-expression-wrappers': 7.18.9
+      '@babel/plugin-syntax-optional-chaining': 7.8.3_@babel+core@7.18.13
+
+  /@babel/plugin-proposal-private-methods/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-nutsvktDItsNn4rpGItSNV2sz1XwS+nfU0Rg8aCx3W3NOKVzdMjJRu0O5OkgDp3ZGICSTbgRpxZoWsxoKRvbeA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/plugin-proposal-private-property-in-object/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-9Rysx7FOctvT5ouj5JODjAFAkgGoudQuLPamZb0v1TGLpapdNaftzifU8NTWQm0IRjqoYypdrSmyWgkocDQ8Dw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-annotate-as-pure': 7.18.6
+      '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/plugin-syntax-private-property-in-object': 7.14.5_@babel+core@7.18.13
+    transitivePeerDependencies:
+      - supports-color
+
+  /@babel/plugin-proposal-unicode-property-regex/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-2BShG/d5yoZyXZfVePH91urL5wTG6ASZU9M4o03lKK8u8UW1y08OMttBSOADTcJrnPMpvDXRG3G8fyLh4ovs8w==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-create-regexp-features-plugin': 7.18.6_@babel+core@7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.18.13:
+    resolution: {integrity: sha512-tycmZxkGfZaxhMRbXlPXuVFpdWlXpir2W4AMhSJgRKzk/eDlIXOhb2LHWoLpDF7TEHylV5zNhykX6KAgHJmTNw==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-bigint/7.8.3_@babel+core@7.18.13:
+    resolution: {integrity: sha512-wnTnFlG+YxQm3vDxpGE57Pj0srRU4sHE/mDkt1qv2YJJSeUAec2ma4WLUnUPeKjyrfntVwe/N6dCXpU+zL3Npg==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+    dev: true
+
+  /@babel/plugin-syntax-class-properties/7.12.13_@babel+core@7.18.13:
+    resolution: {integrity: sha512-fm4idjKla0YahUNgFNLCB0qySdsoPiZP3iQE3rky0mBUtMZ23yDJ9SJdg6dXTSDnulOVqiF3Hgr9nbXvXTQZYA==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-class-static-block/7.14.5_@babel+core@7.18.13:
+    resolution: {integrity: sha512-b+YyPmr6ldyNnM6sqYeMWE+bgJcJpO6yS4QD7ymxgH34GBPNDM/THBh8iunyvKIZztiwLH4CJZ0RxTk9emgpjw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-decorators/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-fqyLgjcxf/1yhyZ6A+yo1u9gJ7eleFQod2lkaUsF9DQ7sbbY3Ligym3L0+I2c0WmqNKDpoD9UTb1AKP3qRMOAQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+    dev: true
+
+  /@babel/plugin-syntax-dynamic-import/7.8.3_@babel+core@7.18.13:
+    resolution: {integrity: sha512-5gdGbFon+PszYzqs83S3E5mpi7/y/8M9eC90MRTZfduQOYW76ig6SOSPNe41IG5LoP3FGBn2N0RjVDSQiS94kQ==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-export-namespace-from/7.8.3_@babel+core@7.18.13:
+    resolution: {integrity: sha512-MXf5laXo6c1IbEbegDmzGPwGNTsHZmEy6QGznu5Sh2UCWvueywb2ee+CCE4zQiZstxU9BMoQO9i6zUFSY0Kj0Q==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-flow/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-LUbR+KNTBWCUAqRG9ex5Gnzu2IOkt8jRJbHHXFT9q+L9zm7M/QQbEqXyw1n1pohYvOyWC8CjeyjrSaIwiYjK7A==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-import-assertions/7.18.6_@babel+core@7.18.13:
+    resolution: {integrity: sha512-/DU3RXad9+bZwrgWJQKbr39gYbJpLJHezqEzRzi/BHRlJ9zsQb4CK2CA/5apllXNomwA1qHwzvHl+AdEmC5krQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+
+  /@babel/plugin-syntax-import-meta/7.10.4_@babel+core@7.18.13:
+    resolution: {integrity: sha512-Yqfm+XDx0+Prh3VSeEQCPU81yC+JWZ2pDPFSS4ZdpfZhp4MkFMaDC1UqseovEKwSUpnIL7+vK+Clp7bfh0iD7g==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.13
+      '@babel/helper-plugin-utils': 7.18.9
+    dev: true
+
+  /@babel/plugin-syntax-json-strings/7.8.3_@babel+core@7.18.13:
+    resolution: {integrity: sha512-lY6kdGpWHvjoe2vk4WrAapEuBR69EMxZl+RoGRhrFGNYVK8mOPAW8VfbT/ZgrFbXlDNiiaxQnAtgVCZ6jv30EA==}
+    peerDependencies:
