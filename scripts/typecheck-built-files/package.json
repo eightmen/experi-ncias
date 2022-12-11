@@ -1,0 +1,43 @@
+{
+  "description": "Ensure that prerelease was published correctly and typechecks",
+  "license": "MIT",
+  "scripts": {
+    "start": "pnpm install --no-frozen-lockfile && tsc"
+  },
+  "dependencies": {
+    "@theme-ui/components": "develop",
+    "@theme-ui/mdx": "develop",
+    "@theme-ui/preset-base": "develop",
+    "@theme-ui/preset-bootstrap": "develop",
+    "@theme-ui/preset-bulma": "develop",
+    "@theme-ui/preset-dark": "develop",
+    "@theme-ui/preset-deep": "develop",
+    "@theme-ui/preset-funk": "develop",
+    "@theme-ui/preset-future": "develop",
+    "@theme-ui/preset-polaris": "develop",
+    "@theme-ui/preset-roboto": "develop",
+    "@theme-ui/preset-sketchy": "develop",
+    "@theme-ui/preset-swiss": "develop",
+    "@theme-ui/preset-system": "develop",
+    "@theme-ui/preset-tailwind": "develop",
+    "@theme-ui/preset-tosh": "develop",
+    "@theme-ui/css": "develop",
+    "theme-ui": "develop",
+    "@emotion/react": "^11",
+    "react": "^18",
+    "typescript": ">=4"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "react-dom": "^18",
+    "@types/react-dom": "^18"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/core",
+        "@mdx-js/react"
+      ]
+    }
+  }
+}

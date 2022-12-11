@@ -1,0 +1,102 @@
+
+lockfileVersion: 5.4
+
+importers:
+
+  .:
+    specifiers:
+      '@emotion/react': ^11
+      '@theme-ui/components': develop
+      '@theme-ui/css': develop
+      '@theme-ui/mdx': develop
+      '@theme-ui/preset-base': develop
+      '@theme-ui/preset-bootstrap': develop
+      '@theme-ui/preset-bulma': develop
+      '@theme-ui/preset-dark': develop
+      '@theme-ui/preset-deep': develop
+      '@theme-ui/preset-funk': develop
+      '@theme-ui/preset-future': develop
+      '@theme-ui/preset-polaris': develop
+      '@theme-ui/preset-roboto': develop
+      '@theme-ui/preset-sketchy': develop
+      '@theme-ui/preset-swiss': develop
+      '@theme-ui/preset-system': develop
+      '@theme-ui/preset-tailwind': develop
+      '@theme-ui/preset-tosh': develop
+      '@types/react': ^18
+      '@types/react-dom': ^18
+      react: ^18
+      react-dom: ^18
+      theme-ui: develop
+      typescript: '>=4'
+    dependencies:
+      '@emotion/react': 11.10.4_7v64pk2mkrohwh22gx7lrz5ive
+      '@theme-ui/components': 0.15.0-develop.22_gyryel6m34lsxtsejhafetjriq
+      '@theme-ui/css': 0.15.0-develop.22_@emotion+react@11.10.4
+      '@theme-ui/mdx': 0.15.0-develop.22_gyryel6m34lsxtsejhafetjriq
+      '@theme-ui/preset-base': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-bootstrap': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-bulma': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-dark': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-deep': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-funk': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-future': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-polaris': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-roboto': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-sketchy': 0.15.0-develop.22_@emotion+react@11.10.4
+      '@theme-ui/preset-swiss': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-system': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-tailwind': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      '@theme-ui/preset-tosh': 0.15.0-develop.22_7k5fjk5riad5p23tz7kwh46upe
+      react: 18.2.0
+      theme-ui: 0.15.0-develop.22_7xbt6cqxny5okm7nuwm4cfiesq
+      typescript: 4.8.2
+    devDependencies:
+      '@types/react': 18.0.18
+      '@types/react-dom': 18.0.6
+      react-dom: 18.2.0_react@18.2.0
+
+packages:
+
+  /@babel/code-frame/7.18.6:
+    resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/highlight': 7.18.6
+    dev: false
+
+  /@babel/helper-module-imports/7.18.6:
+    resolution: {integrity: sha512-0NFvs3VkuSYbFi1x2Vd6tKrywq+z/cLeYC/RJNFrIX/30Bf5aiGYbtvGXolEktzJH8o5E5KJ3tT+nkxuuZFVlA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.13
+    dev: false
+
+  /@babel/helper-plugin-utils/7.18.9:
+    resolution: {integrity: sha512-aBXPT3bmtLryXaoJLyYPXPlSD4p1ld9aYeR+sJNOZjJJGiOpb+fKfh3NkcCu7J54nUJwCERPBExCCpyCOHnu/w==}
+    engines: {node: '>=6.9.0'}
+    dev: false
+
+  /@babel/helper-string-parser/7.18.10:
+    resolution: {integrity: sha512-XtIfWmeNY3i4t7t4D2t02q50HvqHybPqW2ki1kosnvWCwuCMeo81Jf0gwr85jy/neUdg5XDdeFE/80DXiO+njw==}
+    engines: {node: '>=6.9.0'}
+    dev: false
+
+  /@babel/helper-validator-identifier/7.18.6:
+    resolution: {integrity: sha512-MmetCkz9ej86nJQV+sFCxoGGrUbU3q02kgLciwkrt9QqEB7cP39oKEY0PakknEO0Gu20SskMRi+AYZ3b1TpN9g==}
+    engines: {node: '>=6.9.0'}
+    dev: false
+
+  /@babel/highlight/7.18.6:
+    resolution: {integrity: sha512-u7stbOuYjaPezCuLj29hNW1v64M2Md2qupEKP1fHc7WdOA3DgLh37suiSrZYY7haUB7iBeQZ9P1uiRF359do3g==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.18.6
+      chalk: 2.4.2
+      js-tokens: 4.0.0
+    dev: false
+
+  /@babel/plugin-syntax-jsx/7.18.6:
+    resolution: {integrity: sha512-6mmljtAedFGTWu2p/8WIORGwy+61PLgOMPOdazc7YoJ9ZCWUyFy3A6CpPkRKLKD1ToAesxX8KGEViAiLo9N+7Q==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:

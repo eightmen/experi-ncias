@@ -11,4 +11,13 @@ let [header, missingContributors] = output.split('\n')
 
 missingContributors = missingContributors
   .split(', ')
-  .ma
+  .map((x) => x.trim())
+  .filter((name) => !bots.includes(name))
+  .join(', ')
+
+/**
+ * @param s {string}
+ */
+const bold = (s) => `\u001b[1m${s}\u001b[0m`
+
+console.log(bold(header) + '\n', missingContributors)
